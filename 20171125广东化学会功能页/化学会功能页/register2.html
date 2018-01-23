@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/register2.css">
+</head>
+<body>
+	<div class="header">
+		<div class="empty">
+		</div>
+		<div class="butt">
+		<div class="mainBut" id="signIn"><a href="#">
+			登录</a>
+		</div>
+			<div class="mainBut" id="signUp"><a href="#">
+			注册</a>
+		</div>
+			<div class="mainBut" id="index"><a href="#">
+			首页</a>
+			</div>
+		</div>
+	</div>
+
+	<!--第二步-->
+	<div class="boxOfPro">
+	</div>
+
+	<div class="boxAll">
+			<div class="boxOfWord">Email:
+			</div>
+			<input type="text" class="boxOfInput" name="email"><span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>格式：user@chemsoc.org.cn</p>
+			</div>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			密码:
+		</div>
+		<input type="password" class="boxOfInput" name="password">
+		<span>*</span>
+		<div class="boxOfNo">
+			<img src="pics/important.png">
+			<p>格式：密码只能为6-12位</p>
+		</div>
+	</div>
+
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			确认密码:
+		</div>
+		<input type="password" class="boxOfInput" name="passwordAgain">
+		<span>*</span>
+		<div class="boxOfNo">
+			<img src="pics/important.png">
+			<p>格式：请再重复填写一遍密码</p>
+		</div>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			您的称谓:
+		</div>
+    	<select class="boxOfLongSel" name="title">
+      		<option disabled selected style="display:none;">选择称谓</option>
+					<option value="sir">先生</option>
+					<option value="madam">女士</option>
+					<option value="professor">教授</option>
+					<option value="doctor">博士</option>
+    	</select>
+    	<span>*</span>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			您的真实姓名：
+		</div>
+		<input type="text" class="boxOfInput" name="name">
+		<span>*</span>
+		<div class="boxOfNo">
+			<img src="pics/important.png">
+			<p>格式：请填写您的真实姓名</p>
+		</div>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			性别:
+		</div>
+		<div class="boxOfPick">
+    		<input type="radio" value="1"  name="gender">
+			<label>男</label>
+    		<input type="radio" value="2"  name="gender" />
+			<label>女</label>
+		</div>
+		<span>*</span>
+	</div>
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			出生日期:
+		</div>
+		<select class="boxOfShoSel" name="birthdayYear">
+     		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;年</option>
+    	</select>
+    	<p>&nbsp;-&nbsp;</p>
+		<select class="boxOfShoSel" name="birthdayMouth">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;月</option>
+    	</select>
+    	<p>&nbsp;-&nbsp;</p>
+		<select class="boxOfShoSel" name="birthdayDay">
+     		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;日</option>
+		</select>
+		<span>*</span>
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			党派:
+		</div>
+		<input type="text" class="boxOfInput" name="party">
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			文化程度:
+		</div>
+    	<select class="boxOfLongSel" name="education">
+      		<option disabled selected style="display:none;"></option>
+					<option value="undergraduate">大学本科</option>
+					<option value="bachelor">本科</option>
+					<option value="master">硕士</option>
+					<option value="masterCandidate">硕士研究生</option>
+					<option value="doctorate">博士在读</option>
+					<option value="doctor">博士</option>
+					<option value="doctorCandidate">博士研究生</option>
+    	</select>
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			学位:
+		</div>
+		<input type="text" class="boxOfInput" name="degree">
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			职称:
+		</div>
+    	<select class="boxOfLongSel" name="job">
+      		<option disabled selected style="display:none;">选择职称</option>
+					<option value="none">无职称</option>
+					<option value="researcher">研究员</option>
+					<option value="researcherDeputy">副研究员</option>
+					<option value="researcherAssist">助理研究员</option>
+					<option value="researcherPract">研究实习员</option>
+					<option value="professor">教授</option>
+					<option value="professorDeputy">副教授</option>
+					<option value="lecturer">讲师</option>
+					<option value="assist">助教</option>
+					<option value="teacher">教员</option>
+					<option value="engineerUpper">高级工程师</option>
+					<option value="engineer">工程师</option>
+					<option value="engineerAssist">助理工程师</option>
+					<option value="teacherSpec">特级教师</option>
+					<option value="teacherUpper">高级教师</option>
+					<option value="teacherMid">中级教师</option>
+					<option value="experUpper">高级实验师</option>
+					<option value="exper">实验师</option>
+					<option value="experAssist">助理实验师</option>
+					<option value="undergraduate">在读本科生</option>
+					<option value="underMas">在读硕士研究生</option>
+					<option value="underDoc">在读博士研究生</option>
+    	</select>
+    	<span>*</span>
+	</div>
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			专业:
+		</div>
+    	<select class="boxOfLongSel" name="major">
+      	<option disabled selected style="display:none;">选择专业</option>
+				<option value="inorgChem">无机化学</option>
+				<option value="orgChem">有机化学</option>
+				<option value="anaChem">分析化学</option>
+				<option value="phyChem">物理化学</option>
+				<option value="chemPhy">化学物理学</option>
+				<option value="macroPhy">高分子物理</option>
+				<option value="macroChem">高分子化学</option>
+				<option value="nuChem">核化学</option>
+				<option value="appChem">应用化学</option>
+				<option value="bioChem">化学生物学</option>
+				<option value="material">材料化学</option>
+				<option value="engineer">化工</option>
+				<option value="educate">化学教育</option>
+				<option value="history">化学史</option>
+				<option value="else">化学其他学科</option>
+    	</select>
+    	<span>*</span>
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			研究方向:
+		</div>
+		<input type="text" class="boxOfInput" name="direction">
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			学科专业/委员会:
+		</div>
+    	<select class="boxOfLongSel" name="committee">
+    		<option disabled selected style="display:none;">选择学科专业/委员会</option>
+				<option value="phy">物理化学</option>
+				<option value="inorg">无机化学</option>
+				<option value="org">有机化学</option>
+				<option value="analy">分析化学</option>
+				<option value="macro">高分子</option>
+				<option value="apply">应用化学</option>
+				<option value="edu">化学教育</option>
+				<option value="nuclear">核化学与放射化学</option>
+				<option value="cat">催化</option>
+				<option value="light">光化学</option>
+				<option value="elect">电化学</option>
+				<option value="theo">理论化学</option>
+				<option value="crys">晶体化学</option>
+				<option value="rheo">流变学</option>
+				<option value="therm">化学热力学与热分析</option>
+				<option value="orgs">有机固体</option>
+				<option value="compu">计算机化学</option>
+				<option value="order">有序分子膜</option>
+				<option value="chrom">色谱</option>
+				<option value="orgAna">有机分析化学</option>
+				<option value="bio">化学生物学</option>
+				<option value="envir">环境化学</option>
+				<option value="colloid">胶体与界面化学</option>
+				<option value="sieve">分子筛</option>
+				<option value="green">绿色化学</option>
+				<option value="safe">公共安全化学</option>
+				<option value="bioPhy">生物物理化学</option>
+				<option value="nano">纳米化学</option>
+				<option value="spec">质谱分析</option>
+				<option value="dyna">化学动力学</option>
+				<option value="chiral">手性化学</option>
+    	</select>
+    	<span>*</span>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			职务:
+		</div>
+		<input type="text" class="boxOfInput" name="duty">
+	</div>
+
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			工作单位:
+		</div>
+		<input type="text" class="boxOfInput" name="workPlace">
+		<span>*</span>
+		<div class="boxOfNo">
+			<img src="pics/important.png">
+			<p>格式：院（所）、大学（学院/系）</p>
+		</div>
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			所在地区:
+		</div>
+		<select class="boxOfShoSel" name="country">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;国家</option>
+    	</select>
+    	<p>&nbsp;-&nbsp;</p>
+		<select class="boxOfShoSel" name="area">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;地区</option>
+		</select>
+		<span>*</span>
+	</div>
+
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			固定电话:
+		</div>
+		<input type="text" class="boxOfInput" name="phone">
+		<span>&nbsp;</span>
+		<div class="boxOfNo">
+			<img src="pics/important.png">
+			<p>格式：010-62568157</p>
+		</div>
+	</div>
+
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			移动电话:
+		</div>
+		<input type="text" class="boxOfInput" name="mobile">
+		<span>*</span>
+		<div class="boxOfNo">
+			<img src="pics/important.png">
+			<p>格式：1391898188</p>
+		</div>
+	</div>
+
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			传真:
+		</div>
+		<input type="text" class="boxOfInput" name="fax">
+	</div>
+
+
+
+	<div class="boxLongAll">
+		<div class="boxOfWord">
+			通讯地址:
+	</div>
+		<textarea  class="boxOfLongInput" name="address"></textarea>
+		<span>*</span>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			邮政编码:
+		</div>
+		<input type="text" class="boxOfInput" name="code">
+		<span>*</span>
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			会员类型:
+		</div>
+    	<select class="boxOfLongSel" name="type">
+      		<option disabled selected style="display:none;"></option>
+      		<option value="normal">普通会员</option>
+	      	<option value="student">学生会员</option>
+    	</select>
+    	<span>*</span>
+	</div>
+
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			学生证号:
+		</div>
+		<input type="text" class="boxOfInput" name="card">
+	</div>
+
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			入学时间:
+		</div>
+		<select class="boxOfShoSel" name="entranceYear">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;年</option>
+    	</select>
+    	<p>&nbsp;-&nbsp;</p>
+		<select class="boxOfShoSel" name="entranceMonth">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;月</option>
+    	</select>
+	</div>
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			毕业时间:
+		</div>
+		<select class="boxOfShoSel" name="graduateYear">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;年</option>
+    	</select>
+    	<p>&nbsp;-&nbsp;</p>
+		<select class="boxOfShoSel" name="graduateMonth">
+      		<option disabled selected style="display:none;">选择&nbsp;&nbsp;&nbsp;&nbsp;月</option>
+    	</select>
+	</div>
+
+	<div class="boxLongAll">
+		<div class="boxOfWord">
+			学习经历:
+		</div>
+		<textarea  class="boxOfLongInput" name="experience"></textarea>
+	</div>
+
+	<div class="boxAll">
+		<div class="boxOfWord">
+			邮寄杂志:
+		</div>
+		<div class="boxOfPick">
+			<input type="radio" value="1"  name="magezine">
+				<label>需要</label>
+			<input type="radio" value="2"  name="magezine" />
+				<label>不需要</label>
+		</div>
+	</div>
+
+	<!-- UpOrDown -->
+	</div>
+	<div id="upOrDown">
+		<input type="button" value="上一步" id="butUp">
+		<input type="button" value="下一步" id="butDown">
+	</div>
+	<!--首页-->
+	<div class="copyRight">
+Copyright © 2009 广东省化学学会
+</div>
+</body>
+</html>

@@ -1,0 +1,435 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+margin: 0;
+padding: 0;
+font-family:	Microsoft YaHei;
+}
+input{
+   background:none;
+   outline:none;
+}
+select {
+  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+  border: solid 1px #000;
+
+  /*很关键：将默认的select选择框样式清除*/
+  appearance:none;
+  -moz-appearance:none;
+  -webkit-appearance:none;
+
+  /*在选择框的最右侧中间显示小箭头图片*/
+  background: url("../pics/down.png") no-repeat scroll right center transparent;
+  background-size:15px;
+  background-position:right 5px;
+
+
+  /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+  padding-right: 14px;
+}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+select::-ms-expand { display: none; }
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+/*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+font: 12px/1 Microsoft YaHei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+border-bottom: 1px dotted;
+cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+::-webkit-input-placeholder {
+   color:#ccc;
+}
+::-moz-input-placeholder {
+    color:#ccc;
+}
+
+/* 重置表格元素 */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+border: none;
+height: 1px;
+}
+
+
+/*头部*/
+.header{
+  positon:absolute;
+  height:400px;
+  width: auto;
+  background: url("../pics/header.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+
+}
+
+.empty{
+  height: 80%;
+}
+
+.butt{
+  margin:0 auto;
+  width:720px;
+  height:20%;
+}
+.mainBut{
+  margin: 0px 30px;
+	width:180px;
+	height: 50px;
+	text-align:center;
+  float:left;
+  color: white;
+  font-size: 20px;
+  line-height:2.5em;
+}
+
+.mainBut a{
+  height:50px;
+  width:180px;
+  display: block;
+  color:white;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+  border-radius: 2px;
+}
+
+.mainBut a:hover{
+  height:50px;
+  color:white;
+  width:180px;
+  display: block;
+  background-color:#336666;
+  border-style: none;
+}
+
+/*动画*/
+#steps>p{
+  text-align: center;
+  font-size: 20px;
+  color: #006699;
+}
+#line{
+  height:200px;
+}
+
+/*按钮*/
+#upOrDown{
+  margin:10px auto;
+  width:840px;
+  height: 50px;
+}
+
+#butUp{
+    height:50px;
+  width: 180px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius:2px;
+  float:left;
+  background-color:white;
+  color:#006699 ;
+    border-color: #006699;
+
+}
+#butDown{
+    height:50px;
+  width: 180px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius:2px;
+  float:right;
+    background-color:#006699;
+    color: white;
+    border-color:white;
+
+}
+
+/*底部*/
+.copyRight{
+  width: 300px;
+  height:auto;
+  margin:0 auto;
+  color:#cccccc;
+  text-align: center;
+}
+
+/*登录*/
+#account{
+  width: 320px;
+  height:400px;
+  margin: 15px auto;
+}
+#accIn{
+  margin: 15px auto;
+  width:320px;
+  height: 50px;
+  padding-left:50px;
+  background-image: url("../pics/account.png");
+
+  background-image: image(
+    width:25px;
+    height: 25px;
+    );
+  background-repeat: no-repeat; /*设置图片不重复*/
+  background-position: 12px 12px; /*图片显示的位置*/
+  color: black;
+  border-color: black;
+  border-style: solid;
+  border:1px;
+}
+#pasIn{
+  margin: 15px auto;
+  width:320px;
+  height: 50px;
+    padding-left:50px;
+  background-image: url("../pics/password.png");
+  background-image: image(
+    width:25px;
+    height: 25px;
+    );
+  background-repeat: no-repeat; /*设置图片不重复*/
+  background-position: 12px 12px; /*图片显示的位置*/
+
+}
+#aceIn{
+  margin: 15px auto;
+  width:320px;
+  height: 50px;
+    padding-left:50px;
+  background-image: url("../pics/access.png");
+  background-image: image(
+    width:25px;
+    height: 25px;
+    );
+  background-repeat: no-repeat; /*设置图片不重复*/
+  background-position: 12px 12px; /*图片显示的位置*/
+
+}
+.accBut{
+    margin: 15px auto;
+  width:320px;
+  height: 50px;
+  background-color: #0099cc;
+  color: white;
+  text-align: center;
+  line-height: 2em;
+  font-size: 15px;
+
+
+}
+
+
+
+/*第一页内容*/
+#notice{
+  font-size: 14px;
+  margin:0 auto;
+  width:33.3%;
+  height:auto;
+}
+
+#notice p{
+	line-height: 2.5em;
+  color:#000;
+}
+
+#haveRead{
+    display:block;
+    margin-top:5px;
+      color:#000;
+
+}
+#smNo{
+  height:30px;
+  background-image: url("../pics/notice.png");
+  background-repeat: no-repeat;
+  text-indent: 32px;
+  line-height: 2em;
+    font-size: 16px;
+}
+
+/*第二页*/
+.boxAll{
+  height:50px;
+  width:840px;
+  margin:5px auto;
+  display: block;
+
+
+}
+.boxLongAll{
+  height:100px;
+  width:840px;
+  margin:5px auto;
+
+}
+
+.boxOfWord{
+  float: left;
+  width:140px;
+  margin:10px 0px 10px 30px;
+  height:auto;
+  line-height: 2.5em;
+}
+
+.boxOfInput{
+  float: left;
+  width: 214px;
+  height: 30px;
+  margin:10px auto;
+  border-color: #cccccc;
+  border-style: solid;
+  border-radius: 5px;
+      text-indent:5px;
+}
+
+.boxOfLongInput{
+  line-height: 1.5em;
+  float: left;
+  width: 500px;
+  height: 80px;
+  margin:10px 0px;
+  border:2px;
+  border-color: #cccccc;
+  border-style: solid;
+  border-radius: 5px;
+}
+.boxAll span{
+  float: left;
+  color: red;
+}
+.boxAll>p{
+  margin:10px 0px;
+  line-height: 2.5em;
+  float: left;
+}
+.boxLongAll span{
+  float: left;
+  color: red;
+}
+.boxOfNo{
+  float:left;
+  margin:10px 0px 10px 30px;
+  width:auto;
+  height: 30px;
+}
+.boxOfNo img{
+  float:left;
+  height:30px;
+  width:30px;
+}
+.boxOfNo p{
+    float: left;
+    line-height: 2.5em;
+    margin-left: 10px;
+}
+.boxOfPick{
+    float: left;
+  width: 214px;
+  height: 30px;
+  margin:10px auto;
+    line-height: 2.5em;
+}
+.boxOfPick label{
+  margin-right: 50px;
+}
+
+.boxOfLongSel{
+  float: left;
+  width: 214px;
+  height: 30px;
+  margin:10px auto;
+  border-color: #cccccc;
+  border-style: solid;
+  border-radius: 5px;
+  text-indent:5px;
+}
+.boxOfShoSel{
+  float: left;
+  width: 120px;
+  height: 30px;
+  margin:10px 0px;
+  border-color: #cccccc;
+  border-style: solid;
+  border-radius: 5px;
+  text-indent:5px;
+}
+
+/*第三页*/
+#money{
+  overflow: hidden;
+  width:720px;
+  height:524px;
+  margin:0px auto;
+
+}
+#money span{
+  color:#cccccc;
+  display: block;
+  margin:-300;
+}
+.redText{
+  height: 30px;
+  color:red;
+  line-height: 1.8em;
+  display: block;
+}
+.blaText{
+  width:720px;
+  height:30px;
+}
+.blaTextHead{
+  float: left;
+  width:100px;
+  height:30px;
+  line-height: 2em;
+}
+.blaLongIn{
+  float:left;
+  height:20px;
+  width:300px;
+  margin:5px 300px 5px 0px;
+}
+

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+	<div class="header">
+		<div class="empty">
+		</div>
+		<div class="butt">
+		<div class="mainBut" id="signIn"><a href="#">
+			登录</a>
+		</div>
+			<div class="mainBut" id="signUp"><a href="#">
+			注册</a>
+		</div>
+			<div class="mainBut" id="index"><a href="#">
+			首页</a>
+			</div>
+		</div>
+	</div>
+	<!--登录模块-->
+	<div id="account">
+		<input id="accIn" type="text" placeholder="请输入您的账号">
+		<input id="pasIn" type="password" placeholder="请输入您的密码">
+		<input id="aceIn" type="text" placeholder="请输入验证码">
+		<input type="button" class="accBut" value="登录">
+	</div>
+
+
+	</div>
+	<!--注册模块-->
+	<!-- <div id="steps">
+		<p>欢迎您申请注册成为广东省化学学会会员!</p>
+		<div id="line">
+		</div> -->
+
+
+
+	<!--第一步-->
+
+	<div class="noted">
+				<div id="notice">
+			<div id="smNo">会员须知</div>
+			<p>一、办理手续常见问答<br>
+1. 缴费后是否有发票 ？<br>
+　　广东省化学学会为每一位缴费会员提供财政部监制的加盖广东省化学学会财务章的可报销的收据。收据和会员证将使用顺丰快递邮寄给您。<br>
+2. 通过什么方式缴费？<br>
+　　目前支持的缴费方式是使用支付宝进行缴费。<br>
+3. 如何签收会员证和收据的快递？<br>
+　　在顺丰快递发出的同时，我们会同时发一封电子邮件通知有关您的邮件号码。快递到达时，快递员会给您打电话，请您保持手机畅通。<br>
+4. 为什么要填写详细的通讯信息？<br>
+　　因为我们要为您邮寄会员证和发票，所以需要详细的通讯地址。通讯地址的格式：<br>
+　　XX省XX市XX路（或街）XX号XX大学XX学院。<br>
+　　XX省XX市XX路（或街）XX号XX楼XX室。<br>
+<br>
+二、会员条件：<br>
+1. 凡承认本会会章，并具有下列条件之一者，可自愿申请为个人会员。<br>
+	(1)高等院校本科毕业的化学工作者，及化学专业的研究生。<br>
+	(2)非高等院校本科毕业，但已具有上述水平者。<br>
+	(3)热心化学事业，积极支持本会工作，从事化学教育、企业管理等工作的组织领导者。<br>
+	(4)学生会员为在读大学本科学生、研究生。毕业后经申请可转成会员。<br>
+<br>
+三、个人会员的权利与义务：<br>
+1. 会员的权利：<br>
+ (1)选举权、被选举权和表决权；<br>
+ (2)对本会工作有建议权、批评权和监督权；<br>
+ (3)获取本会活动信息的权利；<br>
+ (4)优惠参加本会主办的学术活动；<br>
+ (5)优惠取得本会有关的学术性刊物和资料；<br>
+ (6)退会自由。<br>
+2. 个人会员的义务：<br>
+ (1)遵守本会会章，维护本会的合法权益，宣传本会宗旨，自觉维护本会声誉；<br>
+ (2)执行本会的决议及完成本会交办的工作；<br>
+ (3)积极参与和支持本会各种活动及主办的各种出版物；<br>
+ (4)按期缴纳规定的会费。<br>
+ (5)向本会反映情况，提供有关资料。<br>
+ 承认本会会章都可以加入本会。<br>
+3. 会费<br>
+ 个人普通会员会费标准为50元/人·年，每四年交纳一次(共计200元）。<br>
+
+			</p>
+			<div id="haveRead">
+			<input type="radio"><label>我已阅读并同意上述条款</label>
+			</div>
+		</div>
+	</div>
+ 
+
+	<!--第二步-->
+	<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">Email:
+			</div>
+			<input type="text" class="boxOfInput" name=""><span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>格式：user@chemsoc.org.cn</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">密码:
+			</div>
+			<input type="password" class="boxOfInput" name=""><span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>格式：密码只能为6-12位</p>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">确认密码:
+			</div>
+				<input type="password" class="boxOfInput" name=""><span>*</span>
+				<div class="boxOfNo">
+					<img src="pics/important.png">
+					<p>格式：请再重复填写一遍密码</p>
+				</div>
+			</div>
+		</div>
+
+
+			<div class="boxAll">
+			<div class="boxOfWord">您的称谓:
+			</div>
+    <select class="boxOfLongSel">
+      <option value="">选择称谓</option>
+    </select><span>*</span>
+			</div>
+
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">您的真实姓名：
+			</div>
+				<input type="text" class="boxOfInput" name=""><span>*</span>
+				<div class="boxOfNo">
+					<img src="pics/important.png">
+					<p>格式：请填写您的真实姓名</p>
+				</div>
+			</div>
+		</div>
+
+
+			<div class="boxAll">
+			<div class="boxOfWord">性别:
+			</div>
+			<div class="boxOfPick">
+
+    		<input type="radio" value="1"  name="gender">
+								<label>男</label>
+
+    		<input type="radio" value="2"  name="gender" />
+				    		<label>女</label>
+			</div><span>*</span>
+			</div>
+
+	<div class="boxAll">
+			<div class="boxOfWord">出生日期:
+			</div>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;年</option>
+    	</select><p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;月</option>
+    	</select><p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;日</option>
+		</select><span>*</span>
+	</div>
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">党派:
+			</div>
+				<input type="text" class="boxOfInput" name="">
+			</div>
+		</div>
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">文化程度:
+			</div>
+    <select class="boxOfLongSel">
+      <option value=""></option>
+    </select>
+			</div>
+		</div>
+	</div>
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">学位:
+			</div>
+				<input type="text" class="boxOfInput" name="">
+			</div>
+		</div>
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">职称:
+			</div>
+    	<select class="boxOfLongSel">
+      <option value="">选择职称</option>
+    	</select><span>*</span>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">专业:
+			</div>
+    <select class="boxOfLongSel">
+      <option value="">选择专业</option>
+    </select><span>*</span>
+			</div>
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">研究方向:
+			</div>
+				<input type="text" class="boxOfInput" name="">
+			</div>
+		</div>
+
+			<div class="boxAll">
+			<div class="boxOfWord">学科专业/委员会:
+			</div>
+    <select class="boxOfLongSel">
+      <option value="">选择学科专业/委员会</option>
+    </select><span>*</span>
+			</div>
+
+
+			<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">职务:
+			</div>
+				<input type="text" class="boxOfInput" name="">
+			</div>
+		</div>
+
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">工作单位:
+			</div>
+				<input type="text" class="boxOfInput" name=""><span>*</span>
+				<div class="boxOfNo">
+					<img src="pics/important.png">
+					<p>格式：院（所）、大学（学院/系）</p>
+				</div>
+			</div>
+		</div>
+
+			<div class="boxAll">
+			<div class="boxOfWord">所在地区:
+			</div>
+		<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;国家</option>
+    	</select><p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;地区</option>
+		</select><span>*</span>
+			</div>
+
+
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">固定电话:
+			</div>
+				<input type="text" class="boxOfInput" name=""><span>&nbsp&nbsp;</span>
+				<div class="boxOfNo">
+					<img src="pics/important.png">
+					<p>格式：010-62568157</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">移动电话:
+			</div>
+				<input type="text" class="boxOfInput" name=""><span>*</span>
+				<div class="boxOfNo">
+					<img src="pics/important.png">
+					<p>格式：1391898188</p>
+				</div>
+			</div>
+		</div>
+
+
+			<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">传真:
+			</div>
+				<input type="text" class="boxOfInput" name="">
+			</div>
+		</div>
+
+
+		<div class="boxLongAll">
+			<div class="boxOfWord">通讯地址:
+		</div>
+				<textarea  class="boxOfLongInput" name=""></textarea><span>*</span>
+			</div>
+
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">邮政编码:
+			</div>
+				<input type="text" class="boxOfInput" name=""><span>*</span>
+			</div>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">会员类型:
+			</div>
+    <select class="boxOfLongSel">
+      <option value=""></option>
+    </select><span>*</span>
+			</div>
+
+
+		<div id="information">
+		<div class="boxAll">
+			<div class="boxOfWord">学生证号:
+			</div>
+				<input type="text" class="boxOfInput" name="">
+			</div>
+		</div>
+
+			<div class="boxAll">
+			<div class="boxOfWord">入学时间:
+			</div>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;年</option>
+    	</select><p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;月</option>
+    	</select>
+
+			</div>
+
+			<div class="boxAll">
+			<div class="boxOfWord">毕业时间:
+			</div>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;年</option>
+    	</select><p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel">
+      <option value="">选择&nbsp;&nbsp;&nbsp;&nbsp;月</option>
+    	</select>
+
+			</div>
+
+<div class="boxLongAll">
+			<div class="boxOfWord">学习经历:
+			</div>
+				<textarea  class="boxOfLongInput" name=""></textarea>
+	</div>
+
+			<div class="boxAll">
+			<div class="boxOfWord">邮寄杂志:
+			</div>
+					<div class="boxOfPick">
+
+    		<input type="radio" value="1"  name="gender">
+								<label>需要</label>
+
+    		<input type="radio" value="2"  name="gender" />
+				    		<label>不需要</label>
+			</div>
+			</div>
+
+
+	<!--第三步-->
+	<div id="money">
+		<p class="redText">提示：请务必准确且完整地填写以下信息，以便进行缴费核查！</p>
+		<div class="blaText">
+			<div class="blaTextHead">申请用户:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">缴费单位:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">缴费人姓名:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">代表类型:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">缴费金额:</div>
+			<input type="text" name="" class="blaLongIn">
+			<span>（个人普通会员会费标准为50元/人·年，每四年缴纳一次，共计200元）</span>
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">开具发票:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">发票抬头:</div>
+			<input type="text" name="" class="blaLongIn"><span>（非单位者请填写个人）</span>
+		</div>
+				<div class="blaText">
+			<div class="blaTextHead">纳税人识别码:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+		<div class="blaText"></div>
+		<p class="redText">提示：以下信息用于邮递会员证等重要文件，请您如实填写。</p>
+					<div class="blaText">
+			<div class="blaTextHead">收件人姓名:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>			<div class="blaText">
+			<div class="blaTextHead">联系电话:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>			<div class="blaText">
+			<div class="blaTextHead">通讯地址:</div>
+			<input type="text" name="" class="blaLongIn">
+		</div>
+		<div class="blaText"><span>（备注：会员证等文件将在审核通过后寄出，若您的邮政地址、手机号不详尽，请及时修改。）</span></div>
+
+	</div>
+	<!-- UpOrDown -->
+	</div>
+	<div id="upOrDown">
+		<input type="button" value="上一步" id="butUp">
+		<input type="button" value="下一步" id="butDown">
+	</div>
+	<!--首页-->
+	<div class="copyRight">
+Copyright © 2009 广东省化学学会
+</div>
+</body>
+</html>
