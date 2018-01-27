@@ -91,7 +91,11 @@ hr {
 border: none;
 height: 1px;
 }
-
+/*日起空间样式*/
+::-webkit-datetime-edit-year-field { }
+::-webkit-datetime-edit-month-field { }
+::-webkit-datetime-edit-day-field { }
+::-webkit-inner-spin-button { visibility: hidden; }
 
 /*头部*/
 .header{
@@ -142,9 +146,21 @@ height: 1px;
   width:180px;
   display: block;
   background-color:#336666;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+  border-radius: 2px;
+  opacity: 0.75;
+}
+#signUp{
+  opacity: 0.75; 
+  height:50px;
+  color:white;
+  width:180px;
+  display: block;
+  background-color:#336666;
   border-style: none;
 }
-
 /*按钮*/
 #upOrDown{
   margin:10px auto;
@@ -193,7 +209,7 @@ height: 1px;
   margin:80px auto 32px auto;
   width:840px;
   height:167px;
-  background-image: url("../pics/process2.png");
+  background-image: url("../pics/register2.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;
@@ -219,13 +235,17 @@ height: 1px;
 }
 
 .boxLongAll{
-  height:100px;
+  height:90px;
   width:740px;
   margin:5px auto;
 }
 .boxLongAll span{
   float: left;
+  margin-top:15px;
+  margin-left: 3px;
+  font-size: 20px;
   color: red;
+
 }
 
 .boxOfWord{
@@ -259,7 +279,7 @@ height: 1px;
   float: left;
   width: 214px;
   height: 30px;
-  margin:10px auto;
+  margin:10px 0px;
   border-width:1px;
   border-color: #ccc;
   border-style: solid;
@@ -270,10 +290,10 @@ height: 1px;
 
 .boxOfLongInput{
   padding: 5px;
-  line-height: 1.5em;
+  line-height: 24px;
   float: left;
   width: 400px;
-  height: 70px;
+  height: 60px;
   margin:10px 0px;
   border-width:1px;
   border-color: #ccc;
@@ -285,7 +305,7 @@ height: 1px;
 
 .boxOfPick{
   float: left;
-  width: 214px;
+  width: 196px;
   height: 30px;
   margin:10px ;
   line-height: 30px;
@@ -294,9 +314,28 @@ height: 1px;
   margin-right: 50px;
 }
 
+
+
+.boxOfBigWord{
+  float: left;
+  width:140px;
+  margin:10px 0px 10px 30px;
+  height:70px;
+  line-height: 30px;
+}
+
+.boxOfBigPick{
+  float: left;
+  width: 400px;
+  height: 20px;
+  margin-top:10px ;
+  line-height: 20px;
+}
+
+
 .boxOfLongSel{
   float: left;
-  width: 214px;
+  width: 216px;
   height: 30px;
   margin:10px auto;
   border-width:1px;
@@ -315,4 +354,10 @@ height: 1px;
   border-style: solid;
   border-radius: 5px;
   text-indent:10px;
+}
+.grayLine{
+  width:840px;
+  height:1px;
+  background-color: #ddd;
+  margin: 50px auto;
 }

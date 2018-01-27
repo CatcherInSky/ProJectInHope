@@ -141,8 +141,14 @@ height: 1px;
   display: block;
   background-color:#336666;
   border-style: none;
+  opacity: 0.75; 
 }
-
+#signIn{
+  opacity: 0.75;
+  color:white;
+  background-color:#336666;
+  border-style:none;
+}
 
 
 /*底部*/
@@ -223,4 +229,3 @@ height: 1px;
   border-style: none;
 
 }
-

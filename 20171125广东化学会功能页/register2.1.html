@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/register2.1.css">
+</head>
+<body>
+	<div class="header">
+		<div class="empty">
+		</div>
+		<div class="butt">
+		<div class="mainBut" id="signIn"><a href="#">
+			登录</a>
+		</div>
+			<div class="mainBut" id="signUp"><a href="#">
+			注册</a>
+		</div>
+			<div class="mainBut" id="index"><a href="#">
+			首页</a>
+			</div>
+		</div>
+	</div>
+
+	<!--第二步-->
+	<div>
+		<div class="boxOfPro">
+		</div>
+
+		<div class="boxAll">
+				<div class="boxOfWord">Email:
+				</div>
+				<input type="email" class="boxOfInput" name="email" placeholder="user@chemsoc.org.cn"><span>*</span>
+				<div class="boxOfNo">
+					<img src="pics/important.png">
+					<p>会员的Email地址将作为登录名使用</p>
+				</div>
+		</div>
+
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				密码:
+			</div>
+			<input type="password" class="boxOfInput" name="password" >
+			<span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>密码只能为6-12位</p>
+			</div>
+		</div>
+
+
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				确认密码:
+			</div>
+			<input type="password" class="boxOfInput" name="passwordAgain">
+			<span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>请再重复填写一遍密码</p>
+			</div>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				单位/企业名称:
+			</div>
+			<input type="text" class="boxOfInput" name="name">
+			<span>*</span>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				企业类型:
+			</div>
+			<input type="text" class="boxOfInput" name="name">
+			<span>*</span>
+		</div>
+
+		<div class="boxLongAll">
+			<div class="boxOfBigWord">
+				企业规模:
+			</div>
+			<div class="boxOfBigPick" >
+	    		<input type="radio" value="1"  name="gender">
+				<label>50人以下    (1000元/年，一年一交)</label>
+			</div>
+			<div class="boxOfBigPick" >
+	    		<input type="radio" value="2"  name="gender">
+				<label>50-100人    (3000元/年，一年一交)</label>
+			</div>
+			<div class="boxOfBigPick" >
+				<input type="radio" value="3"  name="gender">
+				<label>100人以上    (5000元/年，一年一交)</label>
+			</div>
+		</div>
+
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				注册日期:
+			</div>
+			<input type="date" class="boxOfInput">
+			<span>*</span>
+		</div>
+
+		<div class="boxLongAll">
+			<div class="boxOfWord">
+				单位/企业简介:
+			</div>
+			<textarea  class="boxOfLongInput" name="address" placeholder="主要概况、从事方向"></textarea>
+			<span>*</span>
+		</div>
+
+		<div class="boxLongAll">
+			<div class="boxOfWord">
+				单位/企业地址:
+			</div>
+			<textarea  class="boxOfLongInput" name="address" placeholder=""></textarea>
+			<span>*</span>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				所在地区:
+			</div>
+			<select class="boxOfShoSel" name="country"id="s1">
+	      		<option disabled selected style="display:none;" >选择国家或地区</option>
+	    	</select>
+	    	<p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel" name="area" id="s2">
+	      		<option disabled selected style="display:none;">选择省、州</option>
+			</select>
+	    	<p>&nbsp;-&nbsp;</p>
+			<select class="boxOfShoSel" name="area"id="s3">
+	      		<option disabled selected style="display:none;" >选择市、县</option>
+			</select>
+			<span>*</span>
+		</div>
+		<div class="boxAll">
+			<div class="boxOfWord">
+				固定电话:
+			</div>
+			<input type="text" class="boxOfInput" name="phone">
+			<span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>格式：010-62568157</p>
+			</div>
+		</div>
+		<div class="boxAll">
+			<div class="boxOfWord">
+				传真:
+			</div>
+			<input type="text" class="boxOfInput" name="fax">
+			<span>*</span>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				负责人/联系人姓名：
+			</div>
+			<input type="text" class="boxOfInput" name="phone">
+			<span>*</span>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				性别:
+			</div>
+			<div class="boxOfPick">
+	    		<input type="radio" value="1"  name="gender">
+				<label>男</label>
+	    		<input type="radio" value="2"  name="gender">
+				<label>女</label>
+			</div>
+			<span>*</span>
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				单位/企业职务：
+			</div>
+			<input type="text" class="boxOfInput" name="phone">
+			<span>*</span>
+		</div>
+
+
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				移动电话:
+			</div>
+			<input type="text" class="boxOfInput" name="mobile">
+			<span>*</span>
+			<div class="boxOfNo">
+				<img src="pics/important.png">
+				<p>格式：1391898188</p>
+			</div>
+
+		</div>
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				QQ:
+			</div>
+			<input type="text" class="boxOfInput" name="qq">
+			<span>*</span>
+		</div>
+
+
+
+
+
+
+		<div class="boxLongAll">
+			<div class="boxOfWord">
+				通讯地址:
+			</div>
+			<textarea  class="boxOfLongInput" name="address"></textarea>
+			<span>*</span>
+		</div>
+
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				邮政编码:
+			</div>
+			<input type="text" class="boxOfInput" name="code">
+			<span>*</span>
+		</div>
+
+
+		<div class="boxAll">
+			<div class="boxOfWord">
+				会员类型:
+			</div>
+			<div class="boxOfWord">
+				（企业会员）
+			</div>
+		</div>
+
+
+		<!-- UpOrDown -->
+		<div class="grayLine">
+		</div>
+		<div id="upOrDown">
+			<input type="button" value="上一步" id="butUp">
+			<input type="button" value="下一步" id="butDown">
+		</div>
+		<!--首页-->
+		<div class="copyRight">
+		Copyright © 2009 广东省化学学会
+		</div>
+	</div>
+	<script src="js/map.js"></script>
+</body>
+</html>

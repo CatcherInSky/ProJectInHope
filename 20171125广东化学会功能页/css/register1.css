@@ -141,16 +141,39 @@ height: 1px;
   width:180px;
   display: block;
   background-color:#336666;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+  border-radius: 2px;
+  opacity: 0.75;
+}
+#signUp{
+  opacity: 0.75; 
+  height:50px;
+  color:white;
+  width:180px;
+  display: block;
+  background-color:#336666;
   border-style: none;
 }
-
 /*按钮*/
 #upOrDown{
   margin:10px auto;
   width:840px;
   height: 50px;
 }
+#butUp{
+    height:50px;
+  width: 180px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius:2px;
+  float:left;
+    background-color:#006699;
+    color: white;
+    border-color:white;
 
+}
 #butDown{
   height:50px;
   width: 180px;
@@ -180,14 +203,14 @@ height: 1px;
   margin:80px auto 32px auto;
   width:840px;
   height:167px;
-  background-image: url("../pics/process1.png");
+  background-image: url("../pics/register1.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;
 }
 #notice{
   font-size: 14px;
-  margin:0 auto 180px auto;
+  margin:0 auto 50px auto;
   width:720px;
   height:auto;
 }
@@ -213,12 +236,20 @@ height: 1px;
     line-height: 15px;
     color:#000;
 }
+.idOrCo{
+    display:block;
+    margin:50px auto;
+    width:200px;
+    height: 15px;
+    line-height: 15px;
+    color:#000;
+}
 /*改写radio*/
 label {
   font-size: 12px;
   cursor: pointer;
       }
-             
+
 label i {
   font-size: 12px;
   font-style: normal;
@@ -232,26 +263,68 @@ label i {
   margin: -2px 2px 1px 0px;
   border: #2489c5 1px solid;
   }
-             
+
   input[type="checkbox"],input[type="radio"] {
       display: none;
   }
-             
+
   input[type="radio"]+ i {
       border-radius: 2px;
   }
-             
+
   input[type="checkbox"]:checked+ i,
   input[type="radio"]:checked+ i {
       background: #2489c5;
   }
-             
+
   input[type="checkbox"]:disabled+ i,
   input[type="radio"]:disabled+ i {
       border-color: #ccc;
   }
-             
+
   input[type="checkbox"]:checked:disabled+ i,
   input[type="radio"]:checked:disabled+ i {
       background: #ccc;
   }
+
+  .grayLine{
+  width:840px;
+  height:1px;
+  background-color: #ddd;
+  margin: 50px auto;
+}
+.boxLongAll{
+  height:90px;
+  width:740px;
+  margin:5px auto;
+}
+.boxLongAll span{
+  float: left;
+  margin-top:15px;
+  margin-left: 3px;
+  font-size: 20px;
+  color: red;
+}
+
+.boxOfBigWord{
+  float: left;
+  width:140px;
+  margin:10px 0px 10px 30px;
+  height:70px;
+  line-height: 30px;
+}
+
+.boxOfBigPick{
+  float: left;
+  width: 400px;
+  height: 20px;
+  margin-top:10px ;
+  line-height: 20px;
+}
+
+table{
+  margin-top: 10px;
+  width: 500px;
+  text-indent: 10px;
+  line-height: 30px;
+}

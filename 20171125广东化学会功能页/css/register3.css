@@ -141,9 +141,21 @@ height: 1px;
   width:180px;
   display: block;
   background-color:#336666;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+  border-radius: 2px;
+  opacity: 0.75;
+}
+#signUp{
+  opacity: 0.75; 
+  height:50px;
+  color:white;
+  width:180px;
+  display: block;
+  background-color:#336666;
   border-style: none;
 }
-
 /*按钮*/
 #upOrDown{
   margin:10px auto;
@@ -191,7 +203,7 @@ height: 1px;
   margin:80px auto 32px auto;
   width:840px;
   height:167px;
-  background-image: url("../pics/process3.png");
+  background-image: url("../pics/register3.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;

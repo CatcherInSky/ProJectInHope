@@ -23,8 +23,8 @@ select {
 
   /*在选择框的最右侧中间显示小箭头图片*/
   background: url("../pics/down.png") no-repeat scroll right center transparent;
-  background-size:15px;
-  background-position:right 5px;
+  background-size:13px;
+  background-position:right 9px top 9px;
 
 
   /*为下拉小箭头留出一点位置，避免被文字覆盖*/
@@ -35,6 +35,7 @@ textarea{resize:none}
 
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
 select::-ms-expand { display: none; }
+
 /* 设置默认字体 */
 body,
 button, input, select, textarea { /* for ie */
@@ -90,7 +91,11 @@ hr {
 border: none;
 height: 1px;
 }
-
+/*日起空间样式*/
+::-webkit-datetime-edit-year-field { }
+::-webkit-datetime-edit-month-field { }
+::-webkit-datetime-edit-day-field { }
+::-webkit-inner-spin-button { visibility: hidden; }
 
 /*头部*/
 .header{
@@ -141,19 +146,21 @@ height: 1px;
   width:180px;
   display: block;
   background-color:#336666;
+  border-style: solid;
+  border-width: 1px;
+  border-color:white;
+  border-radius: 2px;
+  opacity: 0.75;
+}
+#signUp{
+  opacity: 0.75;
+  height:50px;
+  color:white;
+  width:180px;
+  display: block;
+  background-color:#336666;
   border-style: none;
 }
-
-/*动画*/
-#steps>p{
-  text-align: center;
-  font-size: 20px;
-  color: #006699;
-}
-#line{
-  height:200px;
-}
-
 /*按钮*/
 #upOrDown{
   margin:10px auto;
@@ -190,119 +197,54 @@ height: 1px;
 .copyRight{
   width: 300px;
   height:auto;
-  margin:0 auto;
+  margin:200px auto 20px auto;
   color:#cccccc;
   text-align: center;
 }
 
-/*登录*/
-#account{
-  width: 320px;
-  height:400px;
-  margin: 15px auto;
-}
-#accIn{
-  margin: 15px auto;
-  width:320px;
-  height: 50px;
-  padding-left:50px;
-  background-image: url("../pics/account.png");
-
-  background-image: image(
-    width:25px;
-    height: 25px;
-    );
-  background-repeat: no-repeat; /*设置图片不重复*/
-  background-position: 12px 12px; /*图片显示的位置*/
-  color: black;
-  border-color: black;
-  border-style: solid;
-  border:1px;
-}
-#pasIn{
-  margin: 15px auto;
-  width:320px;
-  height: 50px;
-    padding-left:50px;
-  background-image: url("../pics/password.png");
-  background-image: image(
-    width:25px;
-    height: 25px;
-    );
-  background-repeat: no-repeat; /*设置图片不重复*/
-  background-position: 12px 12px; /*图片显示的位置*/
-
-}
-#aceIn{
-  margin: 15px auto;
-  width:320px;
-  height: 50px;
-    padding-left:50px;
-  background-image: url("../pics/access.png");
-  background-image: image(
-    width:25px;
-    height: 25px;
-    );
-  background-repeat: no-repeat; /*设置图片不重复*/
-  background-position: 12px 12px; /*图片显示的位置*/
-
-}
-.accBut{
-    margin: 15px auto;
-  width:320px;
-  height: 50px;
-  background-color: #0099cc;
-  color: white;
-  text-align: center;
-  line-height: 2em;
-  font-size: 15px;
-
-
-}
-
-
-
-/*第一页内容*/
-#notice{
-  font-size: 14px;
-  margin:0 auto;
-  width:33.3%;
-  height:auto;
-}
-
-#notice p{
-	line-height: 2.5em;
-  color:#000;
-}
-
-#haveRead{
-    display:block;
-    margin-top:5px;
-      color:#000;
-
-}
-#smNo{
-  height:30px;
-  background-image: url("../pics/notice.png");
-  background-repeat: no-repeat;
-  text-indent: 32px;
-  line-height: 2em;
-    font-size: 16px;
-}
 
 /*第二页*/
+
+.boxOfPro{
+  margin:80px auto 32px auto;
+  width:840px;
+  height:167px;
+  background-image: url("../pics/register2.1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+
 .boxAll{
   height:50px;
-  width:840px;
+  width:740px;
   margin:5px auto;
   display: block;
-
-
 }
+.boxAll span{
+  float: left;
+  margin-top:15px;
+  margin-left: 3px;
+  font-size: 20px;
+  color: red;
+}
+.boxAll>p{
+  margin:10px 0px 10px 0px;
+  line-height: 30px;
+  float: left;
+}
+
 .boxLongAll{
-  height:100px;
-  width:840px;
+  height:90px;
+  width:740px;
   margin:5px auto;
+}
+.boxLongAll span{
+  float: left;
+  margin-top:15px;
+  margin-left: 3px;
+  font-size: 20px;
+  color: red;
 
 }
 
@@ -310,45 +252,10 @@ height: 1px;
   float: left;
   width:140px;
   margin:10px 0px 10px 30px;
-  height:auto;
-  line-height: 2.5em;
+  height:30px;
+  line-height: 30px;
 }
 
-.boxOfInput{
-  float: left;
-  width: 214px;
-  height: 30px;
-  margin:10px auto;
-  border-color: #cccccc;
-  border-style: solid;
-  border-radius: 5px;
-      text-indent:5px;
-}
-
-.boxOfLongInput{
-  line-height: 1.5em;
-  float: left;
-  width: 500px;
-  height: 80px;
-  margin:10px 0px;
-  border:2px;
-  border-color: #cccccc;
-  border-style: solid;
-  border-radius: 5px;
-}
-.boxAll span{
-  float: left;
-  color: red;
-}
-.boxAll>p{
-  margin:10px 0px;
-  line-height: 2.5em;
-  float: left;
-}
-.boxLongAll span{
-  float: left;
-  color: red;
-}
 .boxOfNo{
   float:left;
   margin:10px 0px 10px 30px;
@@ -356,80 +263,102 @@ height: 1px;
   height: 30px;
 }
 .boxOfNo img{
+  margin:2.5px 0px;
   float:left;
-  height:30px;
-  width:30px;
+  height:25px;
+  width:25px;
 }
 .boxOfNo p{
+    margin:0;
     float: left;
-    line-height: 2.5em;
+    line-height: 30px;
     margin-left: 10px;
 }
-.boxOfPick{
-    float: left;
+
+.boxOfInput{
+  float: left;
   width: 214px;
   height: 30px;
-  margin:10px auto;
-    line-height: 2.5em;
+  margin:10px 0px;
+  border-width:1px;
+  border-color: #ccc;
+  border-style: solid;
+  border-radius: 5px;
+  text-indent:5px;
+  line-height: 30px;
+}
+
+.boxOfLongInput{
+  padding: 5px;
+  line-height: 24px;
+  float: left;
+  width: 400px;
+  height: 60px;
+  margin:10px 0px;
+  border-width:1px;
+  border-color: #ccc;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+
+
+.boxOfPick{
+  float: left;
+  width: 196px;
+  height: 30px;
+  margin:10px ;
+  line-height: 30px;
 }
 .boxOfPick label{
   margin-right: 50px;
 }
 
+
+
+.boxOfBigWord{
+  float: left;
+  width:140px;
+  margin:10px 0px 10px 30px;
+  height:70px;
+  line-height: 30px;
+}
+
+.boxOfBigPick{
+  float: left;
+  width: 400px;
+  height: 20px;
+  margin-top:10px ;
+  line-height: 20px;
+}
+
+
 .boxOfLongSel{
   float: left;
-  width: 214px;
+  width: 216px;
   height: 30px;
   margin:10px auto;
-  border-color: #cccccc;
+  border-width:1px;
+  border-color: #ccc;
   border-style: solid;
   border-radius: 5px;
-  text-indent:5px;
+  text-indent:10px;
 }
 .boxOfShoSel{
   float: left;
-  width: 120px;
+  width: 140px;
   height: 30px;
   margin:10px 0px;
-  border-color: #cccccc;
+  border-width:1px;
+  border-color: #ccc;
   border-style: solid;
   border-radius: 5px;
-  text-indent:5px;
-}
-
-/*第三页*/
-#money{
+  text-indent:10px;
   overflow: hidden;
-  width:720px;
-  height:524px;
-  margin:0px auto;
-
 }
-#money span{
-  color:#cccccc;
-  display: block;
-  margin:-300;
+.grayLine{
+  width:840px;
+  height:1px;
+  background-color: #ddd;
+  margin: 50px auto;
 }
-.redText{
-  height: 30px;
-  color:red;
-  line-height: 1.8em;
-  display: block;
-}
-.blaText{
-  width:720px;
-  height:30px;
-}
-.blaTextHead{
-  float: left;
-  width:100px;
-  height:30px;
-  line-height: 2em;
-}
-.blaLongIn{
-  float:left;
-  height:20px;
-  width:300px;
-  margin:5px 300px 5px 0px;
-}
-
