@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh">
+<%- include("./../public/head.ejs") %>
+<body>
+<%- include("./../public/header.ejs") %>
+<%- include("./../public/banner.ejs") %>
+<section class="main">
+    <div class="container clearfix">
+        <%- include("./../public/admin/admin-aside.ejs") %>
+        <section class="main-right">
+            <%- include("./../public/admin/admin-nav.ejs") %>
+            <section class="main-right-form floatfix">
+                <form action="">
+                    <div class="form-group">
+                        <label>设备名</label>
+                        <input type="text" value="<%= equip.equipName %>" id="equipName">
+                    </div>
+                    <div class="form-group">
+                        <label>厚朴编号</label>
+                        <input type="text" value="<%= equip.equipHopeID %>" id="hopeID">
+                    </div>
+                    <div class="form-group">
+                        <label>管理员</label>
+                        <input type="text" value="<%= equip.adminName %>" id="hopeAdmin">
+                    </div>
+                    <div class="main-right-form-file form-group">
+                        <label>设备快照</label>
+                        <img src="<%= equip.equipImgSrc %>" alt="" id="js-upload-img">
+                        <input type="file" value=""  id="js-upload-input">
+                    </div>
+                    <%- include("./../public/form-btn.ejs")%>
+                </form>
+            </section>
+        </section>
+    </div>
+</section>
+<%- include("./../public/footer.ejs") %>
+<script src="/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  requirejs.config({
+    baseUrl: "/js",
+    paths:{
+      hajax: "public/hajax",
+      jquery: "public/jquery",
+      hlayer: "./hlayer/hlayer",
+      "form-reset": "public/form-reset",
+      upload: "public/upload"
+    },
+    shim: {
+      hajax: {exports: "hajax"},
+      hlayer: {exports: "hlayer"},
+      jquery: {exports: "jquery"},
+      "form-reset": {exports: "form-reset"},
+      upload: {exports: "upload"}
+    }
+  });
+  requirejs(['jquery', 'upload', 'hajax', 'form-reset'], function($, upload, hajax, formReset) {
+    formReset();
+    upload();
+    $('#save').click(function(){
+      var equipName=$.trim($("#equipName").val());
+      var hopeID=$.trim($("#hopeID").val());
+      var equipAdmin=$.trim($("#hopeAdmin").val());
+      if(!equipName || !hopeID || !equipAdmin){
+        layer.alert("设备名、厚朴编号、管理员为必填",{
+          skin:'layui-layer-molv'
+        });
+        return;
+      }
+      hajax.hformAjax({
+        input:{equipName:'equipName',hopeID:'hopeID',equipAdmin:'hopeAdmin'},
+        attr: {'equipImgSrc': ['js-upload-img','src']},
+        redirect: '/admin/admin-equip'
+      })
+    });
+  });
+</script>
+</body>
+</html>

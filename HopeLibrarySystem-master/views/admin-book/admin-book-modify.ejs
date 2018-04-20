@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh">
+<%- include("./../public/head.ejs") %>
+<body>
+<%- include("./../public/header.ejs") %>
+<%- include("./../public/banner.ejs") %>
+<section class="main">
+    <div class="container clearfix">
+        <%- include("./../public/admin/admin-aside.ejs") %>
+        <section class="main-right">
+            <%- include("./../public/admin/admin-nav.ejs") %>
+            <section class="main-right-form floatfix">
+                <form action="">
+                    <div class="form-group">
+                        <label>图书名</label>
+                        <input type="text" value="<%= book.bookName %>" id="bookName">
+                    </div>
+                    <div class="form-group">
+                        <label for="">分类：</label>
+                        <div class="radio">
+                            <%for(var i=0,max=bookCate.length;i<max;i++){%>
+                            <label class="radio-inline">
+                                <input type="radio" name="bookGroup" value="" <%if(bookCate[i]==book.bookCate){%> checked <%}%> ><%=bookCate[i]%>
+                            </label>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>编号</label>
+                        <input type="text" value="<%=book.bookHopeID%>" id="hopeID">
+                    </div>
+                    <div class="form-group">
+                        <label>ISBN</label>
+                        <input type="text" id="bookISBN" value="<%=book.bookISBN%>">
+                    </div>
+                    <div class="form-group">
+                        <label>作者</label>
+                        <input type="text" value="<%=book.bookAuthor%>" id="bookAuthor">
+                    </div>
+                    <div class="form-group">
+                        <label>出版社</label>
+                        <input type="text" id="bookPress" value="<%=book.bookPress%>">
+                    </div>
+                    <div class="main-right-form-file form-group">
+                        <label>封面图</label>
+                        <img src="<%=book.bookImgSrc%>" alt="" id="js-upload-img">
+                        <input type="file" value="" id="js-upload-input">
+                    </div>
+                    <%- include("./../public/form-btn.ejs")%>
+                </form>
+            </section>
+        </section>
+    </div>
+</section>
+<%- include("./../public/footer.ejs") %>
+<script src="/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  requirejs.config({
+    baseUrl: "/js",
+    paths:{
+      hajax: "public/hajax",
+      jquery: "public/jquery",
+      hlayer: "./hlayer/hlayer",
+      "form-reset": "public/form-reset",
+      upload: "public/upload"
+    },
+    shim: {
+      hajax: {exports: "hajax"},
+      hlayer: {exports: "hlayer"},
+      jquery: {exports: "jquery"},
+      "form-reset": {exports: "form-reset"},
+      upload: {exports: "upload"}
+    }
+  });
+  requirejs(['jquery', 'upload', 'hajax', 'form-reset'], function($, upload, hajax, formReset) {
+    formReset();
+    upload();
+    $('#save').click(function(){
+      var data = {bookID: $(this).attr('book-data')};
+      hajax.hformAjax({
+        input:{bookName:'bookName',hopeID:'hopeID',bookAuthor:'bookAuthor',bookISBN:'bookISBN',bookPress:'bookPress'},
+        radio: {bookGroup: 'bookGroup'},
+        attr: {'bookImgSrc': ['js-upload-img','src']},
+        data: data,
+        redirect:'/admin'
+      })
+    })
+  });
+  </script>
+</body>
+</html>

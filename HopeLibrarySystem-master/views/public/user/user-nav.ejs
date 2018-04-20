@@ -1,0 +1,29 @@
+<nav class="main-right-nav">
+    <ul class="main-right-nav-list clearfix ">
+        <%if(firstPath=="book"){%>
+        <li class="main-right-nav-list-item main-right-nav-list-item-active">我的借阅</li>
+        <%}%>
+        <%if(firstPath=="camera"){%>
+        <li class="main-right-nav-list-item main-right-nav-list-item-active">我的预约</li>
+        <%}%>
+        <%if(firstPath=="account"){%>
+        <li class="main-right-nav-list-item  <%if(secondPath=="modify"){%> main-right-nav-list-item-active <%}%>"><a
+                    href="/user/modify">我的信息</a></li>
+        <li class="main-right-nav-list-item  <%if(secondPath=="reset"){%> main-right-nav-list-item-active <%}%>"><a
+                    href="/user/reset">修改密码</a></li>
+        <%}%>
+        <%if(firstPath=="borrow"){%>
+        <li class="main-right-nav-list-item  <%if(secondPath==""){%> main-right-nav-list-item-active <%}%>"><a
+        href="/book">全部</a></li>
+        <%for(var i = 0, max = bookCate.length; i < max; i++) { %>
+        <%var url = encodeURI(bookCate[i])%>
+        <li class="main-right-nav-list-item  <%if(secondPath== bookCate[i]) { %> main-right-nav-list-item-active <%}%>"><a
+        href="/book/cate/<%= url %>"> <%= bookCate[i] %> </a></li>
+        <%}%>
+        <%}%>
+        <%if(firstPath=="reservation"){%>
+        <li class="main-right-nav-list-item  <%if(secondPath==""){%> main-right-nav-list-item-active <%}%>"><a
+                    href="/equip">全部</a></li>
+        <%}%>
+    </ul>
+</nav>
