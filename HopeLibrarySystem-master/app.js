@@ -20,9 +20,17 @@ const routerAdminSuper = require("./routes/admin-super");
 const routerApi = require('./routes/api');
 const emailSchedule = require("./routes/email-schedule");
 const setSession = require('./utils/set-session');
-
+const svgCaptcha = require('svg-captcha');
 const app = express();
 
+
+app.get('/captcha', function (req, res) {
+    var captcha = svgCaptcha.create();
+    req.session.captcha = captcha.text;
+
+    res.type('svg');
+    res.status(200).send(captcha.data);
+});
 
 app.use(session({secret:'hope',cookie:{maxAge:1000*60*60*24*30},resave: false, saveUninitialized: true,}));
 
