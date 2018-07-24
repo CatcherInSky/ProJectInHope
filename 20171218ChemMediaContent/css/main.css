@@ -1,0 +1,351 @@
+/* S 重置浏览器默认样式*/
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0
+}
+
+img {
+    border: 0
+}
+
+table {
+    width: 100%!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal
+}
+
+input,
+button,
+textarea,
+select {
+    *font-size: 100%
+}
+
+input {
+    background: transparent;
+    border: none
+}
+
+input[type=submit] {
+    cursor: pointer
+}
+
+ol,
+ul,
+li {
+    list-style: none ;   /*取消li、ul、ol标签前面的圆点和数字*/
+}
+
+button {
+    border: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+:link,
+:visited {
+    text-decoration: none
+}
+
+:focus {
+    outline: 0
+}
+
+pre {
+    font-family: "Lucida Console", Consolas, "Courier New", Tahoma;
+    color: #666;
+    text-indent: 0;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word
+}
+
+article,
+aside,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+    display: block
+}
+
+figure {
+    margin: 0
+}
+
+body {
+    font: 16px/1.8 "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    color: #000 ;                        /*网站默认字体颜色*/
+    background-color:#faf4e8; /*设置网页的背景颜色*/
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: #d2b27f;/*默认链接被鼠标hover时颜色*/
+}
+
+
+/* E 重置浏览器默认样式*/
+
+.hope_container {
+    margin: 0 auto;/*水平居中*/
+    padding: 0 20px;/*增加左右内边距，使内容与边界有一定距离*/
+    max-width: 1200px;/*把主要内容的宽度固定为1200px*/
+    *zoom: 1
+}
+
+
+/*S header*/
+
+.header {
+    padding: 30px 0 25px 0; /*用来扩大header上方和下方的区域*/
+    background-color:#faf4e8; /*设置header的background背景颜色*/
+}
+
+.header_logo {
+    display: inline-block;
+    height: 40px;/*设置logo盒子的高度*/
+}
+
+.header_nav {
+    display: inline-block;
+    float: right;/*使头部的导航栏向右浮动*/
+}
+
+.header_nav a {
+    line-height: 40px; /*使头部导航栏中文字居中*/
+    font-size: 16px;/*字体大小*/
+    margin-left: 24px; /*添加左外边距，使盒子分离*/
+}
+
+
+/*E header*/
+
+
+/*S nav*/
+
+.nav {
+    border-top: 1px solid #ccc;/*给nav增加一个上边框*/
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 2px 1px 1px #333;    
+    margin-bottom:2px;   /*给nav模拟一个下边框*/
+    
+}
+
+.nav a {
+    display: block;
+    padding: 0 20px;   /*增加左右可点区域，使体验更好*/
+    height: 44px;      /*设置nav高度*/
+    line-height: 44px;  /*垂直居中*/
+    color: #595959;/*改变nav链接字体颜色*/
+}
+
+.nav li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav_dropdown {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;         /*使用绝对定位，使下拉菜单固定在其所属类的下方*/
+    background: rgba(251, 247, 238, 0.75); /*改变下拉菜单的背景颜色*/
+    box-shadow: 1px 2px 1px #F1EEE9; /*给下拉菜单添加阴影效果*/
+    display: none; /*默认情况下下拉菜单隐藏*/
+}
+
+.nav_dropdown a {
+    border-bottom: 1px #FDFAF6 solid;
+    /*给下拉菜单的链接添加下边框*/
+    overflow: hidden; /*讲溢出文本隐藏*/
+}
+
+.nav a:hover {
+    /*给nav的链接添加鼠标悬浮特效*/
+    background: #BD9D69; /*悬浮时改变背景颜色*/
+    color: white; /*悬浮时改变字体颜色*/
+}
+
+
+/*E nav*/
+
+
+/*S footer*/
+
+.footer {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    background: rgb(240, 240, 240); /*改变footer的背景颜色*/
+    border-top: 1px solid #fff;
+}
+
+.footer_siteInfo,
+.footer_copyright {
+    display: inline-block;
+    font-size: 14px;            /*改变footer字体的大小*/
+    color: rgb(153, 153, 153);/*改变footer字体的颜色*/
+}
+
+.footer_siteInfo a,
+.footer_copyright a {
+    line-height: 32px; /*设置行高*/
+}
+
+.footer_copyright {
+    float: right; /*使copyringht的盒子向由浮动*/
+    text-align: right; /*文字靠右对齐*/
+}
+/*E footer*/
+
+/*S main_content*/
+.main_content{
+	margin-top: 20px; /*设置main_content区域上方外边距*/
+}
+/*banner*/
+.culture_banner .hope_container{
+	padding:20px 0;
+	padding-top: 0;
+	border-bottom: 1px solid #d9d9d9;
+	box-shadow: 0 1px 0 0 #fff;
+	margin-bottom: 1px;              /*模拟一条凹的底线*/
+}
+.culture_banner_img {
+    width:75%;
+    float: left;   /*向左浮动*/
+}
+.culture_banner_joinus {
+	width: 25%;      /*设置图片宽度*/
+    text-align: right;   /*向右浮动*/
+    display: block;
+    overflow: hidden;  /*把溢出的图片隐藏*/
+}
+/*location*/
+.location{
+	margin-bottom: 20px;  /*添加底部外边距*/
+}
+.location .hope_container{
+	padding:0;
+	border-bottom: 1px solid #d9d9d9;
+	box-shadow: 0 1px 0 0 #fff;     /*模拟凹线*/
+	line-height: 36px;    /*设置行高*/
+	color: #999;	 /*location字体颜色*/
+}
+.location_icon{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(../images/location_icon.png) no-repeat center center;  /*location的icon地址*/
+}
+.location .hope_container > *{
+	vertical-align: middle;  /*垂直居中*/
+}
+/*E main_content*/
+
+/*内容页模块*/
+.article{
+	overflow:hidden;
+	width:1200px;
+	margin:0 auto 20px auto;/*使大盒子居中*/
+	background-color:#FFFFFF;/*底色*/
+	box-shadow: 2px 2px 2px #bfbfbf;/*阴影*/
+}
+
+.articleHead{
+	height:100px;
+	width:1200px;
+}
+.articleLogo{
+	float:left;
+	margin:20px 20px 7px 20px;
+	width:53px;
+	height:53px;
+}
+.articleText{
+	float:left;
+	margin:20px auto 20px auto;
+	height:auto;
+}
+.articleTitle{
+	color:#000000;
+}
+.articleWriter{
+	color: #9d9d9d;
+}
+
+.line{
+	float: left;
+	width:1200px;
+	height:2px;
+}
+
+
+.blackLine{
+	width:1178px;
+	height:1px;
+	margin:0px auto;
+	background-color: #dcdcdc;
+}
+.grayLine{
+	width:1178px;
+	height:1px;
+	margin:0px auto;
+	background-color: #f7f7f7;
+}
+
+.articleContent{
+	float:left;
+	width:1160px;
+	height: auto;
+	padding:20px;
+}
+.articleContent img{
+	display:block;
+	margin:0px auto;
+	width:519px;
+}
