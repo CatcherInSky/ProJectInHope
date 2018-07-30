@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/intro/intro",
+    "pages/contact/contact",
+    "pages/product/product",
+    "pages/service/service",
+    "pages/case/case",
+    "pages/column1/IT/IT",
+    "pages/column1/Web/Web",
+    "pages/column1/software/software",
+    "pages/column1/App/App",
+    "pages/column1/CMS/CMS",
+    "pages/column1/LIMS/LIMS",
+    "pages/column1/MMS/MMS",
+    "pages/column1/wechat/wechat",
+    "pages/column2/IT/IT",
+    "pages/column2/Web/Web",
+    "pages/column2/software/software",
+    "pages/column2/App/App",
+    "pages/column2/humanity/humanity",
+    "pages/content/minipro/minipro",
+    "pages/content/Drupal/Drupal",
+    "pages/content/chem/chem",
+    "pages/content/bright/bright"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "青朴",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+        "pagePath": "pages/service/service",
+        "text": "服务",
+        "iconPath": "images/service.png",
+        "selectedIconPath": "images/service_sel.png"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "text": "案例"
+      },
+      {
+        "pagePath": "pages/intro/intro",
+        "text": "介绍",
+        "iconPath":"images/greenhope.png",
+        "selectedIconPath":"images/greenhope.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系"
+      }
+    ]}
+}
