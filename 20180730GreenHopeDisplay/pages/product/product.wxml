@@ -1,2 +1,6 @@
 <!--pages/product/product.wxml-->
-<text>pages/product/product.wxml</text>
+<view wx:for="{{list}}" wx:for-item="item" class="container">
+  <view class="MS">{{item.name}}</view>
+  <view class="info">{{item.info}}</view>
+  <view class="more">了解更多</view>
+</view>

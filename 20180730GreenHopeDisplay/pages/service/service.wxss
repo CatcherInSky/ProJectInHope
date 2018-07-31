@@ -1,1 +1,29 @@
 /* pages/service/service.wxss */
+.container{
+  height:500rpx;
+  padding:100rpx 10rpx;
+}
+.container:nth-child(even){
+  background-color: #F2F2F2;
+}
+.title{
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.info{
+  color:#828282;
+  font-size:14px;
+  line-height: 18px;
+  padding-left:20px;
+  padding-right: 20px;
+}
+.more{
+  width:200rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  color:white;
+  margin:auto;
+  text-align: center;
+  border-radius: 10rpx;
+  font-size: 14px;
+}

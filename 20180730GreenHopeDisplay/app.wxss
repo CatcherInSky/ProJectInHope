@@ -8,3 +8,15 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.title{
+  font-size:20px;
+  font-weight: 550;
+  text-align: center;
+  display: block;
+}
+.article{
+  display: block;
+  margin:10px auto;
+  width:700rpx;
+  font-size:12px;
+}

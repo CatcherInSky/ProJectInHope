@@ -1,2 +1,33 @@
 <!--pages/intro/intro.wxml-->
-<text>pages/intro/intro.wxml</text>
+<swiper circular='true' indicator-dots='true' autoplay='true' interval='3000'>
+  <swiper-item ><image src='../../images/banner/intro.jpg'></image></swiper-item>
+  <swiper-item><image src='../../images/banner/service.jpg'></image></swiper-item>
+  <swiper-item><image src='../../images/banner/case.jpg'></image></swiper-item>
+  <swiper-item><image src='../../images/banner/product.jpg'></image></swiper-item>
+  <swiper-item ><image src='../../images/banner/contact.jpg'></image></swiper-item>
+</swiper>
+<view class='origin'>
+  <text class="title">青朴缘起</text>
+  <text class="article">  青朴位于西藏大山深处，三面环山，正面雅鲁藏布江，观景气势宏大，是历来享誉雪域的修行圣地。青朴者，行事严谨、作风朴实、精益求精。
+
+    广州青朴科技有限公司是一家集IT运维、网站建设、软件开发、微信开发于一身的企业，致力于为客户提供先进的产品和技术，迄今已独立研发出厚朴网站内容管理系统（HopeCMS）、厚朴仪器预约管理系统（HopeLIMS）、厚朴人事招聘管理系统（HopeHR）、厚朴移动（HopeMobile）等广受客户好评的产品，助力客户优化工作流程，提高管理效率。产品历经多次升级与完善，成熟度、安全性、稳定性、灵活性均达到高水平。基于优秀的产品质量与服务，本公司已积累了深厚的客户基础以及良好的产品口碑。
+
+    除了专注于核心产品的研发，本公司还推出了针对客户个性化需求的定制化解决方案，如学生事务管理解决方案，教师测评（一表通）解决方案、临床档案及后医疗解决方案，订单数据自动采集与统计解决方案，在线学习与网上考试、网上报名解决方案、刑侦数据采集与分析解决方案，中小型企业以及单位IT运维及架构优化解决方案等。客户范围包括学校（中山大学、香港理工大学、华南理工大学、广东工业大学、广东药学院、广西师范大学、广东金融学院等），医院（中山大学孙逸仙纪念医院、中山大学附属第三医院、中山大学眼科中心等），企业（中国电信、台湾大安集团、广州光明乳品有限公司、广东盖尔伦医学发展有限公司、东南亚电信集团、忆满堂文化传播有限公司等），文化组织（云门山大觉禅寺、广东省佛协、丹霞山别传寺、南华禅寺等）等企事业单位或组织。
+
+    本司将持续秉承中大素养·专业品质·诚信合作理念，继续为广大客户朋友提供专业IT技术服务。</text>
+</view>
+<view class='advantage'>
+  <text class='title'>服务优势</text>
+  <view wx:for="{{advantage}}" wx:for-item="item">
+    <image src='{{item.img}}'></image>
+    <text class="sec">{{item.sec}}</text>
+    <text class="con">{{item.con}}</text>
+  </view>
+</view>
+<view class="flexser">
+  <view class='ser' wx:for="{{ser}}" wx:for-item="item">
+    <image src='{{item.img}}'></image>
+    <text class="secr">{{item.sec}}</text>
+    <text class="conr">{{item.con}}</text>
+  </view>
+</view>

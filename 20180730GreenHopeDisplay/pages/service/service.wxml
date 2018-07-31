@@ -1,2 +1,6 @@
 <!--pages/service/service.wxml-->
-<text>pages/service/service.wxml</text>
+<view wx:for="{{list}}" wx:for-item="item" class='container'>
+  <view style='color:{{item.color}}' class='title'>{{item.name}}</view>
+  <view class='info'>{{item.info}}</view>
+  <view style='background-color:{{item.color}}' class='more'>了解更多</view>
+</view>

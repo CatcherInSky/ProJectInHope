@@ -30,6 +30,7 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "selectedColor":"#1afa29",
     "list": [{
         "pagePath": "pages/service/service",
         "text": "服务",
@@ -38,7 +39,9 @@
       },
       {
         "pagePath": "pages/case/case",
-        "text": "案例"
+        "text": "案例",
+        "iconPath": "images/case.png",
+        "selectedIconPath": "images/case_sel.png"
       },
       {
         "pagePath": "pages/intro/intro",
@@ -48,11 +51,15 @@
       },
       {
         "pagePath": "pages/product/product",
-        "text": "产品"
+        "text": "产品",
+        "iconPath": "images/product.png",
+        "selectedIconPath": "images/product_sel.png"
       },
       {
         "pagePath": "pages/contact/contact",
-        "text": "联系"
+        "text": "联系",
+        "iconPath": "images/contact.png",
+        "selectedIconPath": "images/con_sel.png"       
       }
     ]}
 }
