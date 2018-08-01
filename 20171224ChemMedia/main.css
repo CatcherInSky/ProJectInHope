@@ -1,0 +1,865 @@
+/* S 重置浏览器默认样式*/
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    padding: 0;
+    margin: 0;
+}
+/* clear lists' style */
+ol,
+ul,
+li {
+    list-style: none
+}
+img {
+    border: none;
+}
+
+table {
+    width: 100%!important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+input,
+button,
+textarea,
+select {
+    *font-size: 100%;
+}
+
+input {
+    background: transparent;
+    border: none;
+}
+
+input[type=submit] {
+    cursor: pointer;
+}
+
+ol,
+ul,
+li {
+    /*取消li、ul、ol标签前面的圆点和数字*/
+    list-style: none ;
+}
+
+button {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:link,
+:visited {
+    text-decoration: none;
+}
+
+:focus {
+    outline: 0;
+}
+
+pre {
+    font-family: "Lucida Console", Consolas, "Courier New", Tahoma;
+    color: #666;
+    text-indent: 0;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+article,
+aside,
+figure,
+figcaption,
+footer,
+banner,
+hgroup,
+nav,
+section,
+summary {
+    display: block;
+}
+
+figure {
+    margin: 0;
+}
+
+body {
+    font: 16px/1.8 "Microsoft Yahei", Helvetica, Arial, sans-serif;
+    /*网站默认字体颜色*/
+    color: #000 ;
+    /*设置网页的背景颜色*/
+    background-color:#faf4e8;
+}
+
+a,
+a:link,
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    /*默认链接被鼠标hover时颜色*/
+    color: #d2b27f;
+}
+
+
+/* E 重置浏览器默认样式*/
+
+.hope_container {
+    /*水平居中*/
+    margin: 0 auto;
+    /*增加左右内边距，使内容与边界有一定距离*/
+    padding: 0 20px;
+    /*把主要内容的宽度固定为1200px*/
+    max-width: 1200px;
+}
+
+
+/*S banner*/
+
+.banner {
+    /*用来扩大banner上方和下方的区域*/
+    padding: 30px 0 25px 0;
+    /*设置banner的background背景颜色*/
+    background-color:#faf4e8;
+}
+
+.banner_logo {
+    display: inline-block;
+    /*设置logo的高度*/
+    height: 40px;
+}
+
+.banner_nav {
+    display: inline-block;
+    /*使头部的导航栏向右浮动*/
+    float: right;
+}
+
+.banner_nav a {
+    display: inline-block;
+    /*使头部导航栏中文字居中*/
+    line-height: 40px;
+    /*字体大小*/
+    font-size: 16px;
+    /*添加左外边距，增加空隙*/
+    margin-left: 24px;
+}
+.banner .selected{
+    /*选中的导航字体颜色*/
+    color: #d2b27f;
+}
+
+/*E banner*/
+
+
+/*S nav*/
+
+.nav {
+    position: relative;
+    z-index: 10;
+    /*给nav增加一个上边框*/
+    border-top: 1px solid #ccc;
+    /*给nav模拟一个下边框*/
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 2px 1px 1px #333;
+    margin-bottom:2px;
+
+}
+
+.nav a {
+    display: block;
+    /*增加左右可点区域，使体验更好*/
+    padding: 0 20px;
+    /*设置nav高度*/
+    height: 44px;
+    /*垂直居中*/
+    line-height: 44px;
+    /*改变nav链接字体颜色*/
+    color: #595959;
+}
+
+.nav li {
+    display: inline-block;
+    position: relative;
+}
+
+.nav_dropdown {
+    width: 100%;
+    /*使用绝对定位，使下拉菜单固定在其所属类的下方*/
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /*改变下拉菜单的背景颜色*/
+    background: rgba(251, 247, 238, 0.75);
+    /*给下拉菜单添加阴影效果*/
+    box-shadow: 1px 2px 1px #F1EEE9;
+    /*默认情况下下拉菜单隐藏*/
+    display: none;
+}
+
+.nav_dropdown a {
+    /*给下拉菜单的链接添加下边框*/
+    border-bottom: 1px #FDFAF6 solid;
+    /*讲溢出文本隐藏*/
+    overflow: hidden;
+}
+
+.nav a:hover {
+    /*悬浮时改变背景颜色*/
+    background: #BD9D69;
+    /*悬浮时改变字体颜色*/
+    color: white;
+}
+
+
+/*E nav*/
+
+
+/*S footer*/
+
+.footer {
+    z-index: 10;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    /*改变footer的背景颜色*/
+    background: rgb(240, 240, 240);
+    border-top: 1px solid #fff;
+}
+
+.footer_siteInfo,
+.footer_copyright {
+    display: inline-block;
+    /*改变footer字体的大小*/
+    font-size: 14px;
+    /*改变footer字体的颜色*/
+    color: rgb(153, 153, 153);
+}
+
+.footer_siteInfo a,
+.footer_copyright a {
+    /*设置行高*/
+    line-height: 32px;
+}
+
+.footer_copyright {
+    /*使copyringht的盒子向由浮动*/
+    float: right;
+    /*文字靠右对齐*/
+    text-align: right;
+}
+/*E footer*/
+
+/*main_content*/
+.main_content{
+    /*设置main_content区域上方外边距*/
+    margin-top: 20px;
+}
+/*column_banner*/
+.culture_column_banner .hope_container{
+	padding:20px 0;
+	padding-top: 0;
+    /*模拟一条凹的底线*/
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0 1px 0 0 #fff;
+    margin-bottom: 1px;
+}
+.culture_column_banner_img {
+    width:75%;
+    /*向左浮动*/
+    float: left;
+    /*把溢出的图片隐藏*/
+    overflow: hidden;
+}
+.culture_column_banner_joinus {
+    display: inline-block;
+    /*设置图片宽度*/
+    width: 25%;
+    /*向右浮动*/
+    text-align: right;
+    /*把溢出的图片隐藏*/
+    overflow: hidden;
+}
+/*location*/
+.location{
+    /*添加底部外边距*/
+    margin-bottom: 20px;
+}
+.location .hope_container{
+	padding:0;
+    /*模拟凹线*/
+    border-bottom: 1px solid #d9d9d9;
+    box-shadow: 0 1px 0 0 #fff;
+    /*设置行高*/
+    line-height: 36px;
+    /*location字体颜色*/
+    color: #999;
+}
+.location_icon{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+   /*location的icon的地址*/
+   background: url(images/location_icon.png) no-repeat center center;
+}
+.location .hope_container > *{
+    /*垂直居中*/
+    vertical-align: middle;
+}
+/*main_content*/
+
+/*footer_icons*/
+.footer .hope_container{
+    /*设置相对定位，为后面的footer_icons定位*/
+    position:relative;
+}
+.footer-icon-link {
+    display: inline-block;
+    /*设置图标的大小*/
+    width: 40px;
+    height: 40px;
+    border-radius:20px;
+    /*绝对定位，设置图标的位置*/
+    position: absolute;
+    /*垂直居中，水平居中*/
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*icon背景的颜色*/
+    background-color: #9e8357;
+    /*icon在盒子里显示的大小*/
+    background-size: 60%;
+}
+.footer-icon-link:hover{
+    /*鼠标悬浮的时候背景颜色*/
+    background-color: #999;
+}
+.icon_hope{
+
+    /*中间hope图标的地址和大小*/
+    background-image: url(images/footer_logo.png);
+    background-size: 100%;
+}
+.icon_hope:hover{
+    /*中间hope图标悬浮时改变*/
+    background-image: url(images/grayicon2.png);
+}
+.icon_baidu {
+    /*定位 水平偏移量*/
+    left: 39%;
+    /*icon图片地址*/
+    background-image:url(images/baidu.png);
+}
+.icon_google {
+    /*定位 水平偏移量*/
+    left: 44.1%;
+    /*icon图片地址*/
+    background-image:url(images/google.png);
+}
+.icon_wechat {
+    /*定位 水平偏移量*/
+    left: 55%;
+    /*icon图片地址*/
+    background-image: url(images/wechat.png);
+}
+.icon_phone {
+    /*定位 水平偏移量*/
+    left: 60%;
+    /*icon图片地址*/
+    background-image: url(images/phone.png);
+}
+/*effect wechat和phone图标鼠标悬浮特效*/
+.footer_toolbar {
+    /*设置宽度*/
+    width: 160px;
+}
+.icon_wechat:hover .toolbar_wechat, .icon_phone:hover .toolbar_phone {
+    /*透明度*/
+    opacity: 1;
+    filter: alpha(opacity=100);
+    /*缩放*/
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.toolbar_main_move {
+    background-repeat: no-repeat;
+    position: absolute;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    /*设置缩放的原点*/
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    /*缩放*/
+    -webkit-transform: scale(0.01);
+    -moz-transform: scale(0.01);
+    -ms-transform: scale(0.01);
+    -o-transform: scale(0.01);
+    transform: scale(0.01);
+    /*过渡*/
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.toolbar_wechat {
+    /*高度，可根据选择的图片来改变*/
+    height: 215px;
+    /*绝对定位 按照父元素水平居中*/
+    left: -65px;
+    bottom: 44px;
+    /*鼠标悬浮时wechat图标出现的图片*/
+    background-image: url(images/toolbar_wechat.png);
+}
+.toolbar_phone {
+    /*高度，可根据选择的图片来改变*/
+    height: 40px;
+    /*绝对定位 按照父元素水平居中*/
+    left: -65px;
+    bottom: 44px;
+    /*鼠标悬浮时phone图标出现的图片*/
+    background-image: url(images/toolbar_phone.png);
+}
+
+
+/*内容页模块*/
+.article{
+	overflow:hidden;
+	width:1200px;
+	margin:0 auto 20px auto;/*使大盒子居中*/
+	background-color:#FFFFFF;/*底色*/
+	box-shadow: 2px 2px 2px #bfbfbf;/*阴影*/
+}
+/*内容页头部*/
+.article_head{
+	height:90px;
+	width:1160px;
+    margin:0px auto;
+    border-bottom:solid 1px #d9d9d9;/*添加一条分割线*/
+}
+.article_logo{
+	float:left;
+	margin:20px 20px 7px 0px;
+	width:53px;
+	height:53px;
+}
+.article_text{
+	float:left;
+	margin:20px auto 20px auto;
+	height:auto;
+}
+.article_title{
+	color:#000000;
+}
+.article_writer{
+	color: #9d9d9d;
+}
+/*内容页文章*/
+.article_content{
+    margin:20px 0;
+	width:1160px;
+	height: auto;
+	padding:0px 20px 20px 20px;
+}
+.article_content img{
+	display:block;
+	margin:0px auto;
+	width:519px;
+}
+.article_editor{
+    text-align: right;
+    margin:0px;
+    border-bottom:1px dashed #d9d9d9;/*底部添加虚线*/
+    padding-bottom: 16px;
+}
+.article_href{
+    margin:15px 0px -15px 0px;
+    line-height: 24px;
+}
+/*栏目页*/
+.hope_card{
+    /*这是包含着所有图片内容块的盒子的样式*/
+    padding: 0px;/*内边距为0*/
+    padding-bottom: 20px;/*底部内边距为0*/
+    width: 1216px;/*盒子宽度*/
+    margin: 0 auto;/*顶部和底部外边距为0，左右边外边距自动，会水平居中*/
+    overflow: hidden;/*内容溢出时被清除，且不可见*/
+}
+.hope_card_item{
+    /*这是每一个图片块的盒子的样式*/
+    padding: 22px 6px 6px;
+    background: #fff;/*设置背景色*/
+    float: left;/*设置左边浮动*/
+    margin: 0 7px 20px 7px;
+    width: 278px;
+    position: relative;/*设置相对定位*/
+    overflow: hidden;
+}
+.hope_card_header{
+     /*这是图片的上方内容的盒子的样式*/
+    position: relative;
+    overflow: hidden;
+}
+.hope_card_header_author{
+    /*这是图片的上方内容左边块的样式*/
+    float: left;
+    width: 60px;
+    height: 80px; /*设置高度*/
+    text-align: center;/*设置居中*/
+    margin-right: 10px;
+}
+.hope_card_header_author img{
+    /*厚朴图标*/
+    display: block;/*设置为块级元素*/
+    width: 38px;
+    height: 38px;
+    margin: 0 auto;
+    border: 1px solid #ffffff;/*设置边框*/
+    border-radius: 20px/*设置边框圆角*/
+}
+.hope_card_header_author span{
+    /*人名样式*/
+    line-height: 40px;/*行高*/
+}
+.hope_card_header_main{
+    /*这是图片的上方内容右边块的样式*/
+    display: block;
+    overflow: hidden;
+}
+.hope_card_header_title{
+    /*这是图片的上方内容右边块标题的样式*/
+    display: block;
+    line-height: 40px;
+    font-weight: bold;/*设置字体加粗*/
+    overflow: hidden;
+    white-space: nowrap;/*文本不会换行，文本会在在同一行上继续，直到遇到 <br> 标签为止。*/
+    text-overflow: ellipsis;/*当文本溢出包含元素时，显示省略符号来代表被修剪的文本。*/
+}
+.hope_card_header_date{
+    /*这是图片的上方内容右边块时间的样式*/
+    line-height: 40px;
+    color: #999999;/*字体颜色*/
+}
+.hope_card_img{
+    /*图片的样式*/
+    display: block;
+    max-width: 278px;/*设置最大宽度*/
+    height: 185px;
+    margin: 0 auto 12px;
+}
+.hope_card_info{
+    /*这是图片的下方内容的盒子的样式*/
+    overflow: hidden;
+    padding-bottom: 6px;
+}
+.hope_card_info_item{
+    /*这是用来保留与边缘的空隙的样式*/
+    color: #b2b2b2;
+    cursor: default;/*默认光标为箭头*/
+    display: block;
+    font-family: "calibri";/*设置字体类型*/
+    font-size: 12px;/*设置字体大小*/
+    float: right;
+    margin-left: 10px;
+    height: 18px;
+    line-height: 18px;
+}
+.hope_card_info_item .hope_icon, .hope_card_info_item .hope_slider_pre:hover:before, .hope_card_info_item .hope_slider_next:hover:before{
+    /*设置图标的样式*/
+    display: inline-block;
+    vertical-align: -5px;/*设置垂直方向的距离*/
+    margin-right: 3px;
+}
+.hope_icon_comments{
+    /*设置图标（对话图标）的样式*/
+    background-position: 0 -106px;
+    width: 14px;
+    height: 18px;
+}
+.hope_icon{
+    /*设置图标的样式*/
+    background-image: url(http://7xinb0.com1.z0.glb.clouddn.com/skin/HopeRebuild/dist/images/HopeIcon-s98df3c7b06.png);/*设置图标来源*/
+    background-size: 48px 227px;/*设置图标大小*/
+}
+.hope_icon_hits{
+     /*设置图标（眼睛图标）的样式*/
+    background-position: 0 -129px;/*设置如何定位背景图像*/
+    width: 16px;
+    height: 18px;
+}
+.hope_card_WithShadow .hope_card_item:after{
+    /*设置底部阴影*/
+    content: '';/*定义插入生成内容为空*/
+    position: absolute;/*绝对定位*/
+    left: 0;/*距离左边为0*/
+    bottom: 0;/*距离底部为0*/
+    display: block;
+    width: 290px;
+    height: 7px;
+    background: url(http://7xinb0.com1.z0.glb.clouddn.com/skin/HopeRebuild/dist/images/frameshadow.png);/*背景图片来源*/
+}
+.box{
+  position: relative;
+  z-index:-10;
+  margin-top:50px;
+}
+
+/*slider  */
+#HopeSlider{
+
+    position: relative;
+    overflow: hidden;
+    border-bottom: 4px solid #bd9d6b;
+}
+
+#HopeSlider ul li{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#HopeSlider ul,#HopeSlider ul li{
+    padding-bottom: 29.375%;
+}
+
+#HopeSlider ul li.is-curr{
+    z-index: 3;
+}
+
+#HopeSlider ul li.is-next{
+    z-index: 2;
+}
+
+#HopeSlider .slide img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.dot-list{
+    position: absolute;
+    left:61.8%;
+    bottom: 10px;
+    z-index: 5;
+}
+
+.dot-list .dot{
+    display: inline-block;
+    width: 10px;
+    height:10px;
+    margin:3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.dot-list .dot.active{
+    background-color: rgba(152,42,42,1) !important;
+}
+
+#prev{
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: url("images/arl.png") no-repeat center;
+    z-index: 5;
+}
+#next{
+    position: absolute;
+    right: -50px;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: url("images/arr.png") no-repeat center;
+    z-index: 5;
+}
+
+#prev,#next{
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    cursor: pointer;
+}
+
+#HopeSlider:hover #prev{
+    left: 0;
+}
+
+#HopeSlider:hover #next{
+    right: 0;
+}
+
+.dot{
+    cursor: pointer;
+}
+/*首页*/
+/*这是内容部分的最外层的样式*/
+
+body{color:#000;}
+a, a:link, a:visited{
+    text-decoration: none;
+    color:#000;
+}
+a:hover{
+    color:rgb(210,178,127);
+}
+/*这是内容部分的最外层的样式*/
+.culture_index_cnt{
+    background: #faf4e8 url("../images/header_bg.jpg") repeat;/*背景图片样式*/
+    padding: 26px 0 10px 0;/*设置内边距*/
+}
+/*这个是包含着内容部分的盒子的样式*/
+.hope_container{
+    margin: 0 auto;/*设置居中*/
+    padding: 0 20px;
+    max-width: 1200px;/*宽度*/
+}
+/*这个是左边内容盒子的样式*/
+.culture_index_cnt_left{
+    width: 786px;
+    padding-bottom: 10px;
+    margin-right: 14px;/*外边距*/
+    float: left;/*左浮动*/
+}
+/*这个是左边和右边内容顶部盒子的样式*/
+.culture_index_cnt_title{
+    line-height: 32px;/*行高*/
+    font-size: 14px;/*字体大小*/
+    margin-bottom:10px;
+}
+a.culture_index_cnt_readMore{/*设置more的样式*/
+    padding: 0 9px;
+    float: right;
+    font-size: 12px;
+    line-height:18px;
+    border: 1px solid #d2b27f;/*设置边框大小，边框线，边框颜色*/
+    color: #d2b27f;/*设置字体颜色*/
+    border-radius: 2px;/*设置边框圆角*/
+    margin-top: 5px;
+}
+.culture_index_cnt_title_content{/*设置左边内容顶部*/
+    display: block;/*块级元素*/
+    overflow: hidden;/*内容溢出隐藏*/
+    color: #404040;
+    font: 16px/30px "Microsoft Yahei";
+}
+.culture_index_cnt_title_content img{/*设置左边内容顶部照相机*/
+    width: 26px;/*设置左边内容顶部照相机宽度*/
+    height: 26px;/*设置左边内容顶部照相机高度*/
+    vertical-align: -7px;/*设置竖直方向位置*/
+    margin-right: 5px;
+}
+/*这个是左边内容图片盒子的样式*/
+.culture_index_cnt_imgShow{/*设置左边内容图片盒子的样式*/
+    overflow: hidden;
+    margin:0 -7px;
+}
+.culture_index_cnt_imgShow a{/*设置左边内容图片盒子的样式*/
+    float: left;
+    line-height: 0px;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 0 7px;
+}
+.culture_index_cnt_imgShow img{
+    width:100%;/*图片宽度为其父盒子宽度*/
+}
+.culture_index_cnt_right{/*右边内容盒子的样式*/
+    overflow: hidden;
+    padding-bottom: 10px;
+    padding-right: 0;
+    background: none;
+}
+ul{/*右边内容列表盒子的样式*/
+    list-style: none;/*消除默认样式*/
+    padding: 0px;
+}
+.hope_list_item{/*右边内容列表盒子的样式*/
+    line-height: 30px;
+    border-bottom: 1px dashed #b6b8b7;
+    overflow: hidden;
+}
+.hope_list_time{/*设置时间的样式*/
+    font-family: "Calibri";/*设置字体种类*/
+    color: #787878;
+    float: right;
+    margin-left: 18px;
+    line-height: 30px;
+}
+.hope_list_item_contentBox{
+    overflow: hidden;
+}
+.hope_list_item_content{
+    width: 100%;
+    display: block;
+}
+.hope_list_item_content, .hope_newArts_title, .hope_newArts_item_con, .hope_location_locationInfo, .hope_sidebar_tag, .hope_card_header_title{
+    /*设置溢出处理，是否分行*/
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.culture_index_cnt .hope_list_style{
+    background: #d2b27f;
+    margin: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+/*这是设置右边内容标题部分圆形的样式*/
+.hope_list_style_Round{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
