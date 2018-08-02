@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="main.css">
     <title>大学化学</title>
+
 </head>
 <body>
 <div class="header">
@@ -29,9 +30,22 @@
         <a href="" title="拓展资源">拓展资源</a>
     </div>
 </div>
-<div class="slider">
-    <img src="images/silder.png">
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="" title=""><img src="images/silder.png"> </a></div>
+        <div class="swiper-slide"><a href="" title=""><img src="images/silder1.png"></a> </div>
+        <div class="swiper-slide"><a href="" title=""><img src="images/silder2.png"></a> </div>
+    </div>
 </div>
+<script src="JS/idangerous.swiper.min.js"></script>
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+        loop: true,
+        autoplay: 3000,
+        calculateHeight:true,
+    });
+</script>
 <div class="intro">
     <div class="title">课程介绍</div>
     <div class="container">
