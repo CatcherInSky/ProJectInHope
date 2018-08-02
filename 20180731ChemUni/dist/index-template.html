@@ -6,7 +6,10 @@
     <title>${HopeTag.PageTitle}</title>
     <link rel="icon" href="${HopeTag.InstallDir}Skin/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="${HopeTag.InstallDir}Skin/favicon.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> ${HopeTag.MetaKeywords} ${HopeTag.GetSkin_CSS("大学化学_20180801")}
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    ${HopeTag.MetaKeywords}
+    ${HopeTag.GetSkin_CSS("大学化学_20180801")}
     <script src="${HopeTag.InstallDir}JS/index.js.js"></script>
 </head>
 <body>
@@ -20,37 +23,64 @@
                 <button type="submit"></button>
             </form>
         </div>
+        <a class="navList" onclick="dropDown()"></a>
     </div>
 </div>
+<!--mobile nav-->
+<div class="mobileNav" id="mobileNav">
+    <div class="return"><a  onclick="closeNav()"></a> </div>
+    <div class="mobileSearch">
+        <form>
+            <input placeholder="输入关键字搜索">
+            <button type="submit"></button>
+        </form>
+    </div>
+
+    <div class="container">
+        #foreach($id in [1,2,3,4,5,6,7,8])
+        #set($Cat = ${HopeTag.GetCategory($id)})
+        <div><a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a><a href=""> > </a></div>
+        #end
+    </div>
+
+</div>
+
 <!--nav-->
 <div class="nav">
     <div class="container">
-        <a href="" title="课程介绍">课程介绍</a>
-        <a href="" title="教学队伍">教学队伍</a>
-        <a href="" title="电子教案">电子教案</a>
-        <a href="" title="课后习题">课后习题</a>
-        <a href="" title="科学研究">科学研究</a>
-        <a href="" title="学习交流">学习交流</a>
-        <a href="" title="视频教学">视频教学</a>
-        <a href="" title="拓展资源">拓展资源</a>
+        #foreach($id in [1,2,3,4,5,6,7,8])
+        #set($Cat = ${HopeTag.GetCategory($id)})
+        <a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a>
+        #end
     </div>
 </div>
+
 <!--slider-->
-<div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder.png"> </a></div>
-        <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder1.png"></a> </div>
-        <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder2.png"></a> </div>
+
+
+<div class="pc-slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder.png"> </a></div>
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder1.png"></a> </div>
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder2.png"></a> </div>
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/silder3.png"></a> </div>
+        </div>
+        <div class="pagination"></div>
     </div>
 </div>
-<script src="${HopeTag.InstallDir}JS/idangerous.swiper.min.js"></script>
-<script type="text/javascript">
-    var mySwiper = new Swiper('.swiper-container',{
-        loop: true,
-        autoplay: 3000,
-        calculateHeight:true,
-    });
-</script>
+
+<div class="mobile-slider">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/slider-mobile.png"></a></div>
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/slider-mobile.png"></a> </div>
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/slider-mobile.png"></a> </div>
+            <div class="swiper-slide"><a href="" title=""><img src="${HopeTag.InstallDir}Skin/images/slider-mobile.png"></a> </div>
+        </div>
+        <div class="pagination"></div>
+    </div>
+</div>
 <!--index-->
 <div class="intro">
     <div class="title">课程介绍</div>
