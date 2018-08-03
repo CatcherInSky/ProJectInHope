@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ch">
 <!--head-->
 <head>
     <meta charset="UTF-8">
@@ -10,7 +10,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     ${HopeTag.MetaKeywords}
     ${HopeTag.GetSkin_CSS("大学化学_20180801")}
-    <script src="${HopeTag.InstallDir}JS/index.js.js"></script>
 </head>
 <body>
 <!--header-->
@@ -26,8 +25,9 @@
         <a class="navList" onclick="dropDown()"></a>
     </div>
 </div>
-<!--mobile nav-->
-<div class="mobileNav" id="mobileNav">
+
+<!--nav-->
+<div class="nav" id="nav">
     <div class="return"><a  onclick="closeNav()"></a> </div>
     <div class="mobileSearch">
         <form>
@@ -35,26 +35,14 @@
             <button type="submit"></button>
         </form>
     </div>
-
     <div class="container">
-        #foreach($id in [1,2,3,4,5,6,7,8])
-        #set($Cat = ${HopeTag.GetCategory($id)})
-        <div><a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a><a href=""> > </a></div>
-        #end
-    </div>
-
-</div>
-
-<!--nav-->
-<div class="nav">
-    <div class="container">
-        #foreach($id in [1,2,3,4,5,6,7,8])
-        #set($Cat = ${HopeTag.GetCategory($id)})
-        <a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a>
-        #end
+        <ul>
+            #foreach($id in [1,2,3,4,5,6,7,8])
+            #set($Cat = ${HopeTag.GetCategory($id)})
+            <li><a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a><a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" class="rightArr"> > </a></li>
+            #end
     </div>
 </div>
-
 <!--slider-->
 
 

@@ -15,11 +15,12 @@ var Swiper = new Swiper('.mobile-slider .swiper-container',{
 
 });
 function closeNav(){
-    var div = document.getElementById("mobileNav");
+    var div = document.getElementById("nav");
     div.style.display = "none";
 }
 
 function dropDown(){
-    var div = document.getElementById("mobileNav");
-    div.style.display = "unset";
+    var div = document.getElementById("nav");
+    console.log(div);
+    div.style.display = "block";
 }
