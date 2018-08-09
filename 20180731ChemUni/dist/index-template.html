@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ch">
+
 <!--${My_unichem_head}-->
-
-
 <head>
     <meta charset="UTF-8">
     <title>${HopeTag.PageTitle}</title>
@@ -14,100 +13,104 @@
     <link rel="stylesheet" type="text/css" href="${HopeTag.InstallDir}Skin/collegeChem_20180801.css">
 </head>
 
-
 <body>
+
     <!--${My_unichem_header}-->
     <div class="header">
         <div class="container">
             <a class="logo" href="${HopeTag.InstallDir}"></a>
-            <div class="search">
-                <form>
-                    <input placeholder="输入关键字搜索">
-                    <button type="submit"></button>
-                </form>
-            </div>
             <a class="navList" onclick="dropDown()"></a>
         </div>
     </div>
+
+
     <!--${My_unichem_nav}-->
     <div class="nav" id="nav">
         <div class="return"><a  onclick="closeNav()"></a></div>
-        <div class="mobileSearch">
-            <form>
-                <input placeholder="输入关键字搜索">
-                <button type="submit"></button>
-            </form>
-        </div>
         <div class="container">
             <ul>
                 #foreach($id in [1,2,3,4,5,6,7,8])
-                #set($Cat = ${HopeTag.GetCategory($id)})
-                <li>
-                    <a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name" class="navItem"> $Cat.name</a>
-                    <a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" class="rightArr"> > </a>
-                </li>
+                #set($Cat = ${HopeTag.GetCategoryName($id)})
+                #set($Cata = ${HopeTag.Category})
+                <li><a href="${HopeTag.GetCategoryLink($id)}" title="$Cat"
+                       #if($Cat==$Cata.Name)
+                       class="navItem active"
+                       #else
+                       class="navItem"
+                       #end
+                > $Cat</a><a href="${HopeTag.GetCategoryLink($id)}" class="rightArr"> > </a></li>
                 #end
             </ul>
         </div>
     </div>
+
+
     <!--${My_unichem_slider}-->
     <div class="slider">
-        <div class="pc-slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
                 </div>
                 <div class="pagination"></div>
             </div>
-        </div>
-        <div class="mobile-slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
-                </div>
-                <div class="pagination"></div>
-            </div>
-        </div>
     </div>
+    <script src="${HopeTag.InstallDir}JS/idangerous.swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container',{
+            loop: true,
+            autoplay: 3000,
+            calculateHeight:true,
+            pagination:'.pagination',
+            paginationClickable: true,
+        });
+        var swiperPic = document.getElementsByClassName("swiperPic");
+        var PC = window.matchMedia('(min-width:769px)');
+        if(PC.matches) {
+            for(let i=0;i<swiperPic.length;i++){
+                swiperPic[i].src="${HopeTag.InstallDir}Skin/images/slider/slider.png";
+            }
+        }else{
+            for(let i=0;i<swiperPic.length;i++){
+                swiperPic[i].src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png";
+            }
+        }
+    </script>
+
+
+
     <!--index-->
     <!--intro-->
     <div class="intro">
-        <div class="title">课程介绍</div>
+        <div class="title">${HopeTag.GetCategoryName(1)}</div>
         #set($Intro = ${HopeTag.GetCategory(1)})
         <div class="container">
             <div class="cover">
                 <img src="${HopeTag.InstallDir}$Intro.NodePicPath" alt="$Intro.Name">
             </div>
             <div class="course">
-                <p>$Intro.Content</p>
-                <div class="more">
-                    <a href="${HopeTag.GetCategoryLink(18)}" title="详情"> 详情></a>
-                </div>
+                #set( $intro_text =${HopeTag.Html2Txt($Intro.Content)} )
+                $intro_text
+                <div class="more"><a href="${HopeTag.GetCategoryLink(18)}" title="详情"> 详情></a></div>
             </div>
         </div>
     </div>
     <!--teach-->
     <div class="teach">
-        <div class="title">电子教案</div>
+        <div class="title">${HopeTag.GetCategoryName(3)}</div>
         <div class="container">
             <ul>
                 #foreach($Art in ${HopeTag.ArticleListSource(3,false,16)})
-                <li>
-                    <a href="${HopeTag.GetCategoryLink($Art.NodeID)}" title="$Art.Title"> $Art.Title</a>
-                </li>
+                <li><a href="${HopeTag.GetCategoryLink($Art.NodeID)}" title="$Art.Title"> $Art.Title</a></li>
                 #end
             </ul>
         </div>
     </div>
     <!--sci-->
     <div class="sci">
-        <div class="title">科学研究</div>
+        <div class="title">${HopeTag.GetCategoryName(5)}</div>
         <div class="container">
             #foreach($News in ${HopeTag.ArticleListSource(5,false,3)})
             <div class="news">
@@ -123,12 +126,12 @@
                 </div>
                 <div class="text">
                     <div class="newsTitle">
-                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title">${HopeTag.FormatString($News.Title, 29)}</a>
+                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title">${HopeTag.FormatString($News.Title, 30)}</a>
                     </div>
                     <div class="newsCon">
                         #set( $htm = ${HopeTag.GetValue("Content",$News)})
                         #set( $text =${HopeTag.Html2Txt($htm)} )
-                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title">${HopeTag.FormatString($text, 60)}</a>
+                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title" class="newsCons">$text</a>
                     </div>
                 </div>
             </div>
@@ -139,6 +142,16 @@
             </div>
         </div>
     </div>
+
+    <script src="${HopeTag.InstallDir}JS/clamp.min.js"></script>
+    <script>
+        var para = document.getElementsByClassName('newsCons');
+        for(let i = 0;i<para.length;i++){
+            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
+        }
+    </script>
+
+
     <!--${My_unichem_footer}-->
     <div class="footer">
         <div class="container">
@@ -149,8 +162,7 @@
                 </div>
                 <ul>
                     #foreach($id in [1,2,4,6,8])
-                    #set($Cat = ${HopeTag.GetCategory($id)})
-                    <li><a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a></li>
+                    <li><a href="${HopeTag.GetCategoryLink($id)}" title="${HopeTag.GetCategoryName($id)}"> ${HopeTag.GetCategoryName($id)}</a></li>
                     #end
                 </ul>
             </div>
@@ -173,10 +185,10 @@
                     常用链接
                 </div>
                 <ul>
-                    <li><a href="http://www.sysu.edu.cn/2012/cn/index.htm" target="_Blank" title="中山大学">中山大学</a></li>
+                    <li><a href="http://www.sysu.edu.cn/" target="_Blank" title="中山大学">中山大学</a></li>
                     <li><a href="http://ce.sysu.edu.cn/" target="_Blank" title="化学学院">化学学院</a></li>
                     <li><a href="http://uems.sysu.edu.cn/jwxt/" target="_Blank" title="教务系统">教务系统</a></li>
-                    <li><a href="ge.sysu.edu.cn" target="_Blank" title="通识教育部<">通识教育部</a></li>
+                    <li><a href="http://ge.sysu.edu.cn" target="_Blank" title="通识教育部<">通识教育部</a></li>
                     <li><a href="http://my.sysu.edu.cn/welcome" target="_Blank" title="我的中大">我的中大</a></li>
                 </ul>
             </div>
@@ -186,11 +198,11 @@
                     联系我们
                 </div>
                 <ul>
-                    <li><a  title="电话">电话：020-84113691</a></li>
-                    <li><a  title="传真">传真：020-84112245</a></li>
-                    <li><a  title="邮箱">邮箱：chem@mail.sysu.edu.cn</a></li>
-                    <li><a  title="邮编">邮编：510275</a></li>
-                    <li><a  title="地址">地址：广州市海珠区新港西路135号</a></li>
+                    <li>电话：<a  title="电话">020-84113691</a></li>
+                    <li>传真：<a  title="传真">020-84112245</a></li>
+                    <li>邮箱：<a  title="邮箱">chem@mail.sysu.edu.cn</a></li>
+                    <li>邮编：<a  title="邮编">510275</a></li>
+                    <li>地址：<a  title="地址">广州市海珠区新港西路135号</a></li>
                 </ul>
             </div>
         </div>
@@ -198,24 +210,133 @@
             Copyright © 2018 中山大学化学学院
         </div>
     </div>
+
     <script src="${HopeTag.InstallDir}JS/main.js"></script>
 
-    <script src="${HopeTag.InstallDir}JS/idangerous.swiper.min.js"></script>
+    <!--${My_unichem_banner}-->
+    #set($Cat = ${HopeTag.Category})
+    <div class="banner">
+        <img src="${HopeTag.InstallDir}Skin/images/banner/${Cat.NodePath}.jpg" alt="$Cat.Name" class="bannerPC">
+        <img src="${HopeTag.InstallDir}Skin/images/banner/${Cat.NodePath}-mobile.jpg" alt="$Cat.Name" class="bannerMo">
+    </div>
+
+    <!--${My_unichem_catalog}-->
+    <div class="catalog container">
+        <ul class="cata">
+            #set($Cat=${HopeTag.CurrentCategoryID})
+            #foreach($Art in ${HopeTag.ArticleListSource($Cat,false,20)})
+            <li>
+                <a class="catName" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title">$Art.Title</a>
+                <a class="catDate">${HopeTag.FormatDateTime($Art.UpdateTime)}</a>
+            </li>
+            #end
+        </ul>
+        <div class="more">
+            <a href="" title="加载更多"> 加载更多</a>
+        </div>
+    </div>
+
+    <!--${My_unichem_content}-->
+    <div class="content">
+        <div class="container">
+            #set($Art=${HopeTag.Article})
+            <div class="conTitle">
+                $Art.Title
+            </div>
+            <div class="conInfo">
+                #set($Date=$Art.UpdateTime)
+                日期：${HopeTag.FormatDateTime($Date,"yyyy年MM月dd日")} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;来源：${HopeTag.getValue("Author",$Art)}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点击数：$Art.Hits
+            </div>
+            <div class="conArt">
+                ${HopeTag.getValue("Content",$Art)}
+            </div>
+            <div class="share"><p>分享到:</p><a href="#" title="分享到微信"><img src="${HopeTag.InstallDir}Skin/icon/wechat.png"  alt="微信"></a><a href="#" title="分享到朋友圈"><img src="${HopeTag.InstallDir}Skin/icon/py.png" alt="朋友圈"></a>  <a href="#" title="分享到微博"><img src="${HopeTag.InstallDir}Skin/icon/weibo.png"  alt="微博"></a> <a href="#" title="分享到QQ"><img src="${HopeTag.InstallDir}Skin/icon/qq.png"  alt="QQ"></a> </div>
+        </div>
+    </div>
+
+
+    <!--${My_unichem_teach}-->
+    <div class="teach_list">
+        <div class=" container">
+            <ul class="teach_item">
+                #set($Cat=${HopeTag.CurrentCategoryID})
+                #foreach($Art in ${HopeTag.ArticleListSource($Cat,false,20)})
+                <li>
+                    <div>
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}"><img src="$Art.DefaultPicUrl"></a>
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}" class="teach_title">$Art.Title</a>
+                        #set($Con=${HopeTag.GetValue("Content",$Art)})
+                        #set( $text =${HopeTag.Html2Txt($Con)} )
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}"  class="teach_con">$text</a>
+                    </div>
+                </li>
+                #end
+            </ul>
+        </div>
+    </div>
+    <script src="${HopeTag.InstallDir}JS/clamp.min.js"></script>
     <script>
-        var mySwiper = new Swiper('.pc-slider .swiper-container',{
-            loop: true,
-            autoplay: 3000,
-            calculateHeight:true,
-            pagination:'.pc-slider .pagination',
-            paginationClickable: true,
-        });
-        var Swiper = new Swiper('.mobile-slider .swiper-container',{
-            loop: true,
-            autoplay: 3000,
-            calculateHeight:true,
-            pagination:'.mobile-slider .pagination',
-            paginationClickable: true,
-        });
+        var para = document.getElementsByClassName('teach_con');
+        for(let i = 0;i<para.length;i++){
+            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
+        }
     </script>
+
+    <!--${My_unichem_list}-->
+    <div class="team_list">
+        <div class="container">
+            <ul class="team_item">
+                #set($Cat=${HopeTag.CurrentCategoryID})
+                #foreach($Art in ${HopeTag.ArticleListSource($Cat,false,20)})
+                <li>
+                    <div>
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}" class="team_head" title="$Art.Title"><img src="$Art.DefaultPicUrl" alt="$Art.Title"></a>
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}" class="team_name" title="$Art.Title">$Art.Title</a>
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}" class="team_posi">${HopeTag.GetValue("Position",$Art)}</a>
+                        #set($Con=${HopeTag.GetValue("Content",$Art)})
+                        <a href="${HopeTag.GetItemLink($Art.GeneralID)}" class="team_desc" title="$Art.Title">$Con</a>
+                    </div>
+                </li>
+                #end
+            </ul>
+        </div>
+    </div>
+    <script src="${HopeTag.InstallDir}JS/clamp.min.js"></script>
+    <script>
+        var para = document.getElementsByClassName('team_desc');
+        for(let i = 0;i<para.length;i++){
+            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
+        }
+    </script>
+
+    <!--${My_unichem_video}-->
+    <div class="video_list">
+        <div class="container">
+            <ul class="video_item">
+                #set($Cat=${HopeTag.CurrentCategoryID})
+                #foreach($Art in ${HopeTag.ArticleListSource($Cat,false,20)})
+                <li>
+                    <div>
+                        <a class="video_play" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title"><img class="play" src="${HopeTag.InstallDir}Skin/icon/video.png"><img src="$Art.DefaultPicUrl" alt="$Art.Title"></a>
+                        <a class="video_name" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title">$Art.Title</a>
+                        #set($Con=${HopeTag.GetValue("Content",$Art)})
+                        <a class="video_desc" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title">$Con</a>
+                    </div>
+                </li>
+                #end
+            </ul>
+        </div>
+    </div>
+
+    <script src="${HopeTag.InstallDir}JS/clamp.min.js"></script>
+    <script>
+        var para = document.getElementsByClassName('video_desc');
+        for(let i = 0;i<para.length;i++){
+            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
+        }
+    </script>
+
+
+
 </body>
 </html>

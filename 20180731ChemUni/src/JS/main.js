@@ -11,4 +11,3 @@ function closeNav(){
         div.style.animation="navSlide 0.5s";
     }
 }
-

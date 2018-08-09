@@ -47,28 +47,15 @@
     </div>
     <!--slider-->
     <div class="slider">
-        <div class="pc-slider">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a title=""><img src="images/slider/silder.png"> </a></div>
-                    <div class="swiper-slide"><a title=""><img src="images/slider/silder.png"></a> </div>
-                    <div class="swiper-slide"><a title=""><img src="images/slider/silder.png"></a> </div>
-                    <div class="swiper-slide"><a title=""><img src="images/slider/silder.png"></a> </div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img class="swiperPic" src="images/slider/slider.png"></a></div>
                 </div>
                 <div class="pagination"></div>
             </div>
-        </div>
-        <div class="mobile-slider">
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><a title=""><img src="images/slider/slider-mobile.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="images/slider/slider-mobile.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="images/slider/slider-mobile.png"></a></div>
-                    <div class="swiper-slide"><a title=""><img src="images/slider/slider-mobile.png"></a></div>
-                </div>
-                <div class="pagination"></div>
-            </div>
-        </div>
     </div>
     <!--index-->
     <!--intro-->
@@ -174,6 +161,14 @@
             <a href="" title="更多"> 更多></a>
         </div>
     </div>
+    <script src="JS/clamp.min.js"></script>
+    <script>
+        var para = document.getElementsByClassName('newsCon');
+        for(let i = 0;i<para.length;i++){
+            console.log(para[i]);
+            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
+        }
+    </script>
     <!--footer-->
     <div class="footer">
         <div class="container">
@@ -235,23 +230,28 @@
         </div>
     </div>
     <script src="JS/main.js"></script>
-
     <script src="JS/idangerous.swiper.min.js"></script>
     <script>
-        var mySwiper = new Swiper('.pc-slider .swiper-container',{
+        var mySwiper = new Swiper('.swiper-container',{
             loop: true,
             autoplay: 3000,
             calculateHeight:true,
-            pagination:'.pc-slider .pagination',
+            pagination:'.pagination',
             paginationClickable: true,
         });
-        var Swiper = new Swiper('.mobile-slider .swiper-container',{
-            loop: true,
-            autoplay: 3000,
-            calculateHeight:true,
-            pagination:'.mobile-slider .pagination',
-            paginationClickable: true,
-        });
+        var swiperPic = document.getElementsByClassName("swiperPic");
+        var PC = window.matchMedia('(min-width:769px)');
+        if(PC.matches) {
+
+            for(let i=0;i<swiperPic.length;i++){
+                swiperPic[i].src="images/slider/slider.png";
+            }
+        }else{
+            for(let i=0;i<swiperPic.length;i++){
+                swiperPic[i].src="images/slider/slider-mobile.png";
+            }
+        }
     </script>
+
 </body>
 </html>
