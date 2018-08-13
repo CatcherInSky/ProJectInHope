@@ -480,8 +480,8 @@ body{
     line-height: 40px;
     border-radius: 5px;
     background-color:#FFF;
-    color:#1E82D7;
-    border: #1E82D7 solid 1px;
+    color:#B5B5B5;
+    border: #DDD solid 1px;
     font-size:14px;
     margin:5px;
     float:left;
@@ -494,9 +494,9 @@ body{
     text-align: center;
     line-height: 40px;
     border-radius: 5px;
-    background-color:#FFF;
+    background-color:#1E82D7;
     font-size:14px;
-    color:#1E82D7;
+    color:#FFF;
     border: #1E82D7 solid 1px;
     margin:5px;
     float:left;
@@ -974,7 +974,7 @@ body{
     color:#383838;
     height:72px;
     line-height: 72px;
-    width:auto;
+    width:80%;
     max-width:1000px;
     display: block;
     float: left;
@@ -1001,7 +1001,7 @@ body{
     }
     .catName{
         height:auto;
-        max-width:80%;
+
     }
 }
 @media screen and (max-width: 768px){
@@ -1021,7 +1021,7 @@ body{
         float: none;
         font-size: 15px;
         line-height:24px;
-        max-width: 100%;
+        width: 100%;
     }
     .catDate{
         display: block;
@@ -1142,11 +1142,12 @@ body{
     }
     .teach_item li div a:first-child{
         width:120px;
+        margin-left:15px;
     }
 }
 @media screen and (max-width: 768px){
     .teach_item li{
-        width:100%;
+        width:50%;
     }
     .teach_item li div{
         width:96%;
@@ -1179,11 +1180,30 @@ body{
         height:45px;
     }
 }
+@media screen and (max-width:620px){
+    .teach_item li div a:first-child{
+        width:40%;
+        line-height: 90px;
+        margin-right: 12px;
+        margin-left:12px;
+    }
+    .teach_item li div a img{
+        width:100%;
+    }
+}
+@media screen and (max-width: 426px){
+    .teach_item li{
+        width:100%;
+    }
+    .teach_item li div  a:first-child{
+        width:90px;
+    }
+}
 /*end teach*/
 
 /*team*/
 .team_list{
-    padding:40px 0 75px 0;
+    padding:55px 0 75px 0;
     clear:both;
     display: block;
     background-color: #F7F9FC;
@@ -1252,6 +1272,7 @@ body{
     color:#878787;
     line-height: 24px;
     overflow: hidden;
+    height:198px;
 }
 .team_desc:hover{
     color:#1E82D7;
@@ -1265,6 +1286,9 @@ body{
     }
     .team_list .container{
         width:90%;
+    }
+    .team_desc{
+        height:168px;
     }
 }
 @media screen and (max-width: 768px) {
@@ -1310,9 +1334,19 @@ body{
 }
 /*end team*/
 
+
+/*empty*/
+.empty{
+    height:250px;
+    text-align: center;
+    line-height: 250px;
+    font-size:20px;
+}
+/*end empty*/
+
 /*video*/
 .video_list{
-    padding:50px 0 56px 0;
+    padding:55px 0 56px 0;
     clear:both;
     display: block;
     background-color: #F7F9FC;
@@ -1330,7 +1364,9 @@ body{
     margin-bottom:25px;
     float: left;
 }
+
 .video_item li div{
+    cursor: pointer;
     margin:auto;
     width:95%;
     border-radius:  10px 10px 0 0 ;
@@ -1370,9 +1406,18 @@ body{
     position: relative;
 }
 .play{
-    display: none;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
 }
 .video_play:hover .play{
+    display: none;
+}
+.played{
+    display: none;
+}
+.video_play:hover .played{
     display: block;
     position: absolute;
     top:0;
@@ -1438,6 +1483,11 @@ body{
     line-height: 32px;
     margin:40px auto 0px auto;
 }
+.conPDF{
+    width:800px;
+    margin:30px auto;
+    height:100%;
+}
 .share{
     color:#4a4a4a;
     font-size:16px;
@@ -1456,10 +1506,41 @@ body{
     height:30px;
     margin:1px 2px;
 }
+
+.icon-wechat{
+    background: url('icon/wechat.png') no-repeat;
+    width:30px;
+    height: 30px;
+}
+.icon-qzone{
+    background: url('icon/py.png') no-repeat;
+    width:30px;
+    height: 30px;
+}
+.icon-weibo{
+    background: url('icon/weibo.png') no-repeat;
+    width:30px;
+    height: 30px;
+}
+.icon-qq{
+    background: url('icon/qq.png') no-repeat;
+    width:30px;
+    height: 30px;
+}
+
+
+
+
 @media screen and (max-width:1230px){
     .content{
         width:90%;
         margin:0 5%;
+    }
+
+}
+@media screen and (max-width:800px){
+    .conPDF{
+        width:100%;
     }
 }
 @media screen and (max-width:786px){
@@ -1487,3 +1568,10 @@ body{
     }
 }
 /*end content*/
+
+
+
+/*video*/
+.video_title{
+
+}

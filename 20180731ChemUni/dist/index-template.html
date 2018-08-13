@@ -317,7 +317,10 @@
                 #foreach($Art in ${HopeTag.ArticleListSource($Cat,false,20)})
                 <li>
                     <div>
-                        <a class="video_play" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title"><img class="play" src="${HopeTag.InstallDir}Skin/icon/video.png"><img src="$Art.DefaultPicUrl" alt="$Art.Title"></a>
+                        <a class="video_play" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title">
+                            <img class="play" src="${HopeTag.InstallDir}Skin/icon/video.png">
+                            <img src="$Art.DefaultPicUrl" alt="$Art.Title">
+                        </a>
                         <a class="video_name" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title">$Art.Title</a>
                         #set($Con=${HopeTag.GetValue("Content",$Art)})
                         <a class="video_desc" href="${HopeTag.GetItemLink($Art.GeneralID)}" title="$Art.Title">$Con</a>

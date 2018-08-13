@@ -13,23 +13,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.51549757">
+    <splitter split-orientation="horizontal" split-proportion="0.5448613">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="intro.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/intro.html">
+          <file leaf-file-name="index-template.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/dist/index-template.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="126" selection-start-line="126" selection-end-line="133" selection-end-column="9" />
+                <state relative-caret-position="437">
+                  <caret line="327" column="21" lean-forward="true" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index-template.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/dist/index-template.html">
+          <file leaf-file-name="intro.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/intro.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="190" column="37" lean-forward="true" selection-start-line="190" selection-start-column="37" selection-end-line="190" selection-end-column="37" />
+                <state relative-caret-position="190">
+                  <caret line="216" column="41" selection-start-line="216" selection-start-column="41" selection-end-line="216" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -38,11 +38,20 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-          <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/JS/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="76">
-                  <caret line="4" column="20" selection-end-line="71" selection-end-column="1" />
+                <state relative-caret-position="532">
+                  <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="main.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="626">
+                  <caret line="1576" column="1" selection-start-line="1576" selection-start-column="1" selection-end-line="1576" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -97,12 +106,12 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/dist/JS/main.js" />
-        <option value="$PROJECT_DIR$/src/intro.html" />
         <option value="$PROJECT_DIR$/dist/main.css" />
         <option value="$PROJECT_DIR$/src/index.html" />
-        <option value="$PROJECT_DIR$/src/main.css" />
         <option value="$PROJECT_DIR$/src/JS/main.js" />
         <option value="$PROJECT_DIR$/dist/index-template.html" />
+        <option value="$PROJECT_DIR$/src/intro.html" />
+        <option value="$PROJECT_DIR$/src/main.css" />
       </list>
     </option>
   </component>
@@ -116,7 +125,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="66" />
+    <option name="x" value="65" />
     <option name="y" value="-10" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
@@ -221,17 +230,18 @@
       <workItem from="1533688665604" duration="21349000" />
       <workItem from="1533775094113" duration="26564000" />
       <workItem from="1533861639260" duration="4625000" />
+      <workItem from="1534120391005" duration="7783000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181002000" />
+    <option name="totallyTimeSpent" value="188785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="55" y="-7" width="1488" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15331492" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16436464" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3347826" />
@@ -253,19 +263,19 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15331492" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
@@ -515,13 +525,6 @@
     <entry file="file://$PROJECT_DIR$/dist/JS/clamp.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="626">
-          <caret line="1489" selection-start-line="1489" selection-end-line="1489" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -538,22 +541,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/JS/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="20" selection-end-line="71" selection-end-column="1" />
+        <state relative-caret-position="532">
+          <caret line="71" column="1" lean-forward="true" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/index-template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="190" column="37" lean-forward="true" selection-start-line="190" selection-start-column="37" selection-end-line="190" selection-end-column="37" />
+        <state relative-caret-position="437">
+          <caret line="327" column="21" lean-forward="true" selection-start-line="327" selection-start-column="21" selection-end-line="327" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/intro.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="126" selection-start-line="126" selection-end-line="133" selection-end-column="9" />
+        <state relative-caret-position="190">
+          <caret line="216" column="41" selection-start-line="216" selection-start-column="41" selection-end-line="216" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="626">
+          <caret line="1576" column="1" selection-start-line="1576" selection-start-column="1" selection-end-line="1576" selection-end-column="1" />
         </state>
       </provider>
     </entry>
