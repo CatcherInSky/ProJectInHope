@@ -238,9 +238,9 @@ body{
         height: 667px;
         background-color: #1E82D7;
         animation: navSlide 0.5s;
-        -moz-animation: navSlide 0.5s;	/* Firefox */
-        -webkit-animation: navSlide 0.5s;	/* Safari 和 Chrome */
-        -o-animation: navSlide 0.5s;	/* Opera */
+        -moz-animation: navSlide 0.5s;  /* Firefox */
+        -webkit-animation: navSlide 0.5s;   /* Safari 和 Chrome */
+        -o-animation: navSlide 0.5s;    /* Opera */
     }
     @keyframes navSlide
     {
@@ -457,8 +457,11 @@ body{
     display:none;
 }
 .paginator2{
+    overflow: hidden;
     width:500px;
-    margin:30px 360px;
+    font-size:0;
+    margin:30px auto;
+    height:52px;
 }
 .paginator2 a:first-child{
     display: none;
@@ -479,8 +482,10 @@ body{
     background-color:#FFF;
     color:#1E82D7;
     border: #1E82D7 solid 1px;
+    font-size:14px;
     margin:5px;
     float:left;
+    overflow: hidden;
 }
 .paginator2 span {
     width:40px;
@@ -490,6 +495,7 @@ body{
     line-height: 40px;
     border-radius: 5px;
     background-color:#FFF;
+    font-size:14px;
     color:#1E82D7;
     border: #1E82D7 solid 1px;
     margin:5px;
@@ -890,7 +896,7 @@ body{
 .swiper-wp8-vertical {
     -ms-touch-action: pan-x;
 }
- .pagination {
+.pagination {
     position: absolute;
     z-index: 20;
     bottom: 16px;
@@ -907,7 +913,7 @@ body{
     opacity: 0.25;
     cursor: pointer;
 }
- .swiper-active-switch {
+.swiper-active-switch {
     background: #fff;
     opacity: 1;
 }
@@ -1138,7 +1144,7 @@ body{
         width:120px;
     }
 }
-    @media screen and (max-width: 768px){
+@media screen and (max-width: 768px){
     .teach_item li{
         width:100%;
     }
