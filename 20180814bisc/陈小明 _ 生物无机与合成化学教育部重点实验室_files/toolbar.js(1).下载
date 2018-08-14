@@ -1,0 +1,15 @@
+/**
+ * @file
+ */
+
+(function ($, _, Backbone, Drupal) {
+
+  'use strict';
+
+  Drupal.behaviors.ccms_toolbar = {
+    attach: function (context, settings) {
+      Drupal.toolbar.models.toolbarModel.unset('activeTab');
+    }
+  };
+
+}(jQuery, _, Backbone, Drupal));

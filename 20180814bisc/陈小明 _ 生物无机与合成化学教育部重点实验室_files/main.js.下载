@@ -1,0 +1,67 @@
+'use strict';
+
+$(document).ready(function () {
+    togglePhoneNav();
+    toggleNews();
+
+    // toggle nav and search block when ver.phone
+    function togglePhoneNav() {
+        var btn = $('#phone-nav-btn-container');
+        var search = $('#phone-search');
+        var menu = $('.nav-menu.menu');
+
+        btn.click(function (event) {
+            menu.each(function () {
+                $(this).toggleClass('show');
+            });
+            search.toggleClass('show');
+        });
+    }
+    //toggle news
+    function toggleNews() {
+        var btns = $('.news-notice-btn');
+        // block-news
+        var news = $('#block-index-news');
+        // block-notice
+        var notice = $('#block-index-notice');
+
+        // if there is not a btn there, then quick!
+        if (!btns) {
+            return;
+        }
+
+        //initial
+        news.addClass('show');
+        btns.eq(0).data('type', 'news');
+        btns.eq(1).data('type', 'notice');
+
+        btns.each(function () {
+            var _this = this;
+
+            $(this).click(function (event) {
+                toggleClass($(_this).data('type'), { news: news, notice: notice }, 'show', btns);
+            });
+        });
+
+        function toggleClass(btn, block, className, btns) {
+            // if the block has aleady show, then quick
+            if (block[btn].hasClass(className)) {
+                return;
+            }
+
+            // toggle block class name
+            for (var i in block) {
+                if (i === btn) {
+                    block[i].addClass(className);
+                } else {
+                    block[i].removeClass(className);
+                }
+            }
+
+            //toggle btn class name
+            btns.each(function () {
+                $(this).toggleClass('news-selected');
+            });
+        }
+    }
+});
