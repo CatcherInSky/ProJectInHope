@@ -507,6 +507,15 @@ ul.nav-menu {
     padding-left: 32px;
 }
 
+/* S ver.eng */
+html[lang="en"] .nav-menu .menu-item .level-menu .menu-item a,
+html[lang="en"] .nav-menu .menu-item:first-child .level-menu .menu-item a {
+    padding-left: 1em;
+}
+
+
+/* E ver.eng*/
+
 .nav-menu .menu-item .level-menu .menu-item:hover {
     background: #2091e6;
 }

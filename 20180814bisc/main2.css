@@ -1,1 +1,24 @@
- .page-node-type-teacher .inner .row:last-child .col-sm-12 .col-md-3 .hidden-xs .region-left
+
+
+.page-node-type-teacher .views-field-category{
+    text-align: center;
+    font-size:16px;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+.page-node-type-teacher .field-label-inline{
+
+    font-size:16px;
+    line-height: 24px;
+
+}
+
+.page-node-type-teacher .block-region-right .field-item h3{
+    line-height:40px;
+    font-weight: 700;
+}
+
+.page-node-type-teacher .field-label:after{
+    content:":";
+}

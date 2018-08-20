@@ -10,7 +10,7 @@ th, td { /* table elements 表格元素 */
 }
 input{
     background:none;
-    outline:none;
+    outline:none；
 }
 textarea{resize:none}
 /*清除ie的默认选择框样式清除，隐藏下拉箭头*/
@@ -45,6 +45,7 @@ fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
 button, input, select, textarea {
     font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
 }
+
 a[href]{
     cursor: pointer;
 }
@@ -66,6 +67,10 @@ body{
     width: 100%;
     max-width:1200px;
     margin:0 auto;
+}
+.conPDF{
+    margin:30px auto;
+    max-width:40vw;
 }
 /*header*/
 .header{
@@ -150,7 +155,11 @@ body{
     line-height: 46px;
     color:#717171;
 }
+
 @media screen and (max-width:1230px) {
+    .conPDF{
+        max-width:80vw;
+    }
     .bread .container{
         width:90%;
         margin:0 5%;
@@ -161,6 +170,9 @@ body{
     }
 }
 @media screen and (max-width:768px){
+    .conPDF{
+        max-width:80vw;
+    }
     .bread .container{
         width:96%;
         margin:0 auto;
@@ -192,9 +204,9 @@ body{
 
 /*nav*/
 .nav{
+    background-color: #ffffff;
     height:54px;
 }
-
 .rightArr{
     display: none;
 }
@@ -569,6 +581,7 @@ body{
 
 /*intro*/
 .intro{
+    background-color: #ffffff;
     height:100%;
     padding-top:40px;
     padding-bottom:50px;
@@ -706,6 +719,7 @@ body{
 
 /*sci*/
 .sci{
+    background-color:#ffffff;
     height:100%;
     padding-top:40px;
     width: 100%;
@@ -1001,7 +1015,6 @@ body{
     }
     .catName{
         height:auto;
-
     }
 }
 @media screen and (max-width: 768px){
@@ -1060,6 +1073,7 @@ body{
     overflow: hidden;
 }
 .teach_item li{
+    padding-top:20px;
     height:100%;
     width:50%;
     float:left;
@@ -1155,6 +1169,14 @@ body{
         margin:2%;
         height: 90px;
     }
+    .teach_item li div:hover{
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+        transform: translateY(0px);
+        transition-duration: 0.5s;
+    }
     .teach_item li div a:first-child{
         width:90px;
         line-height: 90px;
@@ -1248,8 +1270,6 @@ body{
     display: block;
     width:100%;
     height: auto;
-
-
 }
 .team_name{
     font-size: 24px;
@@ -1267,6 +1287,7 @@ body{
     margin:15px auto 22px auto;
 }
 .team_desc{
+    white-space: pre;
     display: block;
     margin:0 30px 30px 30px;
     color:#878787;
@@ -1397,6 +1418,7 @@ body{
 .video_desc{
     display: block;
     color:#8b8b8b;
+    height:72px;
     line-height: 24px;
     margin:0 15px 22px 15px;
     overflow: hidden;
@@ -1478,16 +1500,23 @@ body{
     margin-bottom:32px;
 }
 .conArt{
+    white-space:pre;
     color:#4a4a4a;
     font-size:16px;
     line-height: 32px;
     margin:40px auto 0px auto;
 }
-.conPDF{
-    width:800px;
-    margin:30px auto;
-    height:100%;
+.conart p{
+    width: 100%;
+    margin-bottom:32px;
 }
+.conart{
+    color:#4a4a4a;
+    font-size:16px;
+    line-height: 32px;
+    margin:40px auto 0px auto;
+}
+
 .share{
     color:#4a4a4a;
     font-size:16px;
@@ -1500,50 +1529,20 @@ body{
     margin-right:4px;
     display: inline;
 }
-.share img{
-    width:30px;
-    vertical-align: middle;
-    height:30px;
-    margin:1px 2px;
+.social-share{
+    float:right;
 }
-
-.icon-wechat{
-    background: url('icon/wechat.png') no-repeat;
-    width:30px;
-    height: 30px;
-}
-.icon-qzone{
-    background: url('icon/py.png') no-repeat;
-    width:30px;
-    height: 30px;
-}
-.icon-weibo{
-    background: url('icon/weibo.png') no-repeat;
-    width:30px;
-    height: 30px;
-}
-.icon-qq{
-    background: url('icon/qq.png') no-repeat;
-    width:30px;
-    height: 30px;
-}
-
-
-
-
 @media screen and (max-width:1230px){
     .content{
         width:90%;
         margin:0 5%;
     }
-
-}
-@media screen and (max-width:800px){
-    .conPDF{
-        width:100%;
-    }
 }
 @media screen and (max-width:786px){
+    .share{
+
+        display:none;
+    }
     .content{
         width:96%;
         margin:0 2%;
@@ -1563,15 +1562,16 @@ body{
         font-size: 13px;
         line-height: 26px;
     }
+    .conart{
+        margin:0 0 45px 0;
+        font-size: 13px;
+        line-height: 26px;
+    }
     .share{
         display:none;
     }
 }
 /*end content*/
-
-
-
-/*video*/
-.video_title{
-
+.swiper-slide, .swiper-wrapper {
+    height: auto !important;
 }
