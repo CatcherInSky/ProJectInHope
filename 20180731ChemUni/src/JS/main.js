@@ -12,6 +12,7 @@ function closeNav(){
     }
 }
 
+<<<<<<< HEAD
 var bread = document.getElementById("bread");
 if(bread){
     console.log(bread);
@@ -70,3 +71,5 @@ if(paginator2){
     }
 
 }
+=======
+>>>>>>> parent of 1044068... fixed

@@ -8,6 +8,7 @@ th, td { /* table elements 表格元素 */
     padding: 0;
     font-family:Microsoft YaHei;
 }
+
 input{
     background:none;
     outline:none；
@@ -140,6 +141,7 @@ body{
     background:url("icon/search.png") no-repeat center;
     background-color: #FFF;
 }
+<<<<<<< HEAD
 .bread img{
     width:15px;
     height:19px;
@@ -168,17 +170,23 @@ body{
         width:90%;
         margin:0 5%;
     }
+=======
+@media screen and (max-width:1230px) {
+>>>>>>> parent of 1044068... fixed
     .header .container{
         width:90%;
         margin:0 5%;
     }
 }
 @media screen and (max-width:768px){
+<<<<<<< HEAD
 
     .bread .container{
         width:96%;
         margin:0 auto;
     }
+=======
+>>>>>>> parent of 1044068... fixed
     .header{
         height: 64px;
         border-bottom:#57B2FF solid 2px;
@@ -209,7 +217,6 @@ body{
     background-color: #ffffff;
     height:54px;
 }
-
 .rightArr{
     display: none;
 }
@@ -221,7 +228,7 @@ body{
 }
 .nav .container li{
     float:left;
-    width:11.1%;
+    width:12.5%;
     height:55px;
 }
 .navItem{
@@ -233,17 +240,11 @@ body{
     width:100%;
     height:100%
 }
-.active{
-    color:#1E82D7;
-}
 .navItem:hover{
     background-color: #1E82D7;
     color:#FFF;
 }
 @media screen and (max-width:768px){
-    .active{
-        color:#FFF;
-    }
     .nav{
         display:none;
         position: absolute;
@@ -454,7 +455,6 @@ body{
     display: block;
     height: 30px;
     line-height: 30px;
-    color:rgba(255,255,255,0.6);
 }
 .list a{
     color:rgba(255,255,255,0.6);
@@ -485,6 +485,7 @@ body{
     opacity: 0.6;
     box-shadow: 0 -1px 0 #212733;
 }
+<<<<<<< HEAD
 .paginator{
     overflow: hidden;
 }
@@ -541,6 +542,8 @@ body{
     color:#FFF;
     background-color: #1E82D7;
 }
+=======
+>>>>>>> parent of 1044068... fixed
 @media screen and (max-width:1230px){
     .footer1{
         background-color: #FFF;
@@ -587,12 +590,6 @@ body{
 @media screen and (max-width:786px){
     .title{
         margin:0 auto 24px auto;
-        width:130px;
-        height: 20px;
-        font-size: 20px;
-        line-height: 20px;
-        background:url("icon/border-mobile.png") no-repeat ;
-        background-size: contain;
     }
 }
 .more a{
@@ -662,13 +659,11 @@ body{
     }
 }
 @media screen and (max-width:768px){
-
     .intro .container{
         height: 100%;
     }
     .intro{
-        padding-top:29px;
-        padding-bottom:31px;
+        padding-bottom: auto;
     }
     .cover img{
         display: none;
@@ -676,7 +671,7 @@ body{
     .course{
         height: 100%;
         width:90%;
-        padding:0 18px;
+        padding:auto;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
@@ -684,15 +679,17 @@ body{
     }
     .course .more{
         position: relative;
-        margin:20px auto;
-        bottom:0;
+        margin:40px auto;
+        bottom:inherit;
         right:inherit;
+
     }
     .course .more a{
         margin:auto;
     }
 }
 /*end intro*/
+
 
 /*teach*/
 .teach{
@@ -728,9 +725,6 @@ body{
     color:#1E82D7;
 }
 @media screen and (max-width:768px){
-    .teach{
-        padding:29px 0 31px 0;
-    }
     .teach li{
         float: left;
         width:45%;
@@ -810,16 +804,16 @@ body{
     display: block;
     font-size:18px;
     width:90%;
+
     margin-right:30px;
     line-height: 28px;
     color:#3D3D3D;
 }
 .newsCon a{
-    overflow: hidden;
     display: block;
     color:#808080;
     width:90%;
-    height:72px;
+
     margin-right:30px;
     margin-top:5px;
     font-size:14px;
@@ -829,14 +823,8 @@ body{
     .newsTitle a{
         overflow: hidden;
     }
-    .newsCon a{
-        height:96px;
-    }
 }
 @media screen and (max-width:768px){
-    .sci{
-        padding-top: 29px;
-    }
     .news{
         width:95%;
         margin:0 2.5%;
@@ -862,11 +850,11 @@ body{
         margin-bottom:30px;
         font-size:12px;
         width:100%;
-        height:40px;
         line-height:20px;
     }
     .newsTitle a{
         overflow: visible;
+
         line-height: 20px;
         font-size:14px;
         width: 100%;
@@ -945,14 +933,18 @@ body{
 .swiper-wp8-vertical {
     -ms-touch-action: pan-x;
 }
+<<<<<<< HEAD
 .pagination {
+=======
+.pc-slider .pagination {
+>>>>>>> parent of 1044068... fixed
     position: absolute;
     z-index: 20;
     bottom: 16px;
     width: 100%;
     text-align: center;
 }
-.swiper-pagination-switch {
+.pc-slider .swiper-pagination-switch {
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -962,9 +954,48 @@ body{
     opacity: 0.25;
     cursor: pointer;
 }
+<<<<<<< HEAD
 .swiper-active-switch {
+=======
+.pc-slider .swiper-active-switch {
     background: #fff;
     opacity: 1;
+}
+.mobile-slider .pagination {
+    position: absolute;
+    z-index: 20;
+    bottom: 16px;
+    width: 100%;
+    text-align: center;
+}
+.mobile-slider .swiper-pagination-switch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background: #85E6BA;
+    margin: 0 5px;
+    opacity: 0.25;
+    cursor: pointer;
+}
+.mobile-slider .swiper-active-switch {
+>>>>>>> parent of 1044068... fixed
+    background: #fff;
+    opacity: 1;
+}
+.slider-mobile{
+    display: none;
+}
+.mobile-slider{
+    display: none;
+}
+@media screen and (max-width:768px) {
+    .mobile-slider{
+        display: block;
+    }
+    .pc-slider{
+        display: none;
+    }
 }
 /*end slider*/
 /*end index*/
@@ -974,73 +1005,50 @@ body{
     margin:50px auto 70px auto;
     font-size:16px;
     line-height: 32px;
-    color:#525252;
 }
 .intro_content img{
     display: block;
     margin:40px auto;
-    width:90%;
-}
-.intro_content .container p{
-    margin:12px 0;
-}
-@media screen and (max-width: 1230px){
-    .intro_content .container{
-        width:90%;
-    }
-}
-@media screen and (max-width: 768px){
-    .intro_content .container{
-        margin:30px 5% 40px 5%;
-        width:90%;
-        font-size:13px;
-        line-height: 26px;
-    }
-    .intro_content .container p{
-        margin:10px 0;
-    }
 }
 /*end intro*/
 
 /*catolog*/
 .catalog{
-    margin-top:20px;
-    margin-bottom:20px;
-    width:100%;
-    overflow: hidden;
+    margin-top: 20px;
 }
-.cata  li{
-    display: block;
+.catalog .container .cata  li{
     width:100%;
     border-bottom:#D1D1D1 dashed 1px;
-    height:auto;
+    height:72px;
     font-size:16px;
+    line-height: 72px;
     list-style: disc outside;
+    float: right;
     clear: both;
-    overflow: hidden;
 }
 .catName{
     color:#383838;
     height:72px;
+<<<<<<< HEAD
     line-height: 72px;
     width:80%;
     max-width:1000px;
+=======
+    width:auto;
+    overflow: hidden;
+>>>>>>> parent of 1044068... fixed
     display: block;
     float: left;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 .catName:hover{
     color:#1E82D7;
 }
 .catDate{
-    vertical-align: middle;
-    line-height: 72px;
     float:right;
-    display: inline;
+    display: block;
     margin-right: 10px;
 }
+<<<<<<< HEAD
 .catalog .more{
     display: none;
 }
@@ -1090,6 +1098,9 @@ body{
         width:99%;
     }
 }
+=======
+
+>>>>>>> parent of 1044068... fixed
 /*end cata*/
 
 /*teach*/
@@ -1105,9 +1116,8 @@ body{
 }
 .teach_item{
     margin-bottom:30px;
-    width:100%;
+    width:1230px;
     height:100%;
-    overflow: hidden;
 }
 .teach_item li{
     padding-top:20px;
@@ -1118,11 +1128,11 @@ body{
 }
 .teach_item li div{
     background-color: #FFF;
-    max-width:585px;
+    width:585px;
     margin: 0 auto 32px auto;
+    position: relative;
     height:190px;
     border:#EDEDED solid 1px;
-    overflow: hidden;
 }
 .teach_item li div:hover{
     -webkit-transform: translateY(-20px);
@@ -1141,29 +1151,24 @@ body{
     line-height: 40px;
     font-weight: bold;
     margin-left:20px;
-    margin-top: 27px;
-    max-width:350px;
-    display: block;
+    margin-top: 42px;
+    width:350px;
+    float: left;
     color:#000;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 .teach_con{
-    overflow: hidden;
-    height:72px;
-    display: block;
+    float: left;
     color:#717171;
     line-height: 24px;
     margin-left:20px;
     margin-top:20px;
+    width:308px;
 }
-.teach_item li div a:first-child{
-    float: right;
+.teach_item li div img{
+    position: absolute;
     width:163px;
-    line-height:190px;
-    height:100%;
     display: block;
+<<<<<<< HEAD
     margin-right: 20px;
     margin-left:70px;
 }
@@ -1243,6 +1248,11 @@ body{
         margin-top:8px;
         height:45px;
     }
+=======
+    height:123px;
+    top:30px;
+    right:20px;
+>>>>>>> parent of 1044068... fixed
 }
 @media screen and (max-width:620px){
     .teach_item li div a:first-child{
@@ -1276,19 +1286,25 @@ body{
     overflow: auto;
 }
 .team_item{
-    width:100%;
+
+    width:1224px;
     height:100%;
-    overflow: hidden;
 }
 .team_item li{
     width:25%;
     margin-bottom:20px;
     float: left;
 }
+
 .team_item li div{
+<<<<<<< HEAD
     max-width:280px;
     height: 450px;
     margin:auto;
+=======
+    width:282px;
+    height: 429px;
+>>>>>>> parent of 1044068... fixed
     border-radius: 10px;
     background-color: #FFF;
     overflow: hidden;
@@ -1300,33 +1316,25 @@ body{
     height: 0;
     visibility: hidden;
 }
-.team_head{
+.team_head img{
     display: block;
     width: 120px;
     height: 120px;
-    border-radius: 120px;
-    overflow: hidden;
     margin:25px auto 18px auto;
-}
-.team_head img{
-    display: block;
-    width:100%;
-    height: auto;
-
-
+    border-radius: 120px;
 }
 .team_name{
     font-size: 24px;
     color:#1E82D7;
     text-align: center;
-    width:100%;
+    width:120px;
     margin: auto;
     display: block;
 }
 .team_posi{
     display: block;
     color:#5C5C5C;
-    width:100%;
+    width:200px;
     text-align: center;
     margin:15px auto 22px auto;
 }
@@ -1336,12 +1344,16 @@ body{
     margin:0 30px 30px 30px;
     color:#878787;
     line-height: 24px;
+<<<<<<< HEAD
     overflow: hidden;
     height:192px;
+=======
+>>>>>>> parent of 1044068... fixed
 }
 .team_desc:hover{
     color:#1E82D7;
 }
+<<<<<<< HEAD
 @media screen and (max-width: 1200px) {
     .team_item li div{
         height:420px;
@@ -1412,6 +1424,11 @@ body{
 }
 /*end empty*/
 
+=======
+/*end team*/
+
+
+>>>>>>> parent of 1044068... fixed
 /*video*/
 .video_list{
     padding:55px 0 56px 0;
@@ -1420,12 +1437,11 @@ body{
     background-color: #F7F9FC;
     height:100%;
     width:100%;
-    overflow: hidden;
+    overflow: auto;
 }
 .video_item{
-    width:100%;
+    width:1220px;
     height:100%;
-    overflow: hidden;
 }
 .video_item li{
     width:25%;
@@ -1434,10 +1450,15 @@ body{
 }
 
 .video_item li div{
+<<<<<<< HEAD
     cursor: pointer;
     margin:auto;
     width:95%;
     border-radius:  10px 10px 0 0 ;
+=======
+    width:285px;
+    border-radius: 10px;
+>>>>>>> parent of 1044068... fixed
     background-color: #FFF;
     overflow: hidden;
     border: #E8E8E8 solid 1px;
@@ -1459,7 +1480,6 @@ body{
     display: block;
     font-size:18px;
     color:#3d3d3d;
-    overflow: hidden;
     margin:22px 15px;
 }
 .video_desc{
@@ -1468,10 +1488,8 @@ body{
     height:72px;
     line-height: 24px;
     margin:0 15px 22px 15px;
-    overflow: hidden;
 }
 .video_play{
-    display: block;
     position: relative;
 }
 .play{
@@ -1489,63 +1507,33 @@ body{
 .video_play:hover .played{
     display: block;
     position: absolute;
-    top:0;
+    top:-157px;
     left:0;
-}
-@media screen and (max-width: 1200px) {
-    .video_item li {
-        width: 33%;
-    }
-    .video_list .container{
-        width:90%;
-    }
-}
-@media screen and (max-width: 768px) {
-    .video_item li {
-        width: 50%;
-    }
-    .video_item li div{
-        width:95%;
-        padding-bottom: 13px;
-    }
-    .video_name{
-        font-size:12px;
-        margin:10px 12px;
-    }
-    .video_desc{
-        font-size:10px;
-        line-height: 15px;
-        height: 45px;
-        margin:auto 12px;
-    }
-}
-@media screen and (max-width: 425px){
-    .video_desc{
-        height: 60px;
-    }
 }
 /*end video*/
 
 /*content*/
+<<<<<<< HEAD
 .content .container{
     overflow: hidden;
     width:1205px;
     max-width: 1205px;
+=======
+.content{
+
+>>>>>>> parent of 1044068... fixed
 }
 .conTitle{
-    width: 100%;
     margin-top:45px;
     font-size: 32px;
     color:#1e82d7;
     font-weight: bold;
 }
 .conInfo{
-    width: 100%;
     margin-top:25px;
     color:#8b8b8b;
 }
 .conArt p{
-    width: 100%;
     margin-bottom:32px;
 }
 .conArt{
@@ -1580,6 +1568,7 @@ body{
 .social-share{
     float:right;
 }
+<<<<<<< HEAD
 @media screen and (max-width:1230px){
     .content{
         width:90%;
@@ -1620,6 +1609,8 @@ body{
         display:none;
     }
 }
+=======
+>>>>>>> parent of 1044068... fixed
 /*end content*/
 .swiper-slide, .swiper-wrapper {
     height: auto !important;

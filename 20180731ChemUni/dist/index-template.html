@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ch">
-
 <!--${My_unichem_head}-->
+
+
 <head>
     <meta charset="UTF-8">
     <title>${HopeTag.PageTitle}</title>
@@ -14,21 +15,42 @@
     <link rel="stylesheet" type="text/css" href="${HopeTag.InstallDir}Skin/collegeChem_20180801.css">
     <link rel="stylesheet" type="text/css" href="${HopeTag.InstallDir}Skin/share.css">
 </head>
+<<<<<<< HEAD
 <body>
+=======
 
+>>>>>>> parent of 1044068... fixed
+
+<body>
     <!--${My_unichem_header}-->
     <div class="header">
         <div class="container">
             <a class="logo" href="${HopeTag.InstallDir}"></a>
+            <div class="search">
+                <form>
+                    <input placeholder="输入关键字搜索">
+                    <button type="submit"></button>
+                </form>
+            </div>
             <a class="navList" onclick="dropDown()"></a>
         </div>
     </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 1044068... fixed
     <!--${My_unichem_nav}-->
     <div class="nav" id="nav">
         <div class="return"><a  onclick="closeNav()"></a></div>
+        <div class="mobileSearch">
+            <form>
+                <input placeholder="输入关键字搜索">
+                <button type="submit"></button>
+            </form>
+        </div>
         <div class="container">
             <ul>
+<<<<<<< HEAD
                 <li><a href="${HopeTag.InstallDir}" title="首页" class="navItem">首页</a><a href="${HopeTag.GetCategoryLink($id)}" class="rightArr"> > </a></li>
                 #foreach($id in [1,10,3,4,5,6,7,8])
                 #set($Cat = ${HopeTag.GetCategoryName($id)})
@@ -40,13 +62,20 @@
                        class="navItem"
                        #end
                 > $Cat</a><a href="${HopeTag.GetCategoryLink($id)}" class="rightArr"> > </a></li>
+=======
+                #foreach($id in [1,2,3,4,5,6,7,8])
+                #set($Cat = ${HopeTag.GetCategory($id)})
+                <li>
+                    <a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name" class="navItem"> $Cat.name</a>
+                    <a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" class="rightArr"> > </a>
+                </li>
+>>>>>>> parent of 1044068... fixed
                 #end
             </ul>
         </div>
     </div>
-
-
     <!--${My_unichem_slider}-->
+<<<<<<< HEAD
     <div class="slider" id="slider1">
         <div class="swiper-container">
             <div class="swiper-wrapper">
@@ -98,36 +127,65 @@
     </script>
 
 
+=======
+    <div class="slider">
+        <div class="pc-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider.png"></a></div>
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+        <div class="mobile-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
+                    <div class="swiper-slide"><a title=""><img src="${HopeTag.InstallDir}Skin/images/slider/slider-mobile.png"></a></div>
+                </div>
+                <div class="pagination"></div>
+            </div>
+        </div>
+    </div>
+>>>>>>> parent of 1044068... fixed
     <!--index-->
     <!--intro-->
     <div class="intro">
-        <div class="title">${HopeTag.GetCategoryName(1)}</div>
+        <div class="title">课程介绍</div>
         #set($Intro = ${HopeTag.GetCategory(1)})
         <div class="container">
             <div class="cover">
                 <img src="${HopeTag.InstallDir}$Intro.NodePicPath" alt="$Intro.Name">
             </div>
             <div class="course">
-                #set( $intro_text =${HopeTag.Html2Txt($Intro.Content)} )
-                $intro_text
-                <div class="more"><a href="${HopeTag.GetCategoryLink(18)}" title="详情"> 详情></a></div>
+                <p>$Intro.Content</p>
+                <div class="more">
+                    <a href="${HopeTag.GetCategoryLink(18)}" title="详情"> 详情></a>
+                </div>
             </div>
         </div>
     </div>
     <!--teach-->
     <div class="teach">
-        <div class="title">${HopeTag.GetCategoryName(3)}</div>
+        <div class="title">电子教案</div>
         <div class="container">
             <ul>
                 #foreach($Art in ${HopeTag.ArticleListSource(3,false,16)})
-                <li><a href="${HopeTag.GetCategoryLink($Art.NodeID)}" title="$Art.Title"> $Art.Title</a></li>
+                <li>
+                    <a href="${HopeTag.GetCategoryLink($Art.NodeID)}" title="$Art.Title"> $Art.Title</a>
+                </li>
                 #end
             </ul>
         </div>
     </div>
     <!--sci-->
     <div class="sci">
-        <div class="title">${HopeTag.GetCategoryName(5)}</div>
+        <div class="title">科学研究</div>
         <div class="container">
             #foreach($News in ${HopeTag.ArticleListSource(5,false,3)})
             <div class="news">
@@ -143,12 +201,12 @@
                 </div>
                 <div class="text">
                     <div class="newsTitle">
-                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title">${HopeTag.FormatString($News.Title, 30)}</a>
+                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title">${HopeTag.FormatString($News.Title, 29)}</a>
                     </div>
                     <div class="newsCon">
                         #set( $htm = ${HopeTag.GetValue("Content",$News)})
                         #set( $text =${HopeTag.Html2Txt($htm)} )
-                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title" class="newsCons">$text</a>
+                        <a href="${HopeTag.GetCategoryLink($News.NodeID)}" title="$News.Title">${HopeTag.FormatString($text, 60)}</a>
                     </div>
                 </div>
             </div>
@@ -159,16 +217,6 @@
             </div>
         </div>
     </div>
-
-    <script src="${HopeTag.InstallDir}JS/clamp.min.js"></script>
-    <script>
-        var para = document.getElementsByClassName('newsCons');
-        for(let i = 0;i<para.length;i++){
-            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
-        }
-    </script>
-
-
     <!--${My_unichem_footer}-->
     <div class="footer">
         <div class="container">
@@ -178,8 +226,14 @@
                     快速通道
                 </div>
                 <ul>
+<<<<<<< HEAD
                     #foreach($id in [1,10,4,6,8])
                     <li><a href="${HopeTag.GetCategoryLink($id)}" title="${HopeTag.GetCategoryName($id)}"> ${HopeTag.GetCategoryName($id)}</a></li>
+=======
+                    #foreach($id in [1,2,4,6,8])
+                    #set($Cat = ${HopeTag.GetCategory($id)})
+                    <li><a href="${HopeTag.GetCategoryLink($Cat.NodeID)}" title="$Cat.name"> $Cat.name</a></li>
+>>>>>>> parent of 1044068... fixed
                     #end
                 </ul>
             </div>
@@ -202,10 +256,10 @@
                     常用链接
                 </div>
                 <ul>
-                    <li><a href="http://www.sysu.edu.cn/" target="_Blank" title="中山大学">中山大学</a></li>
+                    <li><a href="http://www.sysu.edu.cn/2012/cn/index.htm" target="_Blank" title="中山大学">中山大学</a></li>
                     <li><a href="http://ce.sysu.edu.cn/" target="_Blank" title="化学学院">化学学院</a></li>
                     <li><a href="http://uems.sysu.edu.cn/jwxt/" target="_Blank" title="教务系统">教务系统</a></li>
-                    <li><a href="http://ge.sysu.edu.cn" target="_Blank" title="通识教育部<">通识教育部</a></li>
+                    <li><a href="ge.sysu.edu.cn" target="_Blank" title="通识教育部<">通识教育部</a></li>
                     <li><a href="http://my.sysu.edu.cn/welcome" target="_Blank" title="我的中大">我的中大</a></li>
                 </ul>
             </div>
@@ -215,11 +269,11 @@
                     联系我们
                 </div>
                 <ul>
-                    <li>电话：<a  title="电话">020-84113691</a></li>
-                    <li>传真：<a  title="传真">020-84112245</a></li>
-                    <li>邮箱：<a  title="邮箱">chem@mail.sysu.edu.cn</a></li>
-                    <li>邮编：<a  title="邮编">510275</a></li>
-                    <li>地址：<a  title="地址">广州市海珠区新港西路135号</a></li>
+                    <li><a  title="电话">电话：020-84113691</a></li>
+                    <li><a  title="传真">传真：020-84112245</a></li>
+                    <li><a  title="邮箱">邮箱：chem@mail.sysu.edu.cn</a></li>
+                    <li><a  title="邮编">邮编：510275</a></li>
+                    <li><a  title="地址">地址：广州市海珠区新港西路135号</a></li>
                 </ul>
             </div>
         </div>
@@ -229,6 +283,7 @@
     </div>
     <script src="${HopeTag.InstallDir}JS/main.js"></script>
 
+<<<<<<< HEAD
     <!--${My_unichem_banner}-->
     #set($Cat = ${HopeTag.Category})
     <div class="banner">
@@ -379,12 +434,26 @@
     </div>
     #end
     <script src="${HopeTag.InstallDir}JS/clamp.min.js"></script>
+=======
+    <script src="${HopeTag.InstallDir}JS/idangerous.swiper.min.js"></script>
+>>>>>>> parent of 1044068... fixed
     <script>
-        var para = document.getElementsByClassName('video_desc');
-        for(let i = 0;i<para.length;i++){
-            $clamp(para[i], {clamp: 'auto',useNativeClamp: true,truncationChar:"...",animate:true});
-        }
+        var mySwiper = new Swiper('.pc-slider .swiper-container',{
+            loop: true,
+            autoplay: 3000,
+            calculateHeight:true,
+            pagination:'.pc-slider .pagination',
+            paginationClickable: true,
+        });
+        var Swiper = new Swiper('.mobile-slider .swiper-container',{
+            loop: true,
+            autoplay: 3000,
+            calculateHeight:true,
+            pagination:'.mobile-slider .pagination',
+            paginationClickable: true,
+        });
     </script>
+<<<<<<< HEAD
 
 <!--${My_unichem_breadcrumb}-->
     <div class="bread">
@@ -510,5 +579,7 @@
                 loadPDF('$b');
             };
         </script>
+=======
+>>>>>>> parent of 1044068... fixed
 </body>
 </html>
