@@ -45,7 +45,13 @@ fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
 button, input, select, textarea {
     font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
 }
-
+#pdf-container{
+    text-align:center;
+}
+.pdfClass{
+    border: solid 1px #ccc;
+    width:100%;
+}
 a[href]{
     cursor: pointer;
 }
@@ -69,8 +75,8 @@ body{
     margin:0 auto;
 }
 .conPDF{
-    margin:30px auto;
-    max-width:40vw;
+    padding:20px 0px;
+    margin:auto;
 }
 /*header*/
 .header{
@@ -157,9 +163,7 @@ body{
 }
 
 @media screen and (max-width:1230px) {
-    .conPDF{
-        max-width:80vw;
-    }
+
     .bread .container{
         width:90%;
         margin:0 5%;
@@ -170,9 +174,7 @@ body{
     }
 }
 @media screen and (max-width:768px){
-    .conPDF{
-        max-width:80vw;
-    }
+
     .bread .container{
         width:96%;
         margin:0 auto;
@@ -207,6 +209,7 @@ body{
     background-color: #ffffff;
     height:54px;
 }
+
 .rightArr{
     display: none;
 }
@@ -411,6 +414,12 @@ body{
 /*end banner*/
 
 /*footer*/
+.footer1{
+    clear:both;
+    background-color:#2A303C ;
+    height: 100%;
+    color:#FFF;
+}
 .footer{
     clear:both;
     background-color:#2A303C ;
@@ -424,6 +433,7 @@ body{
     height:240px;
 }
 .listTitle{
+    color:#FFF;
     height: 30px;
     padding:10px 0;
     vertical-align: middle;
@@ -453,6 +463,19 @@ body{
     color:#FFF;
 }
 .bottom{
+    color:#FFF;
+    clear:both;
+    width:100%;
+    height:56px;
+    line-height: 56px;
+    text-align: center;
+    border-top:#3F444F solid 1px;
+    opacity: 0.6;
+    box-shadow: 0 -1px 0 #212733;
+}
+.bottom1
+{
+    color:#FFF;
     clear:both;
     width:100%;
     height:56px;
@@ -519,16 +542,28 @@ body{
     background-color: #1E82D7;
 }
 @media screen and (max-width:1230px){
-    .footer{
+    .footer1{
         background-color: #FFF;
+    }
+
+    .footer{
+        background-color: #f8fafc;
     }
     .list{
         display: none;
     }
-    .bottom{
+    .bottom1{
         width:80%;
         margin:0 auto;
         background-color: #FFF;
+        box-shadow: none;
+        border-top:#D4D4D4 solid 1px;
+        color:#ABABAB;
+    }
+    .bottom{
+        width:80%;
+        margin:0 auto;
+        background-color: #f8fafc;
         box-shadow: none;
         border-top:#D4D4D4 solid 1px;
         color:#ABABAB;
@@ -1015,6 +1050,7 @@ body{
     }
     .catName{
         height:auto;
+
     }
 }
 @media screen and (max-width: 768px){
@@ -1057,6 +1093,7 @@ body{
 /*end cata*/
 
 /*teach*/
+
 .teach_list{
     padding:55px 0 82px 0;
     clear:both;
@@ -1160,7 +1197,12 @@ body{
     }
 }
 @media screen and (max-width: 768px){
+    .teach_list{
+        padding:0;
+        padding-top:12px;
+    }
     .teach_item li{
+        padding:0;
         width:50%;
     }
     .teach_item li div{
@@ -1228,7 +1270,7 @@ body{
     padding:55px 0 75px 0;
     clear:both;
     display: block;
-    background-color: #F7F9FC;
+    background-color: #F8FaFC;
     height:100%;
     width:100%;
     overflow: auto;
@@ -1240,11 +1282,11 @@ body{
 }
 .team_item li{
     width:25%;
-    margin-bottom:30px;
+    margin-bottom:20px;
     float: left;
 }
 .team_item li div{
-    max-width:282px;
+    max-width:280px;
     height: 450px;
     margin:auto;
     border-radius: 10px;
@@ -1270,6 +1312,8 @@ body{
     display: block;
     width:100%;
     height: auto;
+
+
 }
 .team_name{
     font-size: 24px;
@@ -1293,7 +1337,7 @@ body{
     color:#878787;
     line-height: 24px;
     overflow: hidden;
-    height:198px;
+    height:192px;
 }
 .team_desc:hover{
     color:#1E82D7;
@@ -1303,7 +1347,8 @@ body{
         height:420px;
     }
     .team_item li {
-        width: 33%;
+        width: 31%;
+        margin:1%;
     }
     .team_list .container{
         width:90%;
@@ -1321,9 +1366,11 @@ body{
     }
     .team_item li {
         width: 50%;
+        margin:0;
+        margin-bottom:10px;
     }
     .team_item li div{
-        width:92%;
+        width:90%;
         height:auto;
         padding-bottom: 12px;
     }
@@ -1482,6 +1529,8 @@ body{
 /*content*/
 .content .container{
     overflow: hidden;
+    width:1205px;
+    max-width: 1205px;
 }
 .conTitle{
     width: 100%;
@@ -1500,7 +1549,6 @@ body{
     margin-bottom:32px;
 }
 .conArt{
-    white-space:pre;
     color:#4a4a4a;
     font-size:16px;
     line-height: 32px;
@@ -1537,6 +1585,7 @@ body{
         width:90%;
         margin:0 5%;
     }
+
 }
 @media screen and (max-width:786px){
     .share{
