@@ -46,13 +46,7 @@ fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
 button, input, select, textarea {
     font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
 }
-#pdf-container{
-    text-align:center;
-}
-.pdfClass{
-    border: solid 1px #ccc;
-    width:100%;
-}
+
 a[href]{
     cursor: pointer;
 }
@@ -76,8 +70,8 @@ body{
     margin:0 auto;
 }
 .conPDF{
-    padding:20px 0px;
-    margin:auto;
+    margin:30px auto;
+    max-width:40vw;
 }
 /*header*/
 .header{
@@ -165,7 +159,9 @@ body{
 }
 
 @media screen and (max-width:1230px) {
-
+    .conPDF{
+        max-width:80vw;
+    }
     .bread .container{
         width:90%;
         margin:0 5%;
@@ -180,7 +176,13 @@ body{
 }
 @media screen and (max-width:768px){
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    .conPDF{
+        max-width:80vw;
+    }
+>>>>>>> parent of 8719ab5... before  return
     .bread .container{
         width:96%;
         margin:0 auto;
@@ -415,12 +417,6 @@ body{
 /*end banner*/
 
 /*footer*/
-.footer1{
-    clear:both;
-    background-color:#2A303C ;
-    height: 100%;
-    color:#FFF;
-}
 .footer{
     clear:both;
     background-color:#2A303C ;
@@ -434,7 +430,6 @@ body{
     height:240px;
 }
 .listTitle{
-    color:#FFF;
     height: 30px;
     padding:10px 0;
     vertical-align: middle;
@@ -463,19 +458,6 @@ body{
     color:#FFF;
 }
 .bottom{
-    color:#FFF;
-    clear:both;
-    width:100%;
-    height:56px;
-    line-height: 56px;
-    text-align: center;
-    border-top:#3F444F solid 1px;
-    opacity: 0.6;
-    box-shadow: 0 -1px 0 #212733;
-}
-.bottom1
-{
-    color:#FFF;
     clear:both;
     width:100%;
     height:56px;
@@ -545,28 +527,16 @@ body{
 =======
 >>>>>>> parent of 1044068... fixed
 @media screen and (max-width:1230px){
-    .footer1{
-        background-color: #FFF;
-    }
-
     .footer{
-        background-color: #f8fafc;
+        background-color: #FFF;
     }
     .list{
         display: none;
     }
-    .bottom1{
-        width:80%;
-        margin:0 auto;
-        background-color: #FFF;
-        box-shadow: none;
-        border-top:#D4D4D4 solid 1px;
-        color:#ABABAB;
-    }
     .bottom{
         width:80%;
         margin:0 auto;
-        background-color: #f8fafc;
+        background-color: #FFF;
         box-shadow: none;
         border-top:#D4D4D4 solid 1px;
         color:#ABABAB;
@@ -1058,7 +1028,6 @@ body{
     }
     .catName{
         height:auto;
-
     }
 }
 @media screen and (max-width: 768px){
@@ -1104,7 +1073,6 @@ body{
 /*end cata*/
 
 /*teach*/
-
 .teach_list{
     padding:55px 0 82px 0;
     clear:both;
@@ -1202,12 +1170,7 @@ body{
     }
 }
 @media screen and (max-width: 768px){
-    .teach_list{
-        padding:0;
-        padding-top:12px;
-    }
     .teach_item li{
-        padding:0;
         width:50%;
     }
     .teach_item li div{
@@ -1280,7 +1243,7 @@ body{
     padding:55px 0 75px 0;
     clear:both;
     display: block;
-    background-color: #F8FaFC;
+    background-color: #F7F9FC;
     height:100%;
     width:100%;
     overflow: auto;
@@ -1292,13 +1255,17 @@ body{
 }
 .team_item li{
     width:25%;
-    margin-bottom:20px;
+    margin-bottom:30px;
     float: left;
 }
 
 .team_item li div{
 <<<<<<< HEAD
+<<<<<<< HEAD
     max-width:280px;
+=======
+    max-width:282px;
+>>>>>>> parent of 8719ab5... before  return
     height: 450px;
     margin:auto;
 =======
@@ -1321,7 +1288,15 @@ body{
     width: 120px;
     height: 120px;
     margin:25px auto 18px auto;
+<<<<<<< HEAD
     border-radius: 120px;
+=======
+}
+.team_head img{
+    display: block;
+    width:100%;
+    height: auto;
+>>>>>>> parent of 8719ab5... before  return
 }
 .team_name{
     font-size: 24px;
@@ -1346,9 +1321,13 @@ body{
     line-height: 24px;
 <<<<<<< HEAD
     overflow: hidden;
+<<<<<<< HEAD
     height:192px;
 =======
 >>>>>>> parent of 1044068... fixed
+=======
+    height:198px;
+>>>>>>> parent of 8719ab5... before  return
 }
 .team_desc:hover{
     color:#1E82D7;
@@ -1359,8 +1338,7 @@ body{
         height:420px;
     }
     .team_item li {
-        width: 31%;
-        margin:1%;
+        width: 33%;
     }
     .team_list .container{
         width:90%;
@@ -1378,11 +1356,9 @@ body{
     }
     .team_item li {
         width: 50%;
-        margin:0;
-        margin-bottom:10px;
     }
     .team_item li div{
-        width:90%;
+        width:92%;
         height:auto;
         padding-bottom: 12px;
     }
@@ -1516,12 +1492,15 @@ body{
 <<<<<<< HEAD
 .content .container{
     overflow: hidden;
+<<<<<<< HEAD
     width:1205px;
     max-width: 1205px;
 =======
 .content{
 
 >>>>>>> parent of 1044068... fixed
+=======
+>>>>>>> parent of 8719ab5... before  return
 }
 .conTitle{
     margin-top:45px;
@@ -1537,6 +1516,7 @@ body{
     margin-bottom:32px;
 }
 .conArt{
+    white-space:pre;
     color:#4a4a4a;
     font-size:16px;
     line-height: 32px;
@@ -1574,7 +1554,6 @@ body{
         width:90%;
         margin:0 5%;
     }
-
 }
 @media screen and (max-width:786px){
     .share{

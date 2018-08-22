@@ -31,7 +31,7 @@ small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正�
 /* 重置列表元素 */
 ul, ol { list-style: none; }
 /* 重置文本格式元素 */
-a { text-decoration: none; color: black;}
+a { text-decoration: none; }
 a:hover { text-decoration: none; }
 abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
     border-bottom: 1px dotted;
@@ -85,7 +85,6 @@ body{
     margin-right: 5px;
 }
 .more{
-    display: block;
     float:right;
     text-align: center;
 }
@@ -107,7 +106,6 @@ body{
 }
 .news_show{
     margin-right: 26px;
-    float: left;
 }
 .news_slider{
     width:360px;
@@ -121,7 +119,6 @@ body{
     width:320px;
     line-height: 16px;
     font-size:16px;
-    position: relative;
     color:#010101;
     border-radius: 0 0 5px 5px;
 }
@@ -141,17 +138,6 @@ body{
     height:333px;
     float: left;
     padding:2%;
-    font-size: 16px;
-    line-height: 32px;
-}
-.card img{
-    vertical-align: middle;
-    width:10px;
-    margin-right:2px;
-}
-.card .title{
-    height:44px;
-    margin:0;
 }
 .info .card:first-child{
     background-color: #f0f0f0;
@@ -164,20 +150,7 @@ body{
     background-color: #f0f0f0;
     margin-left: 2%;
 }
-.train ul li{
-    height:144px;
 
-
-}
-.train ul li .teach{
-    margin-left:5px;
-}
-.train ul li .time{
-    margin-left:5px;
-}
-.train ul li .loca{
-    margin-left:5px;
-}
 .card .title .name{
     font-size: 18px;
     line-height: 18px;
@@ -185,9 +158,6 @@ body{
     min-width: 150px;
     border-bottom: solid 1px;
     padding-bottom: 10px;
-}
-.card ul li .name{
-    font-size:18px;
 }
 .card .more{
     width:55px;
@@ -197,37 +167,15 @@ body{
     line-height: 17px;
     font-size:12px;
 }
-.duty .name a{
-    color:#FFF;
-}
-.duty .more{
-    color:#FFF;
-}
-.duties li{
-    height:74px;
-
-}
-.patrol{
-    padding-top:22px;
-}
-
 .wechat ul{
-    width:45%;
+    width:50%;
     float:left;
-}
-.wechat li{
-    margin-left:20px;
-    width:100px;
-    line-height:32px;
-}
-.wx_list{
-    line-height:52px;
-    padding-left:5%;
 }
 .photo{
     background-color: #f0f0f0;
     width:100%;
-    height:432px;
+    height: 100%;
+
 }
 .titles{
     height:50px;
@@ -243,8 +191,7 @@ body{
 .titles li a img{
     vertical-align: middle;
 }
-.hover{
-    width:125px;
+.titles li:hover{
     height:100%;
     display: block;
     color:#5191cd;
@@ -293,7 +240,7 @@ body{
     margin-top: 42px;
 
 }
-.icons{
+.icon_list li a{
     display: block;
     height:95px;
     width:95px;
@@ -337,102 +284,4 @@ body{
     height:57px;
     font-size: 16px;
     line-height: 57px;
-}
-
-
-/*slider*/
-.slider{
-    clear: both;
-}
-.swiper-container {
-    height:100%;
-    margin:0 auto;
-    position:relative;
-    overflow:hidden;
-    -webkit-backface-visibility:hidden;
-    -moz-backface-visibility:hidden;
-    -ms-backface-visibility:hidden;
-    -o-backface-visibility:hidden;
-    backface-visibility:hidden;
-    /* Fix of Webkit flickering */
-    z-index:1;
-}
-.swiper-wrapper {
-    position:relative;
-    width:100%;
-    -webkit-transition-property:-webkit-transform, left, top;
-    -webkit-transition-duration:0s;
-    -webkit-transform:translate3d(0px,0,0);
-    -webkit-transition-timing-function:ease;
-    -moz-transition-property:-moz-transform, left, top;
-    -moz-transition-duration:0s;
-    -moz-transform:translate3d(0px,0,0);
-    -moz-transition-timing-function:ease;
-    -o-transition-property:-o-transform, left, top;
-    -o-transition-duration:0s;
-    -o-transform:translate3d(0px,0,0);
-    -o-transition-timing-function:ease;
-    -o-transform:translate(0px,0px);
-    -ms-transition-property:-ms-transform, left, top;
-    -ms-transition-duration:0s;
-    -ms-transform:translate3d(0px,0,0);
-    -ms-transition-timing-function:ease;
-    transition-property:transform, left, top;
-    transition-duration:0s;
-    transform:translate3d(0px,0,0);
-    transition-timing-function:ease;
-}
-.swiper-free-mode > .swiper-wrapper {
-    -webkit-transition-timing-function: ease-out;
-    -moz-transition-timing-function: ease-out;
-    -ms-transition-timing-function: ease-out;
-    -o-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    margin: 0 auto;
-}
-.swiper-slide {
-    float: left;
-    width:100%;
-    height:100%
-}
-.swiper-slide img{
-    width:100%;
-}
-.swiper-slide a{
-    width:100%;
-    height: 100%;
-}
-.swiper-wp8-horizontal {
-    -ms-touch-action: pan-y;
-}
-.swiper-wp8-vertical {
-    -ms-touch-action: pan-x;
-}
-.pagination {
-    float: right;
-}
-.swiper-pagination-switch {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 10px;
-    background: #f0f0f0;
-    margin: 0 6px;
-    cursor: pointer;
-}
-.swiper-active-switch {
-    background: #5191cd;
-    opacity: 1;
-}
-/*end slider*/
-
-/*tab slider*/
-#tabSlide {
-width:100%;
-}
-#tabSlide .swiper-slide {
-    width:100%;
-}
-#tabSlide .content-slide {
-    margin:0 1px;
 }
