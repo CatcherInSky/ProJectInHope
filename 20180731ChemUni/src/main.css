@@ -177,7 +177,13 @@ body{
 @media screen and (max-width:768px){
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+    .conPDF{
+        max-width:80vw;
+    }
+>>>>>>> parent of 8719ab5... before  return
 =======
     .conPDF{
         max-width:80vw;
@@ -1262,7 +1268,11 @@ body{
 .team_item li div{
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     max-width:280px;
+=======
+    max-width:282px;
+>>>>>>> parent of 8719ab5... before  return
 =======
     max-width:282px;
 >>>>>>> parent of 8719ab5... before  return
@@ -1296,6 +1306,9 @@ body{
     display: block;
     width:100%;
     height: auto;
+<<<<<<< HEAD
+>>>>>>> parent of 8719ab5... before  return
+=======
 >>>>>>> parent of 8719ab5... before  return
 }
 .team_name{
@@ -1322,9 +1335,13 @@ body{
 <<<<<<< HEAD
     overflow: hidden;
 <<<<<<< HEAD
+<<<<<<< HEAD
     height:192px;
 =======
 >>>>>>> parent of 1044068... fixed
+=======
+    height:198px;
+>>>>>>> parent of 8719ab5... before  return
 =======
     height:198px;
 >>>>>>> parent of 8719ab5... before  return
@@ -1493,12 +1510,15 @@ body{
 .content .container{
     overflow: hidden;
 <<<<<<< HEAD
+<<<<<<< HEAD
     width:1205px;
     max-width: 1205px;
 =======
 .content{
 
 >>>>>>> parent of 1044068... fixed
+=======
+>>>>>>> parent of 8719ab5... before  return
 =======
 >>>>>>> parent of 8719ab5... before  return
 }
