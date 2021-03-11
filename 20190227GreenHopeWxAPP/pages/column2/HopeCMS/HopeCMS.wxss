@@ -1,0 +1,99 @@
+/* pages/column3/HopeCMS/HopeCMS.wxss */
+
+.banner {
+  width: 750rpx;
+}
+
+.banner-img {
+  width: 750rpx;
+}
+
+.banner-title {
+  margin: 40rpx auto 0;
+  text-align: center;
+  font-size: 36rpx;
+  color: #1b4e8d;
+}
+
+.banner-title text, .banner-title iamge {
+  display: inline;
+}
+
+.banner-title image {
+  width: 60rpx;
+}
+
+.banner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60rpx 0;
+}
+
+.banner-item {
+  width: 232rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-item image {
+  width: 82rpx;
+}
+
+.banner-list-title {
+  font-size: 36rpx;
+  color: #1b4e8d;
+  margin: 20rpx;
+}
+
+.banner-list-sub {
+  font-size: 20rpx;
+  color: #1b4e8d;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #1b4e8d;
+  margin-bottom: 20rpx;
+}
+
+.text {
+  font-size: 20rpx;
+  color: #1b4e8d;
+  line-height: 30rpx;
+}
+
+.item:nth-child(odd) {
+  flex-flow: row-reverse nowrap;
+  background-color: #f5f6f7;
+}
+
+.item:nth-child(3) {
+  flex-flow: column nowrap;
+  text-align: center;
+  height: auto;
+}
+
+.item:nth-child(3) .title {
+  margin-top: 30rpx;
+}
+
+.item:nth-child(3) .sub {
+  margin-bottom: 30rpx;
+}
+
+.item:nth-child(3) image {
+  width: 433rpx;
+  margin-bottom: 20rpx;
+}

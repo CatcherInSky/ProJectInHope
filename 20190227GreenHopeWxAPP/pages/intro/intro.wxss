@@ -1,0 +1,124 @@
+/* pages/intro/intro.wxss */
+
+.banner {
+  width: 750rpx;
+  height: 350rpx;
+  margin: 0 auto;
+}
+
+.banner swiper-item view {
+  width: 700rpx;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-clip: border-box;
+  background-size: cover;
+  border-radius: 10rpx;
+  margin: 0 auto;
+}
+
+.banner-info {
+  width: 700rpx;
+}
+
+.ser-container {
+  margin: 80rpx 25rpx 0;
+}
+
+.scroll {
+  white-space: nowrap;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.ser-title {
+  font-size: 34rpx;
+  color: #353535;
+  margin-bottom: 40rpx;
+}
+
+.scroll-item {
+  display: inline-block;
+  width: 280rpx;
+  height: 210rpx;
+  margin-right: 20rpx;
+  text-align: center;
+  border-radius: 10rpx;
+}
+
+.scroll-item navigator {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-item image {
+  width: 100%;
+}
+
+.scroll-item text {
+  font-size: 28rpx;
+  color: #999;
+  margin-top: -10rpx;
+}
+
+.ser-process image {
+  display: block;
+  width: 610rpx;
+  margin: 20rpx auto;
+}
+
+.process-before, .process-after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+  text-align: center;
+}
+
+.process-before text, .process-after text {
+  width: 120rpx;
+  margin: 0 15rpx;
+}
+
+.row {
+  width: 590rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.adv, .adv-2 {
+  width: 250rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.adv {
+  border-bottom: solid 1px #e0e0e0;
+}
+
+.ser-advantage image {
+  width: 75rpx;
+  margin: 20rpx 0 35rpx;
+}
+
+.ser-advantage text {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 30rpx;
+}
+
+.col-line {
+  width: 1px;
+  height: 100rpx;
+  background-color: #e0e0e0;
+}

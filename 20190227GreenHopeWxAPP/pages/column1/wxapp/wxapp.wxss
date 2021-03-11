@@ -1,0 +1,29 @@
+/* pages/intro/intro.wxss */
+
+.container {
+  width: 710rpx;
+  margin: 0 auto;
+}
+
+.headline {
+  font-size: 34rpx;
+  color: #000;
+  margin: 30rpx 0;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 60rpx;
+}
+
+.box1, .box3 {
+  font-size: 28rpx;
+  color: #666;
+}
+
+.box2 image, .box4 image {
+  display: block;
+  width: 710rpx;
+  margin-bottom: 40rpx;
+}

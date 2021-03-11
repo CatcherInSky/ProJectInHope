@@ -1,0 +1,55 @@
+<!--pages/intro/intro.wxml-->
+
+<swiper class="banner" autoplay circular indicator-dots indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}">
+  <swiper-item wx:for="{{banner}}" wx:key="">
+    <view style="background-image:url({{item.img}})">
+      <image src="{{item.textImg}}" class="banner-info" mode="widthFix"></image>
+    </view>
+  </swiper-item>
+</swiper>
+<view class="ser-type ser-container">
+  <view class="ser-title">{{types.title}}</view>
+  <scroll-view scroll-x class="scroll">
+    <view wx:for="{{types.list}}" wx:key="" class="scroll-item" style="background-color:{{item.color}}">
+      <navigator url="{{item.nav}}">
+        <image src="{{item.img}}" mode="widthFix"></image>
+        <text>{{item.text}}</text>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+<view class="ser-process ser-container">
+  <view class="ser-title">{{process.title}}</view>
+  <view class="process-before">
+    <text wx:for="{{process.before}}" wx:key="">{{item}}</text>
+  </view>
+  <image src="{{process.img}}" mode="widthFix"></image>
+  <view class="process-after">
+    <text wx:for="{{process.after}}" wx:key="">{{item}}</text>
+  </view>
+</view>
+<view class="ser-advantage ser-container">
+  <view class="ser-title">{{adv.title}}</view>
+  <view class="row">
+    <view class="adv">
+      <image src="{{adv.img[0]}}" mode="widthFix"></image>
+      <text>{{adv.text[0]}}</text>
+    </view>
+    <view class="col-line"></view>
+    <view class="adv">
+      <image src="{{adv.img[1]}}" mode="widthFix"></image>
+      <text>{{adv.text[1]}}</text>
+    </view>
+  </view>
+  <view class="row">
+    <view class="adv-2">
+      <image src="{{adv.img[2]}}" mode="widthFix"></image>
+      <text>{{adv.text[2]}}</text>
+    </view>
+    <view class="col-line"></view>
+    <view class="adv-2">
+      <image src="{{adv.img[3]}}" mode="widthFix"></image>
+      <text>{{adv.text[3]}}</text>
+    </view>
+  </view>
+</view>

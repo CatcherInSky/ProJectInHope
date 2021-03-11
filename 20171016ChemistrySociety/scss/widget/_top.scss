@@ -1,0 +1,58 @@
+.top-container {
+  background-color: $colorGreyLL;
+  width: 100%;
+  height: 40px;
+  @media all and (max-width: 440px) {
+    display: none;
+  }
+}
+
+.top {
+  width: 80%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: $colorGreyM;
+  font-size: $fontsizeM;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .top-right {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media all and (max-width: 1024px) {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+.top-right-item {
+  padding: 6px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 16px;
+    height: 16px;
+    padding-right: 2px;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    color: $colorGreyM;
+    &:visited,&:active {
+      background-color: transparent;
+      border: none;
+    }
+  }
+  &:hover,&:focus {
+    color: $colorWhite;
+    background-color: $colorBlueL;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: .2s;
+  }
+}
+

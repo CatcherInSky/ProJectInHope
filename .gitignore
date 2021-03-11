@@ -1,2 +1,7 @@
 
 20180501GitTest/
+.DS_Store
+*/node_modules/
+*/dist/
+*/.idea/
+npm-debug.log

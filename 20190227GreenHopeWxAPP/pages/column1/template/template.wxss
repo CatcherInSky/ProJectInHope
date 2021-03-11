@@ -1,0 +1,44 @@
+/* pages/column1/App/App.wxss */
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 195rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60rpx;
+}
+
+.banner-title {
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.banner-sub {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.item {
+  width: 650rpx;
+  margin: 0 auto 60rpx;
+}
+
+.item image {
+  width: 650rpx;
+  border-radius: 20rpx;
+}
+
+.title {
+  font-size: 30rpx;
+  color: #353535;
+  margin:20rpx 0 10rpx;
+}
+
+.sub {
+  font-size: 20rpx;
+  color: #666;
+}

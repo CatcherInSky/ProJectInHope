@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh">
+<%- include("./../public/head.ejs") %>
+<body>
+<%- include("./../public/header.ejs") %>
+<%- include("./../public/banner.ejs") %>
+<section class="main">
+    <div class="container clearfix">
+        <%- include("./../public/admin/admin-aside.ejs") %>
+        <section class="main-right">
+            <%- include("./../public/admin/admin-nav.ejs") %>
+            <section class="main-right-table">
+                <table>
+                    <%if(book.length>0){%>
+                    <thead>
+                    <tr>
+                        <th class="t-4 left t-left-padding">书籍名</th>
+                        <th class="t-1 center">编号</th>
+                        <th class="t-1 center ">状态</th>
+                        <th class="t-1 center">借阅人</th>
+                        <th class="t-3 center t-right-padding">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%if(book.length>10){var max=10;}else{var max=book.length;}%>
+                    <%for(var i=0;i<max;i++){%>
+                    <tr>
+                        <td class="left t-left-padding"><%= book[i].bookName %></td>
+                        <td class="center"><%= book[i].bookHopeID %></td>
+                        <% if(book[i].bookLeft<=0){ %>
+                        <td class="center">已借出</td>
+                        <td class="center"><%= borrower[i] %></td>
+                        <td class="center t-right-padding main-right-table-manage">
+                            <span>
+                                <a href="/hopelibrary/admin/book-modify/<%= book[i].bookID %>">修改</a>
+                            </span>
+                            <span class="disable">
+                                删除
+                            </span>
+                        </td>
+                        <%}else{%>
+                        <td class="center">在架上</td>
+                        <td class="center"></td>
+                        <td class="center t-right-padding main-right-table-manage">
+                            <span>
+                                <a href="/hopelibrary/admin/book-modify/<%= book[i].bookID %>">修改</a>
+                            </span>
+                            <span>
+                                <a href="javascript:" class="js-drop-book" data-user="<%= book[i].bookID %>">删除</a>
+                            </span>
+                        </td>
+                        <%}%>
+                    </tr>
+                    <%}%>
+                    </tbody>
+                </table>
+            </section>
+             <%if(secondPath!="search"){%>
+                <%if(bookNum>1){%>
+                <section class="main-right-page-num">
+                    <%if(bookNum>10){if(bookPage==1 || bookPage==bookNum){%>
+                    <span <%if(bookPage==1){%> class="main-right-page-num-active" <%}%>><a href="/hopelibrary/admin/admin-book?pageTab=1">1</a></span>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=2">2</a></span>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=3">3</a></span>
+                    <span><a href="">...</a></span>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=<%=bookNum-2%>"><%=bookNum-2%></a></span>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=<%=bookNum-1%>"><%=bookNum-1%></a></span>
+                    <span <%if(bookNum==bookPage){%> class="main-right-page-num-active"<%}%>><a href="/hopelibrary/admin/admin-book?pageTab=<%=bookNum%>"><%=bookNum%></a></span>
+                    <%}else{%>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=1">1</a></span>
+                    <%if(bookPage>3){%>
+                    <span><a href="">...</a></span>
+                    <%}%>
+                    <%if(bookPage>=3){%>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=<%=bookPage-1%>"><%=parseInt(bookPage)-1%></a></span>
+                    <%}%>
+                    <span class="main-right-page-num-active"><a href="/hopelibrary/admin/admin-book?pageTab=<%=bookPage%>"><%=bookPage%></a></span>
+                    <%if(bookPage<(parseInt(bookNum)-1)){%>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=<%=parseInt(bookPage)+1%>"><%=parseInt(bookPage)+1%></a></span>
+                    <%}%>
+                    <%if(bookPage<(parseInt(bookNum)-2)){%>
+                    <span><a href="">...</a></span>
+                    <%}%>
+                    <span><a href="/hopelibrary/admin/admin-book?pageTab=<%=bookNum%>"><%=bookNum%></a></span>
+                    <%}}else{%>
+                    <%for(var k=1;k<=bookNum;k++){%>
+                    <span <%if(k==bookPage){%> class="main-right-page-num-active"<%}%>><a href="/hopelibrary/admin/admin-book?pageTab=<%=k%>"><%=k%></a></span>
+                    <%}%>
+                    <%}%>
+                    <%}%>
+                    <%}else{%>
+                    <table>
+                    <th class="t-10 center">当前架上尚无图书</th>
+                    </table>
+                </section>
+                <%}%>
+            <%}%>
+            </sectin>
+    </div>
+</section>
+<%- include("./../public/footer.ejs") %>
+<script src="/hopelibrary/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  requirejs.config({
+    baseUrl: "/hopelibrary/js",
+    paths:{
+      hajax: "public/hajax",
+      jquery: "public/jquery",
+      hlayer: "./hlayer/hlayer"
+    },
+    shim: {
+      hajax: {exports: "hajax"},
+      hlayer: {exports: "hlayer"},
+      jquery: {exports: "jquery"},
+    }
+  });
+  requirejs(['jquery', 'hajax', 'hlayer'], function($, hajax, hlayer) {
+    $(".js-drop-book").click(function(){
+      var dropData=$(this).attr("data-user");
+      hlayer.alert({
+        text:'删除图书将会删除该图书的所有信息',
+        icon:3,
+        cancelBtn:true,
+        width:'300px',
+        mainBg:'#1c95ea',
+        confirmCb:function(){
+          hajax.hformAjax({
+            data:{"bookID":dropData},
+            redirect:'/hopelibrary/admin/admin-book',
+            url:'/hopelibrary/admin/dropbook'
+          });
+        },
+        cancelCb:'close'
+      });
+    });
+  });
+    $('#searchInput').keyup(function(e){
+        if(e.keyCode==13){
+            if($('#searchInput').val()){
+                window.location.replace("http://202.116.83.77/hopelibrary/admin/admin-book/search?word="+$('#searchInput').val());
+            }
+        }
+  });
+
+  $('#searchBox').click(function(e){
+    if($('#searchInput').val()){
+        window.location.replace("http://202.116.83.77/hopelibrary/admin/admin-book/search?word="+$('#searchInput').val());
+    }
+  })
+</script>
+</body>
+</html>

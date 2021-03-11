@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<%- include("./../public/head.ejs") %>
+<body>
+<%- include("./../public/header.ejs") %>
+<%- include("./../public/banner.ejs") %>
+<section class="main">
+    <div class="container clearfix">
+        <%- include("./../public/admin/admin-aside.ejs") %>
+        <section class="main-right">
+            <%- include("./../public/admin/admin-nav.ejs") %>
+            <section class="main-right-form floatfix">
+                <form action="">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" id="readerName" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label>权限</label>
+                        <div class="radio">
+                            <label class="radio-inline">
+                                <input type="radio" name="permission" permission="admin-super">
+                                超级管理员
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="permission" permission="admin-book">
+                                图书管理员
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="permission" permission="admin-camera">
+                                设备管理员
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="permission" permission="user">
+                                普通用户
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group hope-group undisplay">
+                        <label>厚朴组</label>
+                        <div class="radio">
+                            <label class="radio-inline">
+                                <input type="radio" name="hopeGroup">
+                                编程组
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="hopeGroup">
+                                前端组
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="hopeGroup" >
+                                设计组
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="hopeGroup">
+                                数码组
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="hopeGroup">
+                                网管组
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">邮箱：</label>
+                        <input type="text" value="" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="">密码：</label>
+                        <input type="password" value="" id="password">
+                    </div>
+                    <div class="form-group">
+                        <label for="">确认密码：</label>
+                        <input type="password" value="" id="confirmPassword">
+                    </div>
+                    <%- include("./../public/form-btn.ejs")%>
+                </form>
+            </section>
+        </section>
+    </div>
+</section>
+<%- include("./../public/footer.ejs") %>
+<script src="/hopelibrary/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  requirejs.config({
+    baseUrl: "/hopelibrary/js",
+    paths:{
+      hajax: "public/hajax",
+      jquery: "public/jquery",
+      hlayer: "hlayer/hlayer",
+      "form-reset": "public/form-reset",
+      upload: "public/upload",
+      adduser: "admin-super/adduser"
+    },
+    shim: {
+      "form-reset": {exports: "form-reset"},
+      adduser: {exports: 'adduser'}
+    }
+  });
+  requirejs(['adduser', 'form-reset'], function(adduser, formReset) {
+    adduser();
+    formReset();
+  });
+</script>
+</body>
+</html>

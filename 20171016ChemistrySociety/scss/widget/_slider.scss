@@ -1,0 +1,7 @@
+.slider-container {
+  background-color: $colorWhite;
+  width: 100%;
+  @media all and (max-width: 440px) {
+    display: none;
+  }
+}

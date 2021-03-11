@@ -1,0 +1,392 @@
+@import "init/_init.scss";
+@import "var/_var.scss";
+@import "widget/_main.scss";
+@import "pages/_pages.scss";
+
+%container {
+  width: 100%;
+}
+
+%common-width {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0;
+  color: $colorBlack;
+  @media all and (max-width: 1024px) {
+    width: 100%;
+    padding: 50px 20px;
+  }
+}
+
+%more {
+  color: $colorGreyM;
+  font-size: $fontsizeS;
+  &:hover {
+    color: $colorBlueL;
+    font-size: $fontsizeS;
+    cursor: pointer;
+    transition: .2s;
+  }
+}
+
+%dot {
+  width: 5px;
+  height: 5px;
+  margin: 0 8px;
+  background-color: $colorGreyD;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+  .title-en {
+    margin-bottom: 8px;
+    font-family: "Segoe UI","Times New Roman";
+    font-size: 18px;
+    color: $colorGreyM;
+  }
+  .title-zh {
+    font-family: "Microsoft YaHe";
+    font-size: 24px;
+    color: $colorGreyD;
+    span {
+      color: $colorGreyM;
+    }
+  }
+}
+
+@media all and (min-width: 440px) {
+  .m-content,.m-nav-container {
+    display: none;
+  }
+}
+@media all and (max-width: 440px) {
+  .content {
+    display: none;
+  }
+}
+/** 新闻中心 **/
+.news-container {
+  @extend %container; 
+  background-color: $colorWhite;
+  .news {
+    @extend %common-width;
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .news-box {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .more {
+        @extend %more;
+      }
+      @media all and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        .news-item {
+          width: 96%;
+          &:first-child {
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.news-item {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.news-title {
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  background-color: $colorGreyL;
+  font-size: $fontsizeM;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+.news-content {
+  width: 100%;
+  .news-list {
+    margin: 12px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &:hover {
+      background-color: $colorBlueLL;
+      transition: .2s;
+      cursor: default;
+    }
+  }
+}
+.news-list-left {
+  width: 64px;
+  height: 60px;
+  color: $colorBlueL;
+  background-color: $colorBlueLL;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .date-day {
+    margin: 1px;
+    font-size: $fontsizeLL;
+  }
+  .date-mouth {
+    margin: 1px;
+    font-size: $fontsizeSS;
+  }
+}
+.news-list-right {
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  .news-list-title {
+    margin: 1px;
+    color: $colorBlack;
+  }
+  .news-list-doc {
+    margin: 1px;
+    color: $colorGreyM;
+  }
+}
+
+/** 化学竞赛&会员注册 **/
+%common-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  color: $colorGreyD;
+  .list-item-left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .dot {
+      @extend %dot;
+    }
+    .list-item-title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:hover {
+        color: $colorBlueL;
+        cursor: pointer;
+      }
+    }
+  }
+  .list-date {
+    margin: 0 8px;
+  }
+}
+
+.compete-container {
+  @extend %container; 
+  background-color: $colorGreyL;
+  .compete {
+    @extend %common-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media all and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .compete-left {
+        width: 96%;
+      }
+      .compete-right {
+        display: none;
+      }
+    }
+  }
+  .more {
+    display: bolck;
+    float: right;
+    margin: 8px;
+    @extend %more;
+  }
+}
+
+.compete-list {
+  .compete-img {
+    width: 20em;
+    height: 20em;
+    display: block;
+    margin: 0 auto;
+    @media all and (max-width: 1024px) {
+      display: none;
+    }
+  }
+}
+.compete-left {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: first-start;
+  align-items: space-between;
+  .title {
+    width: 320px;
+    margin: 0 auto 50px auto;
+  }
+}
+.compete-list-item {
+  @extend %common-list-item;
+  @extend %common-item-first;
+  height: 3em;
+  line-height: 1.5em;
+  border-bottom: 1.2px solid $colorWhite;
+}
+.compete-list-item-first {
+  height: 5.75em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  .new1 {
+    width: 5.0em;
+    height: 5.0em;
+  }
+  .first-item {
+    padding-left: .5em;
+    flex: 1;
+  }
+}
+.compete-right {
+  width: 36%;
+  .title {
+    width: 320px;
+    margin: 0 auto 50px auto;
+  }
+}
+
+/** 学术会议 **/
+.conference-container {
+  @extend %container; 
+  background-color: $colorWhite;
+  .conference {
+    @extend %common-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    .conference-box {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      .more {
+        display: block;
+        height: 36px;
+        float: right;
+        margin: 8px;
+        @extend %more;
+      }
+    }
+  }
+}
+
+.conference-left {
+  .conference-img {
+    width: 20em;
+    height: 20em;
+    display: block;
+    margin: 0 auto;
+  }
+  @media all and (max-width: 768px) {
+    display: none;
+  }
+}
+.conference-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: first-start;
+  align-items: space-between;
+  flex: 1;
+  .title {
+    width: 320px;
+    margin: 0 auto 50px auto;
+  }
+  .conference-list-item {
+    @extend %common-list-item;
+    @extend %common-item-first;
+    height: 50px;
+    &:nth-child(odd) {
+      background-color: $colorGreyL;
+    }
+    @media all and (min-width: 1024px) {
+      padding-left: .5em;
+    }
+  }
+  .first-item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .list-item-title {
+      flex: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+      overflow: hidden;
+    }
+    .list-item-doc {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+  }
+}
+
+.new2 {
+  width: 3em;
+  height: 3em;
+  margin: 0 .5em;
+}
+
+%common-item-first {
+  &:first-child {
+    height: 6em;
+    justify-content: flex-start;
+  }
+  .first-item {
+    line-height: 1.5em;
+    position: relative;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .list-item-title {
+      margin-bottom: .5em;
+    }
+    p {
+      font-size: $fontsizeS;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .list-date {
+      line-height: 1.5em;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

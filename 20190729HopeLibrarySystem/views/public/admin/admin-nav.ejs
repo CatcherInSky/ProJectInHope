@@ -1,0 +1,82 @@
+<nav class="main-right-nav">
+    <ul class="main-right-nav-list clearfix ">
+        <%if(firstPath=="user"){%>
+            <li class="main-right-nav-list-item <%if(secondPath=="modify" || !secondPath){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-user">当前用户</a>
+            </li>
+            <li class="main-right-nav-list-item <%if(secondPath=="add"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/useradd">增加用户</a>
+            </li>
+            <%if(secondPath=="search" || secondPath=="modify"||!secondPath){%>
+                <div class="search bar8">
+                    <form onsubmit="return false">
+                        <input type="text" id="searchInput" placeholder="请输入您要搜索的用户...">
+                        <button id="searchBox"></button>
+                    </form>
+                </div>
+            <%}%>
+        <%}%>
+
+        <%if(firstPath=="book"){%>
+            <li class="main-right-nav-list-item <%if(secondPath=="modify" || !secondPath){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-book">库存图书</a>
+            </li>
+            <li class="main-right-nav-list-item <%if(secondPath=="add"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/bookadd">增加图书</a>
+            </li>
+
+            <%if(secondPath=="search" || secondPath=="modify"){%>
+                <div class="search bar8">
+                    <form onsubmit="return false">
+                        <input type="text" id="searchInput" placeholder="请输入您要搜索的书名...">
+                        <button id="searchBox"></button>
+                    </form>
+                </div>
+            <%}%>
+
+        <%}%>
+
+        <%if(firstPath=="camera"){%>
+            <li class="main-right-nav-list-item <%if(secondPath=="modify" || !secondPath){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-equip">库存设备</a></li>
+            <li class="main-right-nav-list-item <%if(secondPath=="check"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/check">预约审核</a></li>
+
+            <li class="main-right-nav-list-item <%if(secondPath=="add"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/equipadd">添加设备</a></li>
+
+            <%if(secondPath=="search" || secondPath=="modify"){%>
+                <div class="search bar8">
+                    <form onsubmit="return false">
+                        <input type="text" id="searchInput" placeholder="请输入您要搜索的设备...">
+                        <button id="searchBox"></button>
+                    </form>
+                </div>
+            <%}%>
+
+
+        <%}%> 
+
+        <%if(firstPath=="account"){%>
+            <li class="main-right-nav-list-item  <%if(secondPath=="modify"){%> main-right-nav-list-item-active <%}%>"><a
+                    href="/hopelibrary/admin/modify">我的信息</a></li>
+            <li class="main-right-nav-list-item  <%if(secondPath=="reset"){%> main-right-nav-list-item-active <%}%>"><a
+                    href="/hopelibrary/admin/reset">修改密码</a></li>
+        <%}%>
+        
+        <%if(firstPath=="data"){%>
+        <li class="main-right-nav-list-item <%if(secondPath=="cateCount"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-book-data/catecount">图书数量</a>
+        </li>
+        <li class="main-right-nav-list-item <%if(secondPath=="userBorrow" || !secondPath){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-book-data/userborrow">用户借阅</a>
+        </li>
+        <li class="main-right-nav-list-item <%if(secondPath=="groupBorrow"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-book-data/groupborrow">团队借阅</a>
+        </li>
+        <li class="main-right-nav-list-item <%if(secondPath=="cateBorrow"){%> main-right-nav-list-item-active <%}%>">
+            <a href="/hopelibrary/admin/admin-book-data/cateborrow">类别借阅</a>
+        </li>
+        <%}%>
+    </ul>
+</nav>

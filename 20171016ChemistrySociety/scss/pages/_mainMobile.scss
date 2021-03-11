@@ -1,0 +1,204 @@
+@media all and (max-width: 440px) {
+  .m-content {
+    width: 100%;
+  }
+  .m-more-container {
+    width: 100%;
+    height: 3.6em;
+    .m-more {
+      margin: 1em;
+      font-size: $fontsizeM;
+      color: $colorGreyM;
+      float: right;
+      &:active {
+        color: $colorGreyL;
+      }
+    }
+  }
+  .m-title {
+    padding: 36px 0;
+    font-size: $fontsizeL;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      color: $colorGreyM;
+    }
+    p {
+      color: $colorGreyD;
+    }
+  }
+  /** 新闻中心-手机端 **/
+  .m-news-container {
+    background-color: $colorGreyLM;
+    padding: 0 1.25em;
+    .news {
+      display: block;
+      position: relative;
+      padding-top: 1em;
+    }
+  }
+  .m-news-title {
+    display: flex;
+    padding: 1em 0;
+    justify-content: space-around;
+    align-items: center;
+    color: $colorGreyD;
+    font-size: $fontsizeL;
+    .m-news-title-l {
+      padding: .125em 0;
+      border-bottom: 3px solid $colorGreyM;
+    }
+  }
+  .m-news-content-l {
+    display: block;
+  }
+  .m-news-content-r {
+    display: none;
+  }
+  .m-news-list {
+    margin: 1em 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    .m-news-list-left {
+      width: 4.5em;
+      height: 5.2em;
+      color: $colorBlueL;
+      background-color: $colorBlueLL;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .m-date-day {
+        margin: 1px;
+        font-size: $fontsizeLL;
+      }
+      .m-date-mouth {
+        margin: 1px;
+        font-size: $fontsizeSS;
+      }
+    }
+    .m-news-list-right {
+      height: 5.2em;
+      padding-left: .5em;
+      border-bottom: .5px solid transparentize($colorBlueL,.6);
+      flex: 1;
+      .m-news-list-title {
+        font-size: $fontsizeML;
+        margin-bottom: .8em;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        &:active {
+          color: $colorBlueL;
+        }
+      }
+      .m-news-list-doc {
+        color: $colorGreyM;
+        font-size: $fontsizeS;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+  }
+
+  /** 化学竞赛 **/
+  .m-compete-container {
+    background-color: $colorWhiteL;
+    padding: 0 1.25em;
+    m-compete {
+      width: 100%;
+    }
+  }
+  .m-compete-list-item {
+    border-bottom: 1px solid transparentize($colorGreyD,.6);
+    margin: 12px 0;
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    img {
+      display: block;
+      width: 1.8em;
+      height: 1.8em;
+      margin: .5em 0;
+    }
+    .m-list-item-right {
+      font-size: $fontsizeML;
+      line-height: 1.8em;
+      height: 3.6em;
+      padding-left: .5em;
+      margin: .5em 0;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+
+    }
+    .m-list-date {
+      color: $colorGreyM;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      line-height: 1.5em;
+      margin: .5em 0;
+    }
+  }
+
+
+  /** 学术会议 **/
+  .m-conference-container {
+    background-color: $colorGreyLM;
+    padding: 0 1.25em;
+    .conference {
+      width: 100%;
+    }
+  }
+  .m-conference-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px dashed $colorGreyD;
+    margin: 12px 0;
+    .m-date {
+      margin-bottom: 16px;
+      color: #0899ec;
+      font-family: "SimHei";
+      font-size: $fontsizeLS;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        padding: 4px 4px 4px 0;
+      }
+    }
+    .m-list-item-title {
+      width: 100%;
+      font-size: $fontsizeML;
+      margin-bottom: 16px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      &:active {
+        color: $colorBlueL;
+      }
+    }
+    .m-location {
+      font-size: $fontsizeML;
+      font-family: "SimSun";
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      img {
+        padding: 4px 4px 4px 0;
+      }
+    }
+  }
+}
+

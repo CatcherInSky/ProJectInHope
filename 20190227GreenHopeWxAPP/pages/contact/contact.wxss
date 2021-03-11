@@ -1,0 +1,69 @@
+/* pages/contact/contact.wxss */
+
+page {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.map {
+  width: 750rpx;
+  flex-grow: 1;
+}
+
+.title {
+  width: 700rpx;
+  height: 156rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-title {
+  font-size: 36rpx;
+  margin-bottom: 20rpx;
+}
+
+.title-info {
+  line-height: 24rpx;
+}
+
+.title-pos {
+  display: inline-block;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 24rpx;
+}
+
+.nav-icon {
+  width: 100rpx;
+  margin-right: 50rpx;
+}
+
+.list {
+  height: 80rpx;
+  width: 700rpx;
+  margin: 0 auto 20rpx;
+  border-radius: 50rpx;
+  border: solid 1px #e0e0e0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.list image {
+  width: 28rpx;
+  margin-left: 25rpx;
+}
+
+.list text {
+  margin: 0 40rpx 0 20rpx;
+  font-size: 24rpx;
+  color: #666;
+}

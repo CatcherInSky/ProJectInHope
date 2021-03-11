@@ -1,0 +1,20 @@
+<!--pages/contact/contact.wxml-->
+
+<view class="container">
+  <map class="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}"></map>
+  <view class="info">
+    <view class="title">
+      <view class="title-text">
+        <view class="title-title">{{title}}</view>
+        <view class="title-info">
+          <view class="title-pos">{{distence}}</view>
+        </view>
+      </view>
+      <image src="{{navIcon}}" mode="widthFix" class="nav-icon" bindtap="navTo"></image>
+    </view>
+    <view wx:for="{{list}}" wx:key="" class="list" id="{{index}}" bindtap="phoneCall">
+      <image src="{{item.icon}}" mode="widthFix"></image>
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+</view>

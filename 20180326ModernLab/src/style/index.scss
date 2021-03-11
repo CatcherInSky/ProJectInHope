@@ -1,0 +1,357 @@
+@import 'reset';
+@import 'sprites.scss';
+$font-1: "font1";
+//icons
+.icon-new {
+  @include sprite($new);
+}
+
+@each $icon in $icon_1,
+$icon_2,
+$icon_3,
+$icon_4,
+$icon_5,
+$icon_6,
+$book,
+$flask,
+$test,
+$grid {
+  .#{nth($icon,10)} {
+    @include sprite($icon);
+  }
+}
+
+.clearfix {
+  clear: both;
+}
+
+//index
+.slide img {
+  width: 100%;
+}
+
+// news
+#news {
+  #news-header {
+    border: {
+      width: 1px;
+      color: #7d7d7d;
+      bottom-style: solid;
+    }
+  }
+  hgroup {
+    display: inline-block;
+  }
+  .css_search_form {
+    line-height: 55px;
+  }
+  margin-bottom: 20px;
+  @each $className in news-lists,
+  plan-lists,
+  expriment-lists {
+    .#{$className}+section .lists:not(.#{$className}) {
+      display: none;
+    }
+  }
+  #news-header {
+    h1 {
+      display: inline-block;
+      font-size: 22px;
+      margin-right: 1em;
+      position: relative;
+      a{
+        line-height: 55px;
+        display: inline-block;
+        padding-right: 1em;
+        display: inline-flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .icon {
+          margin-right: .5em;
+        }
+      }
+    }
+    margin-bottom: 2em;
+  }
+  .news-left {
+    display: inline-block;
+    margin-top: 25px;
+    img {
+      width: 400px;
+      display: block;
+      width: 100%;
+    }
+    .description {
+      font-family: $font-1,KaiTi,"FZSKBXKJW--GB1-0";
+      font-weight: bold;
+      display: block;
+      text-align: center;
+      font-size: 28px;
+      margin: 40px 0;
+    }
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
+  }
+  .lists {
+    color: #505050;
+    display: inline-block;
+    width: 63%;
+    font-size: 20px;
+    float: right;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
+    }
+    .lists-item {
+      margin-left: 1em;
+      overflow: hidden;
+      white-space: nowrap;
+      a {
+        line-height: 48px;
+        display: inline-block;
+        max-width: 70%;
+        @media screen and (max-width: 638px) {
+         max-width: 100%;
+        }
+        span {
+          display: inline-block;
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          vertical-align: middle;
+        }
+      }
+    }
+    li {
+      border: {
+        color: #505050;
+        width: 1px;
+        style: none none dashed none;
+      }
+      a::before {
+        content: '●';
+        display: inline-block;
+        color: #505050;
+      }
+    }
+    time {
+      float: right;
+      line-height: 48px;
+      @media screen and (max-width: 638px) {
+        display: none;
+      }
+    }
+  }
+  .container::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    clear: both;
+  }
+}
+
+.sources {
+  background-color: #e5e5e5;
+  .container {
+    & .ti {
+      margin-bottom: 37px;
+      padding-top: 33px;
+      color: #4a78a8;
+      font-size: 20px;
+      & a {
+        display: inline-block;
+        .icon {
+          vertical-align: middle;
+        }
+        span {
+          vertical-align: middle;
+        }
+        font-size:25px;
+        margin-bottom:15px;
+      }
+    }
+  }
+  .sources-decription {
+    display: block;
+  }
+  .sources-item {
+    display: inline-block;
+    margin-bottom: 20px;
+    .sources-decription {
+      background: #f0f0f0;
+      line-height: 67px;
+      display: block;
+      text-align: center;
+      width: 100%;
+      font-size: 18px;
+      color: #000;
+      font-weight: bold;
+    }
+    img {
+      width: 100%;
+    }
+    @media screen and (max-width: 1258px) {
+      width: 300px;
+    }
+    @media screen and (max-width: 1011px) {
+      width: 280px;
+    }
+  }
+  .sources-items {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    @media screen and (max-width: 900px) {
+      justify-content: space-around;
+    }
+    padding-bottom: 25px;
+    .sources-item {
+      a {
+        display: inline-block;
+        overflow: hidden;
+        figure {
+          margin: 0;
+          max-height: 257px;
+          overflow: hidden;
+          img {
+            transition: transform ease-in-out .5s;
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.list {
+  padding-top: 35px;
+  max-width: 1200px;
+  margin: auto;
+  .list-item {
+    float: left;
+    text-align: center;
+    width: 33.333%;
+    margin-bottom: 38px;
+    .ti {
+      margin-top: 18px;
+      color: #000;
+    }
+  }
+  @media screen and (max-width:778px) {
+    .list-item {
+      width: 50%;
+    }
+  }
+  & ul {
+    &::after {
+      content: '';
+      display: inline-block;
+      clear: both;
+      width: 1px;
+      height: 1px;
+    }
+    & li {
+      width: 400px;
+      float: left;
+      & a {
+        display: block;
+      }
+      & a .icon:hover {
+        animation-name: shake;
+        animation-duration: 0.5s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: alternate;
+        animation-play-state: running;
+        /* Safari and Chrome: */
+        -webkit-animation-name: shake;
+        -webkit-animation-duration: 0.5s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-direction: alternate;
+        -webkit-animation-play-state: running;
+      }
+      @keyframes shake/*定义动画名*/
+        {
+        0% {
+          transform: scale(1.0);
+        }
+        /*定义起始帧样式，0%相当于from*/
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1.0);
+        }
+        75% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1.0);
+        }
+        /*定义结束帧样式，100%相当于to*/
+      }
+      @-webkit-keyframes shake/* Safari and Chrome */
+        {
+        0% {
+          transform: scale(1.0);
+        }
+        /*定义起始帧样式，0%相当于from*/
+        25% {
+          transform: scale(1.1);
+        }
+        50% {
+          transform: scale(1.0);
+        }
+        75% {
+          transform: scale(0.9);
+        }
+        100% {
+          transform: scale(1.0);
+        }
+        /*定义结束帧样式，100%相当于to*/
+      }
+      & .ti {
+        font-size: 20px;
+        text-align: center;
+        font-family: "Microsoft YaHei UI";
+        font-weight: bold;
+      }
+      & .intro {
+        font-size: 15px;
+        color: #939498;
+        text-align: center;
+      }
+    }
+  }
+}
+$color-theme: #4a78a8;
+.active span {
+  height: 3px;
+  width: 100%;
+  display: block;
+  background: $color-theme;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.active::after {
+  content: "";
+  display: block;
+  border-top: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid $color-theme;
+  position: absolute;
+  bottom: 3px;
+  left: 48%;
+}
+.active {
+  color: $color-theme;
+}

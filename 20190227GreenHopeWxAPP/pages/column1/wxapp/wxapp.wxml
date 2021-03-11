@@ -1,0 +1,21 @@
+<!--pages/intro/intro.wxml-->
+<view class="container">
+  <view class="headline">
+    <text>{{HeadlineText}}</text>
+  </view>
+  <view class="date">
+    <text>{{DateText}}</text>
+  </view>
+  <view class="box1">
+    <text space="emsp">{{Paragraph1}}</text>
+  </view>
+  <view class="box2">
+    <image src="{{pictureUrl1}}" mode="widthFix"></image>
+  </view>
+  <view class="box3">
+    <text space="emsp">{{Paragraph2}}</text>
+  </view>
+  <view class="box4">
+    <image src="{{pictureUrl2}}" mode="widthFix"></image>
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<!--pages/HopeMMS/HopeMMS.wxml-->
+<view class="banner">
+  <view class="banner-img">
+    <image src="{{banner.img}}" mode="widthFix"></image>
+  </view>
+  <view class="banner-text">
+    <text>{{banner.title1}}</text>
+    <image src="{{banner.textImg}}" mode="widthFix"></image>
+    <text>{{banner.title2}}</text>
+  </view>
+</view>
+<view class="mms-container">
+  <view wx:for="{{list}}" wx:key="" class="item">
+    <image src="{{item.img}}" mode="widthFix"></image>
+    <text>{{item.text}}</text>
+  </view>
+</view>
+<view class="footer">
+  <text class="footer-title">{{footer.title}}</text>
+  <text class="footer-sub">{{footer.sub}}</text>
+  <image src="{{footer.img}}" mode="widthFix"></image>
+</view>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html class="login">
+<%- include("./head.ejs") %>
+	<body>
+	<section class="login-bg">
+		<form action="">
+			<h1>厚朴图书设备管理系统</h1>
+			<div class="form-group clearfix">
+				<input type="text" placeholder="账号" id="username" autofocus>
+			</div>
+			<div class="form-group clearfix">
+				<input type="password" placeholder="密码" id="password">
+			</div>
+			<div class="form-group checkcode">
+			    <input type="text" placeholder="" id="checkcode">
+			    <img id="checkcoding" style="cursor: pointer;" src="/hopelibrary/equip/checkcode?width=100&height=48" onclick="change()"/>
+			</div>
+			<div class="login-bg-btn">
+				<a href="javascript:" id="loginBtn">登录</a>
+			</div>
+		</form>
+		<script type="text/javascript">
+			let i=1;
+			function change(){
+				document.getElementById("checkcoding").src="/hopelibrary/equip/checkcode?width=100&height=48"+"&"+i;
+				i++;
+			}
+		</script>
+		<section class="login-footer">
+			<p>
+                <span>技术支持
+                <a href="/hopelibrary/user/login">◇</a>
+                <a href="http://202.116.83.50/hope/">厚朴〖HOPE〗工作室</a>
+                <a href="/hopelibrary/admin/login">◇</a>
+                </span>
+				<span class="login-footer-dev">
+                <a href="https://github.com/huruji/HopeLibrarySystem">联系开发</a>
+                    <a href="https://github.com/huruji/HopeLibrarySystem" class="github"></a>
+                </span>
+			</p>
+		</section>
+	</section>
+	<script data-main="/hopelibrary/js/public/login.js" src="/hopelibrary/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+	</body>

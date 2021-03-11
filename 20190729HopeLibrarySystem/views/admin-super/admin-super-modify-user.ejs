@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<%- include("./../public/head.ejs") %>
+<body>
+<%- include("./../public/header.ejs") %>
+<%- include("./../public/banner.ejs") %>
+<section class="main">
+    <div class="container clearfix">
+        <%- include("./../public/admin/admin-aside.ejs") %>
+        <section class="main-right">
+            <%- include("./../public/admin/admin-nav.ejs") %>
+            <section class="main-right-form floatfix">
+                <%if(user.readerGroup){%>
+                <form action="" form-data="user" id="user-form">
+                    <div class="form-group">
+                        <label>用户名</label>
+                        <input type="text" value="<%=user.readerName%>" id="readerName">
+                    </div>
+                    <div class="form-group">
+                        <label>性别</label>
+                        <div class="radio">
+                            <label class="radio-inline">
+                                <input type="radio" name="sex" value="" <%if(user.readerSex=="男"){%> checked<%}%> >男
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="sex" value="" <%if(user.readerSex=="女"){%> checked<%}%> >女
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>学号</label>
+                        <input type="text" id="studentNumber" value="<%=user.studentNumber%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="">邮箱</label>
+                        <input type="text" id="readerEmail" value="<%=user.readerEmail%>" >
+                    </div>
+                    <div class="form-group">
+                        <label for="">手机</label>
+                        <input type="text" id="readerPhone" value="<%=user.readerPhone%>" >
+                    </div>
+                    <div class="form-group">
+                        <label for="">厚朴组</label>
+                        <div class="radio">
+                            <%for(var i=0,max=hopeGroup.length;i<max;i++){%>
+                            <label class="radio-inline"><input type="radio" class="" name="hopeGroup" value="" <%if(hopeGroup[i]==user.readerGroup){%> checked <%}%> ><%=hopeGroup[i]%></label>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="">专业</label>
+                        <input type="text" value="<%=user.readerMajor%>" id="readerMajor">
+                    </div>
+                    <%- include("./../public/form-btn.ejs")%>
+                </form>
+                <%}else{%>
+                <form form-data="admin" id="user-form">
+                    <div class="form-group" >
+                        <label for="">用户名</label>
+                        <input type="text" value="<%=user.adminName%>" id="adminName">
+                    </div>
+                    <div class="form-group">
+                        <label for="">权限</label>
+                        <div class="radio">
+                            <label class="radio-inline" user-type="super"><input type="radio" name="permission" value="" <%if(user.adminPermissions=="super"){%> checked<%}%> >超级管理员</label>
+                            <label class="radio-inline" user-type="book"><input type="radio" name="permission" value="" <%if(user.adminPermissions=="book"){%> checked<%}%> >图书管理员</label>
+                            <label class="radio-inline" user-type="camera"><input type="radio" name="permission" value="" <%if(user.adminPermissions=="camera"){%> checked<%}%> >设备管理员</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">邮箱</label>
+                        <input type="text" id="readerEmail" value="<%=user.adminEmail%>" >
+                    </div>
+                    <%- include("./../public/form-btn.ejs")%>
+                </form>
+                <%}%>
+            </section>
+        </section>
+    </div>
+</section>
+<%- include("./../public/footer.ejs") %>
+<script src="/hopelibrary/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  requirejs.config({
+    baseUrl: "/hopelibrary/js",
+    paths:{
+      hajax: "public/hajax",
+      jquery: "public/jquery",
+      hlayer: "hlayer/hlayer",
+      "form-reset": "public/form-reset",
+    },
+    shim: {
+      hajax: {exports: "hajax"},
+      hlayer: {exports: "hlayer"},
+      jquery: {exports: "jquery"},
+      "form-reset": {exports: "form-reset"},
+    }
+  });
+  requirejs(['jquery', 'hajax', 'form-reset'], function($,  hajax, formReset) {
+    formReset();
+    var type=$("#user-form").attr("form-data");
+    if(type=="user") {
+      $("#save").click(function () {
+        var sex = $.trim($(":radio[name=sex]:checked").parent().text());
+        var studentNumber = $.trim($("#studentNumber").val());
+        var readerEmail = $.trim($("#readerEmail").val());
+        var readerPhone = $.trim($("#readerPhone").val());
+        var readerMajor = $.trim($("#readerMajor").val());
+        var readerGroup = $.trim($(":radio[name=hopeGroup]:checked").parent().text());
+        var readerName = $.trim($("#readerName").val());
+        if (!readerName || !readerEmail || !sex || !readerGroup) {
+          layer.alert("用户名、性别、邮箱、厚朴组为必填", {
+            skin: 'layui-layer-molv'
+          });
+          return;
+        }
+        hajax.ajax({
+          data: {
+            "readerName": readerName,
+            "sex": sex,
+            "studentNumber": studentNumber,
+            "readerEmail": readerEmail,
+            "readerPhone": readerPhone,
+            "readerMajor": readerMajor,
+            "readerGroup": readerGroup
+          },
+          redirect: '/hopelibrary/admin'
+        })
+      });
+    }else if(type=="admin"){
+      $("#save").click(function(){
+        var permission=$.trim($(":radio[name=permission]:checked").parent().attr("user-type"));
+        var readerEmail=$.trim($("#readerEmail").val());
+        var readerName=$.trim($("#adminName").val());
+        if(!readerName || !readerEmail || !permission){
+          layer.alert("用户名、邮箱、权限为必填",{
+            skin: 'layui-layer-molv'
+          });
+          return;
+        }
+        hajax.ajax({
+          data:{"readerName":readerName,"readerEmail":readerEmail,"permission":permission},
+          redirect:'/hopelibrary/admin'
+        })
+      })
+    }
+  });
+</script>
+</body>
+</html>

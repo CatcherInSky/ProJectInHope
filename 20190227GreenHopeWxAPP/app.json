@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/intro/intro",
+    "pages/contact/contact",
+    "pages/product/product",
+    "pages/service/service",
+    "pages/case/case",
+    "pages/column1/IT/IT",
+    "pages/column1/Web/Web",
+    "pages/column1/software/software",
+    "pages/column1/template/template",
+    "pages/column1/wechat/wechat",
+    "pages/column1/wxapp/wxapp",
+    "pages/column2/HopeCMS/HopeCMS",
+    "pages/column2/HopeLIMS/HopeLIMS",
+    "pages/column2/HopeMMS/HopeMMS",
+    "pages/template/content/content",
+    "pages/template/webview/webview"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "青朴",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "#c82800",
+    "list": [
+      {
+        "pagePath": "pages/intro/intro",
+        "text": "介绍",
+        "iconPath": "images/greenhope.png",
+        "selectedIconPath": "images/greenhope_sel.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "服务",
+        "iconPath": "images/service.png",
+        "selectedIconPath": "images/service_sel.png"
+      },
+      {
+        "pagePath": "pages/case/case",
+        "text": "案例",
+        "iconPath": "images/case.png",
+        "selectedIconPath": "images/case_sel.png"
+      },
+      {
+        "pagePath": "pages/product/product",
+        "text": "产品",
+        "iconPath": "images/product.png",
+        "selectedIconPath": "images/product_sel.png"
+      },
+      {
+        "pagePath": "pages/contact/contact",
+        "text": "联系",
+        "iconPath": "images/contact.png",
+        "selectedIconPath": "images/contact_sel.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+<!--pages/service/service.wxml-->
+
+<swiper indicator-dots indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}" circular class="swiper">
+  <swiper-item wx:for="{{list}}" wx:key="">
+    <view class='inner'>
+      <view class="image">
+        <image src="{{item.picURL}}" mode="widthFix"></image>
+      </view>
+      <view class='title'>{{item.name}}</view>
+      <view class='info'>{{item.info}}</view>
+      <navigator url="{{item.url}}">
+        <view style='background-color:{{item.color}}' class='more'>了解更多</view>
+      </navigator>
+    </view>
+  </swiper-item>
+</swiper>

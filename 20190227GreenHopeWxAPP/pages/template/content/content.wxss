@@ -1,0 +1,21 @@
+@import "../../wxParse/wxParse.wxss";
+
+.container {
+  width: 710rpx;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 34rpx;
+  margin: 30rpx 0;
+}
+
+.date {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 60rpx;
+}
+
+image {
+  width: 710rpx !important;
+}

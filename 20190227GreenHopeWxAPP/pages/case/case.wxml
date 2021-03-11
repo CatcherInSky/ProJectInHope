@@ -1,0 +1,22 @@
+<!--pages/case/case.wxml-->
+
+<scroll-view scroll-x="true" class="scroll" scroll-left="{{scrollLeft}}">
+  <text wx:for="{{info}}" wx:key="" class="scroll-item" id="scroll-{{index}}" style="color:{{item.color}};border-bottom:{{item.border}};" bindtap="changeColumn">{{item.title}}</text>
+</scroll-view>
+
+<view class="case-container" style="height:{{swiperHeight}};">
+  <swiper circular current="{{currentIndex}}" style="height:{{swiperHeight}};" bindchange="changeColumn2">
+    <swiper-item wx:for="{{column}}" wx:key="">
+      <navigator wx:for="{{item}}" wx:key="" class="case-inner" url="{{item.nav}}">
+        <image src="{{item.picurl}}"></image>
+        <view class="case-inner-text">
+          <text class="case-title">{{item.title}}</text>
+          <view class="case-time">
+            <image src="{{timeiconURL}}" mode="widthFix"></image>
+            <text>{{item.time}}</text>
+          </view>
+        </view>
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>

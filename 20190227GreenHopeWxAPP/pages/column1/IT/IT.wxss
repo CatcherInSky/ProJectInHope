@@ -1,0 +1,92 @@
+/* pages/column1/IT/IT.wxss */
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 195rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.banner-sub {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.sub {
+  font-size: 20rpx;
+  color: #999;
+  padding: 20rpx 0;
+}
+
+.inner {
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.inner:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.inner1 image {
+  width: 511rpx;
+}
+
+.inner3 image {
+  width: 500rpx;
+}
+
+.inner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner2-list-item {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 220rpx;
+  height: 116rpx;
+  margin: 0 10rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+
+.inner2-list-item image, .inner4-list-item image {
+  width: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.inner2-list-item text, .inner4-list-item text {
+  font-size: 20rpx;
+  color: #333;
+}
+
+.inner4-list {
+  padding-top: 20rpx;
+}
+
+.inner4-list-item:nth-child(odd) {
+  width: 200rpx;
+}
+
+.inner4-list-item:nth-child(even) image {
+  width: 21rpx;
+  margin: 0;
+}

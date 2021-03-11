@@ -1,0 +1,102 @@
+/* pages/column1/wechat/wechat.wxss */
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 195rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.banner-sub {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.sub {
+  font-size: 20rpx;
+  color: #999;
+  padding: 20rpx 0;
+}
+
+.inner:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.inner {
+  padding: 40rpx 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.inner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner1 {
+  padding-bottom: 20rpx;
+}
+
+.inner1-list {
+  flex-flow: row wrap;
+}
+
+.inner1-list-item {
+  width: 200rpx;
+  height: 120rpx;
+  background-color: #fff;
+  margin: 0 10rpx 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+}
+
+.inner1-list-item image {
+  width: 50rpx;
+  margin-bottom: 10rpx;
+}
+
+.inner1-list-item text {
+  font-size: 20rpx;
+  color: #333;
+}
+
+.inner2-list {
+  margin-top: 20rpx;
+}
+
+.inner2-list-item:nth-child(odd) {
+  width: 200rpx;
+  font-size: 20rpx;
+  color: #333;
+}
+
+.inner2-list-item image {
+  width: 45rpx;
+}
+
+.inner2-list-item:nth-child(even) image {
+  width: 21rpx;
+  margin: 0;
+}
+
+.inner3  image {
+  width: 462rpx;
+}

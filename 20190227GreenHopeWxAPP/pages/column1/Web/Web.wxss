@@ -1,0 +1,100 @@
+/* pages/column1/Web/Web.wxss */
+
+.banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 195rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-size: 30rpx;
+  color: #fff;
+  margin-bottom: 10rpx;
+}
+
+.banner-sub {
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.sub {
+  font-size: 20rpx;
+  color: #999;
+  padding: 20rpx 0;
+}
+
+.inner {
+  padding: 40rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.inner:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.inner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner1 image {
+  width: 700rpx;
+}
+
+.inner3 iamge {
+  width: 577rpx;
+}
+
+.inner2-list-item:nth-child(odd), .inner4-list-item:nth-child(odd) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 200rpx;
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: #333;
+}
+
+.inner2-list-item:nth-child(odd) image, .inner4-list-item:nth-child(odd) image {
+  width: 50rpx;
+  margin-bottom: 15rpx;
+}
+
+.inner2-list-item:nth-child(even) image, .inner4-list-item:nth-child(even) image {
+  width: 21rpx;
+}
+
+.inner5 {
+  padding-bottom: 20rpx;
+}
+
+.inner5-list {
+  flex-flow: row wrap;
+}
+
+.inner5-list-item {
+  width: 200rpx;
+  height: 120rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0 10rpx 20rpx;
+  border-radius: 20rpx;
+}
+
+.inner5-list-item image {
+  width: 60rpx;
+}

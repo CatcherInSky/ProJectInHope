@@ -1,0 +1,22 @@
+<!--pages/column3/HopeLIMS/HopeLIMS.wxml-->
+
+<view class="banner">
+  <image src="{{banner.img}}" mode="widthFix" class="banner-img"></image>
+  <view class="banner-title">
+    <text>{{banner.title1}}</text>
+    <image src="{{banner.textImg}}" mode="widthFix"></image>
+    <text>{{banner.title2}}</text>
+  </view>
+  <view class="banner-list">
+    <image wx:for="{{banner.list}}" wx:key="" src="{{item}}" mode="widthFix"></image>
+  </view>
+</view>
+<view class="lims-container">
+  <view wx:for="{{list}}" wx:key="" class="item">
+    <view class="item-info">
+      <text class="title">{{item.title}}</text>
+      <text class="text">{{item.text}}</text>
+    </view>
+    <image src="{{item.img}}" style="width:{{item.width}};" mode="widthFix"></image>
+  </view>
+</view>

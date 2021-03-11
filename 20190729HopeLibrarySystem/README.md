@@ -1,0 +1,39 @@
+# 厚朴工作室图书设备管理系统
+
+> 说明：本项目由谢志强创建，张春祥修改、管理和维护，现已正式上线
+目前版本 v1.0
+
+## Installation
+1. git clone <code>https://github.com/huruji/HopeLibrarySystem</code>
+2. use file <code>hope_v2.sql</code> to create your database in your mysql
+3. modify file <code>config.js</code> base on your needs
+4. start up app <code>npm run start</code>
+5. view <code>localhost:3000</code> in your browser
+
+## Usage
+1. user can borrow books and appointment equipments(用户可以借阅书籍和预约设备)
+2. user can receive email before he/she return books(用户会收到邮件提醒归还书籍)
+3. user can send email to administrator when he/she appointment equipments(用户可以在预约设备时发送邮件)
+4. administrators of book can add books, modify books(图书管理员可以增加、修改图书)
+5. administrator of equip can check reservations, he/she can agree or disagree the reservations(设备管理员可以审核预约，他可以通过或者不通过审核)
+6. administrator of equip can add equipments, modify equipments(设备管理员可以增加、修改设备)
+7. super administrator can add user/administrator, delete user/administrator, modify user/administrator and have all the rights of book adminnistrator/equip adminnistrator(超级管理员可以增加、删除、修改管理员和用户，并拥有图书管理员、设备管理员的所有权限)
+8. user/administrator can customize his/her messages like avatar, password(用户和管理员都可以自定义自己的信息，比如：头像、密码)
+9. administraror can see some useful data from charts maked by echarts(管理员可以通过图表直观地看到数据统计信息)
+
+## Usage images
+1. login
+![](git_images/100.png)
+
+2. chart
+![](git_images/200.png)
+![](git_images/300.png)
+![](git_images/400.png)
+
+3. user && administrator
+![](git_images/1.png)
+![](git_images/2.png)
+![](git_images/3.png)
+![](git_images/4.png)
+![](git_images/5.png)
+![](git_images/6.png)

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh">
+<%- include("./../public/head.ejs") %>
+<body>
+<%- include("./../public/header.ejs") %>
+<%- include("./../public/banner.ejs") %>
+<section class="main">
+    <div class="container clearfix">
+        <%- include("./../public/user/user-aside.ejs") %>
+        <section class="main-right">
+            <%- include("./../public/user/user-nav.ejs") %>
+            <% if( equip.length > 0) { %>
+            <section class="main-right-borrow">
+                <ul class="main-right-borrow-list clearfix">
+                    <%if(equip.length>12){var max=12;}else{var max=equip.length;}%>
+                    <% for(var i = 0; i < max; i++) {%>
+                    <li class="main-right-borrow-list-item">
+                        <div class="main-right-borrow-list-item-img">
+                            <img src="/hopelibrary/<%= equip[i].equipImgSrc %>" >
+                        </div>
+                        <div class="main-right-borrow-list-item-message">
+                            <h4> <%= equip[i].equipName %> </h4>
+                            <p>编号：<%= equip[i].equipHopeID %> </p>
+                            <% if(equip[i].equipLeft <= 0) { %>
+                            <button disabled="disabled">已借出</button>
+                            <% } else {%>
+                            <button data-reservationID=<%= equip[i].equipID%> class="js-borrow-btn">预约</button>
+                            <% } %>
+                        </div>
+                    </li>
+                    <% } %>
+                </ul>
+            </section>
+            <% } else { %>
+            <section class="main-right-table">
+                <table>
+                    <thead>
+                    <th class="t-10 center">当前暂无设备</th>
+                    </thead>
+                </table>
+            </section>
+            <% } %>
+                  <%if(equipNum>1){%>
+                    <section class="main-right-page-num">
+                    <%if(equipNum>10){
+                        if(equipPage==1 || equipPage==equipNum){%>
+                            <span 
+                            <%if(equipPage==1){%>
+                                class="main-right-page-num-active" 
+                            <%}%>
+                            ><a href="/hopelibrary/equip?pageTab=1">1</a></span>
+                            <span><a href="/hopelibrary/equip?pageTab=2">2</a></span>
+                            <span><a href="/hopelibrary/equip?pageTab=3">3</a></span>
+                            <span><a href="">...</a></span>
+                            <span><a href="/hopelibrary/equip?pageTab=<%=equipNum-2%>"><%=equipNum-2%></a></span>
+                            <span><a href="/hopelibrary/equip?pageTab=<%=equipNum-1%>"><%=equipNum-1%></a></span>
+                            <span 
+                            <%if(equipNum==equipPage){%>
+                                class="main-right-page-num-active"
+                            <%}%>
+                            ><a href="/hopelibrary/equip?pageTab=<%=equipNum%>"><%=equipNum%></a></span>
+                        <%}else{%>
+                            <span><a href="/hopelibrary/equip?pageTab=1">1</a></span>
+                            <%if(equipPage>3){%>
+                                <span><a href="">...</a></span>
+                            <%}%>
+                            <%if(equipPage>=3){%>
+                                <span><a href="/hopelibrary/equip?pageTab=<%=equipPage-1%>"><%=parseInt(equipPage)-1%></a></span>
+                            <%}%>
+                            <span class="main-right-page-num-active"><a href="/hopelibrary/equip?pageTab=<%=equipPage%>"><%=equipPage%></a></span>
+                            <%if(equipPage<(parseInt(equipNum)-1)){%>
+                                <span><a href="/hopelibrary/equip?pageTab=<%=parseInt(equipPage)+1%>"><%=parseInt(equipPage)+1%></a></span>
+                            <%}%>
+                            <%if(equipPage<(parseInt(equipNum)-2)){%>
+                                <span><a href="">...</a></span>
+                            <%}%>
+                            <span><a href="/hopelibrary/equip?pageTab=<%=equipNum%>"><%=equipNum%></a></span>
+                        <%}%>
+                    <%}else{%>
+                        <%for(var k=1;k<=equipNum;k++){%>
+                            <span 
+                            <%if(k==equipPage){%>
+                                class="main-right-page-num-active"
+                            <%}%>
+                            ><a href="/hopelibrary/equip?pageTab=<%=k%>"><%=k%></a></span>
+                        <%}%>
+                    <%}%>
+                <%}else{%>
+                    <table><th class="t-10 center">当前架上尚无设备</th></table>
+                    </section>
+                <%}%>
+
+        </section>
+    </div>
+</section>
+<%- include("./../public/footer.ejs") %>
+<script src="/hopelibrary/js/public/require.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  requirejs.config({
+    baseUrl: "/hopelibrary/js",
+    paths:{
+      hajax: "public/hajax",
+      jquery: "public/jquery",
+      hlayer: "hlayer/hlayer"
+    },
+    shim: {
+      hajax: {exports: "hajax"},
+      hlayer: {exports: "hlayer"},
+      jquery: {exports: "jquery"}
+    }
+  })
+    requirejs(['hajax', 'hlayer', 'jquery'], function(hajax, hlayer, $) {
+      $(".js-borrow-btn").click(function(){
+        var equipID=$(this).attr("data-reservationID");
+        hajax.ajax({
+          data:{"equipID":equipID},
+          url:"/hopelibrary/equip/equipemail",
+          successFn:function(res){
+            var text = '你预约的设备是' + res.equipName + '，管理员是' + res.adminName + '，请填写预约信息';
+            hlayer.prompt({
+              title:'预约信息',
+              text: text,
+              formType: 3,
+              height: '350px',
+              width: '500px',
+              mainBg:'#1c95ea',
+              confirmCb: function(value){
+                hajax.ajax({
+                  data:{"equipID":equipID,"info":value},
+                  url:'/hopelibrary/equip/equipreservation',
+                  redirect:window.location,
+                })
+              }
+            })
+          }
+        });
+      })
+    })
+  $('#searchInput').keyup(function(e){
+        if(e.keyCode==13){
+            if($('#searchInput').val()){
+                window.location.replace("http://202.116.83.77/hopelibrary/equip/search?word="+$('#searchInput').val());
+            }
+        }
+  });
+
+  $('#searchBox').click(function(e){
+    if($('#searchInput').val()){
+        window.location.replace("http://202.116.83.77/hopelibrary/equip/search?word="+$('#searchInput').val());
+    }
+  })
+</script>
+</body>
+</html>

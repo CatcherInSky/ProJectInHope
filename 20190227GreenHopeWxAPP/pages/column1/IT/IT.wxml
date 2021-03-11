@@ -1,0 +1,38 @@
+<!--pages/column1/IT/IT.wxml-->
+
+<view class="banner" style="background-image:url({{banner.bg}})">
+  <text class="banner-title">{{banner.title}}</text>
+  <text class="banner-sub">{{banner.sub}}</text>
+</view>
+<view class="container">
+  <view class="inner inner1">
+    <text class="title">{{inner1.title}}</text>
+    <text class="sub">{{inner1.sub}}</text>
+    <image src="{{inner1.img}}" mode="widthFix"></image>
+  </view>
+  <view class="inner inner2">
+    <text class="title">{{inner2.title}}</text>
+    <text class="sub">{{inner2.sub}}</text>
+    <view class="inner-list inner2-list">
+      <view wx:for="{{inner2.list}}" wx:key="" class="inner2-list-item">
+        <image src="{{item.img}}" mode="widthFix"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="inner inner3">
+    <text class="title">{{inner3.title}}</text>
+    <text class="sub">{{inner3.sub}}</text>
+    <image src="{{inner3.img}}" mode="widthFix"></image>
+  </view>
+  <view class="inner inner4">
+    <text class="title">{{inner4.title}}</text>
+    <text class="sub">{{inner4.sub}}</text>
+    <view class="inner-list inner4-list">
+      <view wx:for="{{inner4.list}}" wx:key="" class="inner4-list-item">
+        <image src="{{item.img}}" mode="widthFix"></image>
+        <text>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,33 @@
+/* pages/intro/intro.wxss */
+
+.item {
+  width: 650rpx;
+  height: 480rpx;
+  margin: 0 auto 50rpx;
+  box-shadow: 0 10rpx 10rpx 2rpx rgba(153, 153, 153, 0.25);
+  border-radius: 20rpx;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.img {
+  width: 650rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.title {
+  text-align: center;
+  font-size: 32rpx;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title image {
+  width: 65rpx;
+}
+
+text {
+  display: inline;
+}

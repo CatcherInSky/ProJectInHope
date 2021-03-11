@@ -1,0 +1,12 @@
+<!--pages/intro/intro.wxml-->
+
+<navigator wx:for="{{list}}" wx:key="" url="{{item.nav}}" class="item">
+  <image src="{{item.img}}" mode="widthFix" class="img"></image>
+  <view class="title" style="color:{{item.color}}">
+    <view>
+      <text>{{item.title1}}</text>
+      <image src="{{item.textImg}}" mode="widthFix"></image>
+      <text>{{item.title2}}</text>
+    </view>
+  </view>
+</navigator>

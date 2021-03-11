@@ -1,0 +1,42 @@
+
+> hope-borrow@1.0.0 sevents.js:165
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: Connection lost: The server closed the connection.
+    at Protocol.end (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/protocol/Protocol.js:112:13)
+    at Socket.<anonymous> (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/Connection.js:97:28)
+    at Socket.<anonymous> (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/Connection.js:502:10)
+    at Socket.emit (events.js:185:15)
+    at endReadableNT (_stream_readable.js:1101:12)
+    at process._tickCallback (internal/process/next_tick.js:114:19)
+Emitted 'error' event at:
+    at Connection._handleProtocolError (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/Connection.js:425:8)
+    at Protocol.emit (events.js:180:13)
+    at Protocol._delegateError (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/protocol/Protocol.js:390:10)
+    at Protocol.end (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/protocol/Protocol.js:116:8)
+    at Socket.<anonymous> (/Data/HopeLibrarySystem-master/node_modules/mysql/lib/Connection.js:97:28)
+    [... lines matching original stack trace ...]
+    at process._tickCallback (internal/process/next_tick.js:114:19)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! hope-borrow@1.0.0 start: `node bin/www "dev"`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the hope-borrow@1.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /root/.npm/_logs/2019-01-01T21_36_42_111Z-debug.log
+0mGET /js/public/login.js [36m304 [0m0.851 ms - -[0m
+[0mGET /js/public/jquery.js [36m304 [0m0.779 ms - -[0m
+[0mGET / [36m302 [0m1.288 ms - 90[0m
+[0mGET /user/login [32m200 [0m2.279 ms - 4011[0m
+[0mGET /equip/checkcode?width=100&height=48 [32m200 [0m17.857 ms - -[0m
+[0mGET /css/main.css [36m304 [0m2.219 ms - -[0m
+[0mGET /js/public/require.js [36m304 [0m2.090 ms - -[0m
+[0mGET /js/hlayer/hlayer.css [36m304 [0m1.939 ms - -[0m
+[0mGET /img/github.png [36m304 [0m1.465 ms - -[0m
+[0mGET /img/login-bg.jpg [36m304 [0m1.366 ms - -[0m
+[0mGET /js/public/login.js [36m304 [0m0.864 ms - -[0m
+[0mGET /js/public/jquery.js [36m304 [0m0.845 ms - -[0m

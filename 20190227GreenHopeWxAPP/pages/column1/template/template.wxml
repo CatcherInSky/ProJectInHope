@@ -1,0 +1,16 @@
+<!--pages/column1/App/App.wxml-->
+
+<view class="banner" style="background-image:url({{banner.bg}})">
+  <text class="banner-title">{{banner.title}}</text>
+  <text class="banner-sub">{{banner.sub}}</text>
+</view>
+
+<view class="container">
+  <view class="list">
+    <navigator wx:for="{{list}}" wx:key="" url="{{item.nav}}" class="item">
+      <image src="{{item.img}}" mode="widthFix"></image>
+      <text class="title">{{item.title}}</text>
+      <text class="sub">{{item.sub}}</text>
+    </navigator>
+  </view>
+</view>

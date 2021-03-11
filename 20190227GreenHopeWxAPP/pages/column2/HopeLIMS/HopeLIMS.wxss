@@ -1,0 +1,70 @@
+/* pages/column3/HopeLIMS/HopeLIMS.wxss */
+
+.banner {
+  width: 750rpx;
+}
+
+.banner-img {
+  width: 750rpx;
+}
+
+.banner-title {
+  margin: 36rpx auto 0;
+  text-align: center;
+  font-size: 36rpx;
+  color: #383838;
+}
+
+.banner-title text, .banner-title iamge {
+  display: inline;
+}
+
+.banner-title image {
+  width: 60rpx;
+}
+
+.banner-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60rpx auto;
+}
+
+.banner-list :nth-child(even) {
+  width: 60rpx;
+  margin: 0 20rpx;
+}
+
+.banner-list :nth-child(odd) {
+  width: 60rpx;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 300rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #1b4e8d;
+  margin-bottom: 20rpx;
+}
+
+.text {
+  font-size: 20rpx;
+  color: #1b4e8d;
+  line-height: 30r px;
+}
+
+.item:nth-child(odd) {
+  flex-flow: row nowrap;
+  background-color: #f5fbf6;
+}
+
+.item:nth-child(even) {
+  flex-flow: row-reverse nowrap;
+}
